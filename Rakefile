@@ -21,6 +21,7 @@ blog_index_dir  = 'source/blog'    # directory for your blog's index page (if yo
 deploy_dir      = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir       = "_stash"    # directory to stash posts for speedy generation
 posts_dir       = "_posts"    # directory for blog files
+projects_dir    = "projects"  # directory for project files
 themes_dir      = ".themes"   # directory for blog files
 new_post_ext    = "markdown"  # default new post file extension when using the new_post task
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
@@ -108,6 +109,33 @@ task :new_post, :title do |t, args|
     post.puts "comments: true"
     post.puts "categories: "
     post.puts "---"
+  end
+end
+
+# usage rake new_project[my-new-project] or rake new_project['my new project'] or rake new_project (defaults to "mr project")
+desc "Begin a new project in #{source_dir}/#{projects_dir}"
+task :new_project, :title do |t, args|
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  mkdir_p "#{source_dir}/#{projects_dir}"
+  args.with_defaults(:title => 'mr project')
+  title = args.title
+  filename = "#{source_dir}/#{projects_dir}/#{title.to_url}.#{new_post_ext}"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  puts "Creating new project: #{filename}"
+  open(filename, 'w') do |proj|
+    proj.puts "---"
+    proj.puts "layout: project"
+    proj.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    proj.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    proj.puts "comments: true"
+    proj.puts "categories: "
+    proj.puts "teaser: "
+    proj.puts "video: "
+    proj.puts "web: "
+    proj.puts "paper: "
+    proj.puts "---"
   end
 end
 
