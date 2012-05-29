@@ -3,16 +3,11 @@ layout: page
 title: "CV"
 ---
 
-## Education ##
-
-* Simon Fraser University, Burnaby, BC., MSc in Computer Science, expected May 2012.
-* Georgetown University, Washington, DC. BS in Computer Science, 2002.
-
-## Refereed Conference Publications - Published ##
+## Conference Publications ##
 
 * Thomas Torsney-Weir, Ahmed Saad, Torsten Möller, Britta Weber, Hans-Christian Hege, Jean-Marc Verbavatz, Steven Bergner, "Tuner: Principled Parameter Finding for Image Segmentation Algorithms Using Visual Response Surface Exploration," IEEE Transactions on Visualization and Computer Graphics (Proceedings Visualization / Information Visualization 2011), vol. 17, no. 6, pp. 1892--1901, Nov.-Dec. 2011.
 
-## Refereed Journal Papers - Published ##
+## Journal Papers ##
 
 * Philippe J. Giabbanelli, Thomas Torsney-Weir, Diane T. Finegood. Building a system dynamics model of individual energy balance related behaviour.  Canadian Journal of Diabetes 35(2), p. 201, 2011.
 
@@ -22,7 +17,12 @@ title: "CV"
 
 * "Visualization of Computer Models."  MoCCSy Graduate Seminar, Burnaby, BC September 16, 2011.
 
-## Software Publications ##
+## Education ##
+
+* Simon Fraser University, Burnaby, BC., MSc in Computer Science, expected May 2012.
+* Georgetown University, Washington, DC. BS in Computer Science, 2002.
+
+<!--## Software Publications ##-->
 
 ## Memberships ##
 
@@ -35,7 +35,7 @@ title: "CV"
 * CMPT 225 Introduction to Data Structures and Algorithms, Spring 2011
 * CMPT 361 Introduction to Computer Graphics, Fall 2011
 
-## Other academic positions ##
+## Former academic positions ##
 
 * Research Assistant, NYU Proteus Project, NYU Computer Science Department September 2005 - May 2006
   * Implemented a vizualization tool for multilingual parse trees in Java
@@ -49,8 +49,9 @@ title: "CV"
 
 ## Volunteer Positions ##
 
-* SFU Teaching Support Staff Union Steward, September 2010 - present
+* SFU Teaching Support Staff Union Steward, September 2010 - May 2012
 * SFU Teaching Support Staff Union Membership Mobilization Comittee Member, January 2011 - present
+* SFU Teaching Support Staff Union Membership Mobilization Comittee Commissioner, November 2011 - present
 * SFU Computing Science Buddy Coordinator, Incoming student mentorship program, January 2011 - present
 
 ## Academic Awards ##
@@ -80,21 +81,12 @@ title: "CV"
   * Assisted with the coordination of the CDO Analytics testing team
   * Wrote specifications based on analysts' suggestions and work flow
 
-## Diving ##
-
-* 100  dives
-* 50  dives in cold water
-* Led dive through the U-853, Montauk, NY, 121 feet
-* SSI Advanced Open Water diver
-* SSI Dive Controller Training
-* SSI Open Water Instructor Training
-* Taught 25  students the "pool session" of diving which is where people tend to be unexpectedly nervous since this is their first time breathing underwater and it can freak them out a bit
-* Supervised over a dozen open water certification students on their training dives
-
 ## Other Activities ##
 
 * Rock climbing
 * Cycling
+* Scuba diving
+* Skiing
 * Photography
 
 
