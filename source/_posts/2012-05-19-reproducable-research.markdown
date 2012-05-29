@@ -21,6 +21,8 @@ week.  This basically constitutes a lab notebook for me.  A lot of my work
 involves writing a lot of math formulae, producing plots and images, some code
 to munge data, and text to explain what I'm doing.
 
+![preview][]
+
 I use R for any sort of numerical computing and multimarkdown has been my
 go-to markup language for some time.  My favorite feature of multimarkdown is
 its support for processing LaTeX math.  Now that the 
@@ -35,17 +37,13 @@ The rest of this post goes into detail about how I've set up Vim, knitr, and
 report every time I save.  The code is located at
 <https://bitbucket.org/gabysbrain/r-notebook>.
 
-![source][]
-![preview][]
-
-[source]: https://torsneyt.files.wordpress.com/2012/05/notebook-source.png width=300px
-[preview]: https://torsneyt.files.wordpress.com/2012/05/notebook-preview.png width=300px
-
 ## Editor: Vim
 
 The best thing about this method is that it's pretty much editor agnostic.
 Marked doesn't care what editor you use as long as it's editing markdown.
 So, I get to use the only text editor I've ever liked: vim!
+
+![source][]
 
 I linked Marked to vim with the instructions from 
 [A Whole lot of Bollocks' blog post](http://captainbollocks.tumblr.com/post/9858989188/linking-macvim-and-marked-app) 
@@ -119,4 +117,6 @@ require some interaction with a running version of R though.
 But for now, I'm happy that I can easily make a record of what I've done
 each week and my supervisor is happy that I can show what I've done!
 
+[source]: {{root_url}}/images/notebook-source.png width=300px
+[preview]: {{root_url}}/images/notebook-preview.png width=300px
 
