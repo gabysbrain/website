@@ -5,12 +5,23 @@ footer: true
 ---
 
 {% assign index = true %}
-{% for proj in paginator.posts %}
-  {% if proj.layout == 'project' %}
+<h1>Research</h1>
+{% for proj in site.posts %}
+  {% if proj.layout == 'project' and proj.category == 'research' %}
     {% assign content = proj.content %}
-    <article>
+    <div class="project-preview">
       {% include project.html %}
-    </article>
+    </div>
+  {% endif %}
+{% endfor %}
+
+<h1>Other</h1>
+{% for proj in site.posts %}
+  {% if proj.layout == 'project' and proj.category != 'research' %}
+    {% assign content = proj.content %}
+    <div class="project-preview">
+      {% include project.html %}
+    </div>
   {% endif %}
 {% endfor %}
 

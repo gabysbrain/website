@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Tuner"
-categories: Multi-D Visualization
+category: research
 teaser: tuner.png
 video: http://www.youtube.com/watch?v=f44P7ulT2yY
 web: http://bitbucket.org/gabysbrain/tuner
