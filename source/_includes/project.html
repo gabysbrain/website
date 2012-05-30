@@ -18,7 +18,6 @@
         <img src="{{ root_url }}/images/{{ page.teaser }}" />
       </div>
     {% endif %}
-    {% include article/links.html %}
   </header>
 {% endunless %}
 {% if index %}
@@ -30,6 +29,7 @@
     </footer>
   {% endif %}
 {% else %}
+      {% include project/links.html %}
   <div class="entry-content">{{ content }}</div>
   {% if page.citation %}
     <div class="citation">
