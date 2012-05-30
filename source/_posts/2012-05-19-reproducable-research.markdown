@@ -15,11 +15,13 @@ or why I've done it.  I would often stare dumbfounded when asked seemingly
 simple questions like, "how did you make this graph?" or even
 "why did you make this graph?"
 
-So, for the past few months I've started producing weekly reports to give to
-my supervisors before our meetings.  It's a summary of my work from the past
-week.  This basically constitutes a lab notebook for me.  A lot of my work
-involves writing a lot of math formulae, producing plots and images, some code
-to munge data, and text to explain what I'm doing.
+So, for the past few months I've started producing weekly reports using R and
+multimarkdown to give to my supervisors before our meetings.  It's a summary
+of my work from the past week.  This basically constitutes a lab notebook for
+me.  A lot of my work involves writing a lot of math formulae, producing plots
+and images, some code to munge data, and text to explain what I'm doing.
+
+<!--more-->
 
 ![preview][]
 
