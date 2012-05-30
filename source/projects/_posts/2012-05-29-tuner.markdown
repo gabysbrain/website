@@ -1,0 +1,22 @@
+---
+layout: project
+title: "Tuner"
+categories: Multi-D Visualization
+teaser: tuner.png
+video: http://www.youtube.com/watch?v=f44P7ulT2yY
+web: http://bitbucket.org/gabysbrain/tuner
+mendeley: http://www.mendeley.com/research/tuner-principled-parameter-finding-image-segmentation-algorithms-using-visual-response-surface-exploration/
+---
+
+We present an approach to optimizing a high-dimensional scalar function that
+systematically explores the parameter space. Our core idea is the following
+two-stage technique: We start with a sparse sampling of the parameter space
+and apply a statistical model to estimate the response of the segmentation
+algorithm. The statistical model incorporates a model of uncertainty of the
+estimation which we use in conjunction with the actual estimate in (visually)
+guiding the user towards areas that need refinement by placing additional
+sample points. In the second stage the user navigates through the parameter
+space in order to determine areas where the response value is high.
+
+Thomas Torsney-Weir, Ahmed Saad, Torsten Möller, Britta Weber, Hans-Christian Hege, Jean-Marc Verbavatz, Steven Bergner, "Tuner: Principled Parameter Finding for Image Segmentation Algorithms Using Visual Response Surface Exploration," IEEE Transactions on Visualization and Computer Graphics (Proceedings Visualization / Information Visualization 2011), vol. 17, no. 12, pp. 1892--1901, Dec. 2011. 
+
