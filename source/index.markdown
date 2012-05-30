@@ -1,8 +1,6 @@
 ---
-layout: default
+layout: page
 ---
-
-# About #
 
 ![headshot][headshot]
 Hello! I am a MSc student in the [GrUVi Lab][gruvi] of the 
