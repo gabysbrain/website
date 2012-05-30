@@ -1,11 +1,16 @@
+{% if index %}
+  {% assign x=proj %}
+{% else %}
+  {% assign x=page %}
+{% endif %}
 <ul id="project-links">
-  {% if page.web %}
-    <li><a href="{{ page.web }}">source code</a></li>
+  {% if x.web %}
+    <li><a href="{{ x.web }}">source code</a></li>
   {% endif %}
-  {% if page.video %}
-    <li><a href="{{ page.video }}">video</a></li>
+  {% if x.video %}
+    <li><a href="{{ x.video }}">video</a></li>
   {% endif %}
-  {% if page.paper %}
-    <li><a href="{{ page.paper }}">paper</a></li>
+  {% if x.paper %}
+    <li><a href="{{ x.paper }}">paper</a></li>
   {% endif %}
 </ul>
