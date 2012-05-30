@@ -3,3 +3,14 @@ layout: page
 title: "Projects"
 footer: true
 ---
+
+{% assign index = true %}
+{% for proj in paginator.posts %}
+  {% if proj.layout == 'project' %}
+    {% assign content = proj.content %}
+    <article>
+      {% include project.html %}
+    </article>
+  {% endif %}
+{% endfor %}
+
