@@ -1,2 +1,42 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+/* ----- general ----- */
+
+body { font-size: 1em; }
+
+/* ----- header ----- */
+
+body > header {
+  //background: url("/images/banner.png");
+  //background: none;
+};
+
+body > header h2 {
+  color: #ffffff;
+  //text-transform: uppercase;
+  //font-variant: small-caps;
+  font-size: 0.8em;
+  //font-style: italic;
+}
+
+/* ----- nav ----- */
+
+body > nav {
+  font-size: 1em;
+  margin-bottom: 1em;
+  border-radius: 0.4em;
+}
+
+/* ----- article ----- */
+
+article > h1, h2, h3 {
+  color: #4b8749;
+  //text-transform: uppercase;
+  //font-variant: small-caps;
+}
+
+article > h1 {
+  font-size: 2em;
+}
+
