@@ -2,7 +2,7 @@
 layout: project
 title: "Tuner"
 category: research
-summary: A high-D vis system
+summary: We present an approach to optimizing a high-dimensional parameter space for computer simulations.
 teaser: tuner.png
 video: http://www.youtube.com/watch?v=f44P7ulT2yY
 web: http://bitbucket.org/gabysbrain/tuner
