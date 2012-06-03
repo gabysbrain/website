@@ -1,0 +1,19 @@
+---
+layout: project
+title: "R notebook"
+category: other
+summary: A notebook-style interface to R that allows annotationed data analysis using R, LaTeX formulas, and multimarkdown text
+teaser: notebook-preview.png
+video: 
+web: https://bitbucket.org/gabysbrain/r-notebook
+paper: 
+---
+
+This script takes as input a multimarkdown file annotated with R code, 
+passes it through R using the knitr module, and then generates an html
+file using multimarkdown.  This allows one to create a lab notebook using
+R for data analysis and multimarkdown and LaTeX formulas for explanation.
+
+My personal setup is detailed in 
+<{% post_url 2012-05-19-reproducable-research %}>.
+
