@@ -1,13 +1,15 @@
 {% if index %}
   <div class="project-entry">
-    <h1 class="entry-title"><a href="{{ root_url }}{{ proj.url }}">{% if site.titlecase %}{{ proj.title | titlecase }}{% else %}{{ proj.title }}{% endif %}</a></h1>
+    <h3 class="entry-title"><a href="{{ root_url }}{{ proj.url }}">{% if site.titlecase %}{{ proj.title | titlecase }}{% else %}{{ proj.title }}{% endif %}</a></h3>
     {% if proj.teaser %}
       <div class="teaser">
         <img src="{{ root_url }}/images/{{ proj.teaser }}" />
       </div>
     {% endif %}
-    <div class="entry-content">{{ content | excerpt }}</div>
-    {% include project/links.html %}
+    <div class="entry-content">
+      {{ content | excerpt }}
+      {% include project/links.html %}
+    </div>
   </div>
 {% else %}
   {% unless page.no_header %}
