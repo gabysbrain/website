@@ -23,7 +23,7 @@ and images, some code to munge data, and text to explain what I'm doing.
 
 <!--more-->
 
-![preview][]
+![][preview]
 
 I use R for any sort of numerical computing and multimarkdown has been my
 go-to markup language for some time.  My favorite feature of multimarkdown is
