@@ -3,7 +3,9 @@
     <h3 class="entry-title"><a href="{{ root_url }}{{ proj.url }}">{% if site.titlecase %}{{ proj.title | titlecase }}{% else %}{{ proj.title }}{% endif %}</a></h3>
     {% if proj.teaser %}
       <div class="teaser">
-        <img src="{{ root_url }}/images/{{ proj.teaser }}" />
+        <a href="{{ root_url }}{{ proj.url }}">
+          <img src="{{ root_url }}/images/{{ proj.teaser }}" />
+        </a>
       </div>
     {% endif %}
     <div class="entry-content">

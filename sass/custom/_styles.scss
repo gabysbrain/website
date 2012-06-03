@@ -46,14 +46,40 @@ article > h1 {
 
 /* ----- project list ----- */
 
-.project-entry img {
+$projLeftCol: 200px;
+$projRightCol: 400px;
+
+.project-preview {
+  margin-bottom: 1em;
+}
+
+.project-entry {
+  overflow: auto;
+  width: 100%;
+}
+
+.project-entry .teaser {
   float: left;
-  width: 200px;
+  width: $projLeftCol;
+}
+
+.project-entry .teaser img {
+  width: $projLeftCol;
+}
+
+.project-entry .teaser a {
+  white-space: normal;
+}
+
+.project-entry .entry-title {
+  float: right;
+  width: $projRightCol;
+  color: #000000;
 }
 
 .project-entry .entry-content {
   float: right;
-  width: 400px;
+  width: $projRightCol;
   margin-left: 10px;
 }
 
@@ -64,5 +90,17 @@ article > h1 {
 .project-links li {
   display: inline;
   list-style: none;
+}
+
+.project-links li:first-child:before {
+  content: "[ ";
+}
+
+.project-links li:last-child:after {
+  content: " ]";
+}
+
+.project-links li:after {
+  content: " | ";
 }
 
