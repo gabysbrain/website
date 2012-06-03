@@ -117,5 +117,6 @@ require some interaction with a running version of R though.
 But for now, I'm happy that I can easily make a record of what I've done
 each week and my supervisor is happy that I can show what I've done!
 
-[preview]: {{root_url}}/images/notebook-preview.png width=300px class=block
+[preview]: {{root_url}}/images/notebook-preview.png "preview image" 
+           width=640px class=block
 
