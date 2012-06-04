@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://yoursite.com/r-notebook/</loc>
+        <lastmod>2012-06-03T19:50:43-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/tuner/</loc>
+        <lastmod>2012-06-03T12:39:24-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/blog/archives/</loc>
+        <lastmod>2012-06-03T19:50:43-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/blog/</loc>
+        <lastmod>2012-06-03T19:50:43-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/cv.html</loc>
+        <lastmod>2012-06-03T12:39:24-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/</loc>
+        <lastmod>2012-06-03T12:39:24-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://yoursite.com/projects/</loc>
+        <lastmod>2012-06-03T19:50:43-07:00</lastmod>
+    </url>
+</urlset>
