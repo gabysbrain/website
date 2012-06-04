@@ -1,31 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://yoursite.com/r-notebook/</loc>
+        <loc>http://www.tomtorsneyweir.com/reproducable-research/</loc>
+        <lastmod>2012-06-03T20:14:45-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.tomtorsneyweir.com/r-notebook/</loc>
         <lastmod>2012-06-03T19:50:43-07:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/tuner/</loc>
+        <loc>http://www.tomtorsneyweir.com/tuner/</loc>
         <lastmod>2012-06-03T12:39:24-07:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/archives/</loc>
-        <lastmod>2012-06-03T19:50:43-07:00</lastmod>
+        <loc>http://www.tomtorsneyweir.com/blog/archives/</loc>
+        <lastmod>2012-06-03T20:14:45-07:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/blog/</loc>
-        <lastmod>2012-06-03T19:50:43-07:00</lastmod>
+        <loc>http://www.tomtorsneyweir.com/blog/</loc>
+        <lastmod>2012-06-03T20:14:45-07:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/cv.html</loc>
+        <loc>http://www.tomtorsneyweir.com/cv.html</loc>
         <lastmod>2012-06-03T12:39:24-07:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/</loc>
+        <loc>http://www.tomtorsneyweir.com/</loc>
         <lastmod>2012-06-03T12:39:24-07:00</lastmod>
     </url>
     <url>
-        <loc>http://yoursite.com/projects/</loc>
-        <lastmod>2012-06-03T19:50:43-07:00</lastmod>
+        <loc>http://www.tomtorsneyweir.com/projects/</loc>
+        <lastmod>2012-06-03T20:14:45-07:00</lastmod>
     </url>
 </urlset>

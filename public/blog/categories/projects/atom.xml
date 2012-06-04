@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: projects | Tom Torsney-Weir]]></title>
-  <link href="http://yoursite.com/blog/categories/projects/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2012-06-03T20:03:34-07:00</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://www.tomtorsneyweir.com/blog/categories/projects/atom.xml" rel="self"/>
+  <link href="http://www.tomtorsneyweir.com/"/>
+  <updated>2012-06-03T20:18:50-07:00</updated>
+  <id>http://www.tomtorsneyweir.com/</id>
   <author>
     <name><![CDATA[Tom Torsney-Weir]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Tuner]]></title>
-    <link href="http://yoursite.com/tuner/"/>
+    <link href="http://www.tomtorsneyweir.com/tuner/"/>
     <updated>2012-05-29T00:00:00-07:00</updated>
-    <id>http://yoursite.com/tuner</id>
+    <id>http://www.tomtorsneyweir.com/tuner</id>
     <content type="html"><![CDATA[<p>We present an approach to optimizing a high-dimensional scalar function that
 systematically explores the parameter space. Our core idea is the following
 two-stage technique: We start with a sparse sampling of the parameter space
@@ -34,9 +34,9 @@ space in order to determine areas where the response value is high.</p>
   
   <entry>
     <title type="html"><![CDATA[R notebook]]></title>
-    <link href="http://yoursite.com/r-notebook/"/>
+    <link href="http://www.tomtorsneyweir.com/r-notebook/"/>
     <updated>2012-05-29T00:00:00-07:00</updated>
-    <id>http://yoursite.com/r-notebook</id>
+    <id>http://www.tomtorsneyweir.com/r-notebook</id>
     <content type="html"><![CDATA[<p>This script takes as input a multimarkdown file annotated with R code,
 passes it through R using the knitr module, and then generates an html
 file using multimarkdown.  This allows one to create a lab notebook using
