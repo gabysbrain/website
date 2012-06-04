@@ -6,8 +6,9 @@ require 'sinatra/base'
 $root = ::File.dirname(__FILE__)
 
 use Rack::Rewrite do
-  # redirect old wordpress links
-  r301 %r{[0-9]{4}/[0-9]{2}/[0-9]{2}(/.+)}, '$1'
+  # redirect old (and misspelled) wordpress link
+  r301 %r{2012/05/19/reproducible-research/$}, '/reproducable-research/'
+  #r301 %r{[0-9]{4}/[0-9]{2}/[0-9]{2}(/.+)}, '$1'
 end
 
 class SinatraStaticServer < Sinatra::Base  
