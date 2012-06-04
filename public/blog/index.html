@@ -153,6 +153,22 @@ and images, some code to munge data, and text to explain what I&#8217;m doing.</
 </section>
 
 
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("gabysbrain", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/gabysbrain" class="twitter-follow-button" data-show-count="false">Follow @gabysbrain</a>
+  
+</section>
+
 
 
 
