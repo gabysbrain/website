@@ -1,8 +1,14 @@
 require 'bundler/setup'
+require 'rack/rewrite'
 require 'sinatra/base'
 
 # The project root directory
 $root = ::File.dirname(__FILE__)
+
+use Rack::Rewrite do
+  # redirect old wordpress links
+  r301 %r{[0-9]{4}/[0-9]{2}/[0-9]{2}(/.+)}, '$1'
+end
 
 class SinatraStaticServer < Sinatra::Base  
 
