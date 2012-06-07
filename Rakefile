@@ -104,6 +104,7 @@ task :new_post, :title do |t, args|
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
+    post.puts "published: false"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
@@ -127,6 +128,7 @@ task :new_project, :title do |t, args|
   open(filename, 'w') do |proj|
     proj.puts "---"
     proj.puts "layout: project"
+    post.puts "published: false"
     proj.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     proj.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     proj.puts "comments: true"
