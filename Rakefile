@@ -108,7 +108,7 @@ task :new_post, :title do |t, args|
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: true"
-    post.puts "categories: "
+    post.puts "category: "
     post.puts "---"
   end
 end
@@ -130,12 +130,12 @@ task :new_project, :title do |t, args|
     proj.puts "layout: project"
     post.puts "published: false"
     proj.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    proj.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-    proj.puts "comments: true"
-    proj.puts "categories: "
+    proj.puts "comments: false"
+    proj.puts "category: "
     proj.puts "teaser: "
     proj.puts "video: "
     proj.puts "web: "
+    proj.puts "mendeley: "
     proj.puts "paper: "
     proj.puts "---"
   end
