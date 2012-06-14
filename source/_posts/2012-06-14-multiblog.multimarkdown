@@ -4,7 +4,7 @@ published: false
 title: "Multiblog"
 date: 2012-06-14 16:54
 comments: true
-category: 
+categories: blog
 ---
 
 With the new website I wanted 2 sources of posts: regular blog posts and
@@ -13,6 +13,8 @@ posts and one for my projects.  The issue with jekyll/Octopress is that all
 valid files in any `_posts` directory are all combinied into one big list.
 Jekyll/Octopress doesn't differentiate the posts stored in different places on
 the file system.
+
+<!--more-->
 
 [This thread](http://groups.google.com/group/jekyll-rb/browse_thread/thread/50a5f36fee313f29?pli=1)
 as well as [this post](http://www.garron.me/blog/multi-blog-site-jekyll.html)
@@ -30,6 +32,7 @@ anyway.
 When creating a post I just have to make sure that for blog posts my yaml
 front matter includes a `layout: post` line as shown below:
 
+{% codeblock lang:yaml %}
     ---
     layout: post
     title: "Reproducable research"
@@ -37,9 +40,11 @@ front matter includes a `layout: post` line as shown below:
     comments: true
     categories: research
     ---
+{% endcodeblock %}
 
 and projects include a `layout: project` line:
 
+{% codeblock lang:yaml %}
     ---
     layout: project
     title: "Tuner"
@@ -48,14 +53,17 @@ and projects include a `layout: project` line:
     teaser: tuner.png
     video: http://www.youtube.com/watch?v=f44P7ulT2yY
     ---
+{% endcodeblock %}
 
 I then made sure that there were layout files called `post.html` and
 `project.html` in my `source/_layout` directory in Octopress.
 
 ## Index pages
 
-Then, when creating my blog index page, I just have to check if `layout = 'post'`
+Then, when creating my [blog index](/blog/) page, I just have to check 
+if `layout = 'post'`
 
+{% codeblock lang:html %}
     {% for post in paginator.posts %}
       {% if post.layout == 'post' %}
       {% assign content = post.content %}
@@ -64,10 +72,12 @@ Then, when creating my blog index page, I just have to check if `layout = 'post'
         </article>
       {% endif %}
     {% endfor %}
+{% endcodeblock %}
 
 For the projects list I manually list the categories right now.  So, for 
-example, the "Research" section of my projects list looks like
+example, the "Research" section of my [projects list](/projects) looks like
 
+{% codeblock lang:html %}
     <h1>Research</h1>
     {% for proj in site.posts %}
       {% if proj.layout == 'project' and proj.category == 'research' %}
@@ -77,14 +87,14 @@ example, the "Research" section of my projects list looks like
         </div>
       {% endif %}
     {% endfor %}
-
-* This needs links to the actual index pages
+{% endcodeblock %}
 
 ## Rakefile
 
 The last step was to make sure that creating new posts via the Rakefile
 automatically add the layout directive.  My new post task now looks like:
 
+{% codeblock lang:ruby %}
     desc "Begin a new post in #{source_dir}/#{posts_dir}"
     task :new_post, :title do |t, args|
       raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
@@ -107,6 +117,7 @@ automatically add the layout directive.  My new post task now looks like:
         post.puts "---"
       end
     end
+{% endcodeblock %}
 
 I also wanted to add a task called `new_project` to create a new project file
 similar to how to create new Octopress posts.  That task also adds a bunch of
@@ -114,6 +125,7 @@ extra fields that the project layout uses for my projects like a teaser image,
 and links for demo videos, citations, websites, etc.  My new project task
 looks like
 
+{% codeblock lang:ruby %}
     desc "Begin a new project in #{source_dir}/#{projects_dir}"
     task :new_project, :title do |t, args|
       raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
@@ -140,6 +152,7 @@ looks like
         proj.puts "---"
       end
     end
+{% endcodeblock %}
 
 ## Conclusion
 
