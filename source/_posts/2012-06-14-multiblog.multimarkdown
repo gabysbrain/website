@@ -1,22 +1,23 @@
 ---
 layout: post
-published: false
-title: "Multiblog"
+title: Multiblog
 date: 2012-06-14 16:54
 comments: true
-categories: blog
+categories: test
 ---
 
-With the new website I wanted 2 sources of posts: regular blog posts and
+With the new website I wanted 2 sources of posts, regular blog posts and
 projects.  This boils down to having 2 separate index pages, one for my blog
 posts and one for my projects.  The issue with jekyll/Octopress is that all
 valid files in any `_posts` directory are all combinied into one big list.
 Jekyll/Octopress doesn't differentiate the posts stored in different places on
-the file system.
+the file system.  I wanted two separate index pages.  One would list all my
+blog posts in the standard blog index format and the other would be a 
+different layout listing all my projects.
 
 <!--more-->
 
-[This thread](http://groups.google.com/group/jekyll-rb/browse_thread/thread/50a5f36fee313f29?pli=1)
+I found [this thread](http://groups.google.com/group/jekyll-rb/browse_thread/thread/50a5f36fee313f29?pli=1)
 as well as [this post](http://www.garron.me/blog/multi-blog-site-jekyll.html)
 detail how to use the categories attribute in the yaml front matter to
 distinguish which blog posts are part of. However, I wanted to use the
@@ -63,7 +64,7 @@ I then made sure that there were layout files called `post.html` and
 Then, when creating my [blog index](/blog/) page, I just have to check 
 if `layout = 'post'`
 
-{% codeblock lang:html %}
+{% codeblock lang:html %}{% raw %}
     {% for post in paginator.posts %}
       {% if post.layout == 'post' %}
       {% assign content = post.content %}
@@ -72,12 +73,12 @@ if `layout = 'post'`
         </article>
       {% endif %}
     {% endfor %}
-{% endcodeblock %}
+{% endraw %} {% endcodeblock %}
 
 For the projects list I manually list the categories right now.  So, for 
 example, the "Research" section of my [projects list](/projects) looks like
 
-{% codeblock lang:html %}
+{% codeblock lang:html %}{% raw %}
     <h1>Research</h1>
     {% for proj in site.posts %}
       {% if proj.layout == 'project' and proj.category == 'research' %}
@@ -87,7 +88,7 @@ example, the "Research" section of my [projects list](/projects) looks like
         </div>
       {% endif %}
     {% endfor %}
-{% endcodeblock %}
+{% endraw %}{% endcodeblock %}
 
 ## Rakefile
 
