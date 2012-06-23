@@ -13,6 +13,9 @@ deploy_default = "rsync"
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
 
+# The heroku repository we want to deploy to
+deploy_repo = git@heroku.com:tomtorsneyweir.git
+
 ## -- Misc Configs -- ##
 
 public_dir      = "public"    # compiled site directory
@@ -321,6 +324,20 @@ task :set_root_dir, :dir do |t, args|
     rm_rf public_dir
     mkdir_p "#{public_dir}#{dir}"
     puts "## Site's root directory is now '/#{dir.sub(/^\//, '')}' ##"
+  end
+end
+
+desc "Configure the remotes and branches for my blog"
+task :setup_repo, :repo do |t, args|
+  # check for octopress remote target
+  unless `git remote -v`.match(/octopress.+?octopress.git/)
+    system "git remote add octopress https://github.com/imathis/octopress.git"
+    puts "Added octopress remote target"
+  end
+  # check for heroku deployment target
+  unless `git remote -v`.match(/heroku.+?#{deploy_repo}/)
+    system "git remote add heroku #{deploy_repo}"
+    puts "Added heroku remote at #{deploy_repo}"
   end
 end
 
