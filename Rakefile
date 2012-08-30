@@ -14,7 +14,7 @@ deploy_default = "rsync"
 deploy_branch  = "gh-pages"
 
 # The heroku repository we want to deploy to
-deploy_repo = git@heroku.com:tomtorsneyweir.git
+deploy_repo = "git@heroku.com:tomtorsneyweir.git"
 
 ## -- Misc Configs -- ##
 
