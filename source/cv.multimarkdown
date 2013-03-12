@@ -2,6 +2,7 @@
 layout: page
 ---
 
+
 # Refereed journal publications
 
 * Philippe J. Giabbanelli, __Thomas Torsney-Weir__, and Vijay Kumar Mago. 
@@ -31,26 +32,26 @@ layout: page
   parameter finding for image segmentation algorithms using visual response
   surface exploration. SFU Computing Science Department TR–2011–01.
 
-# Invited Talks
+# Invited talks
 
 * "Tuner." MADAI workshop, Duke University, Durham, NC June 20, 2012.
-* "Visualization of Computer Models."  MoCCSy Graduate Seminar, Burnaby, BC September 16, 2011.
+* "Visualization of computer models."  MoCCSy Graduate Seminar, Burnaby, BC September 16, 2011.
 
 # Education
 
-* Simon Fraser University, Burnaby, BC., MSc in Computer Science, 2012.
-* Georgetown University, Washington, DC. BS in Computer Science, 2002.
+* Simon Fraser University, Burnaby, BC, Canada. MSc in Computer Science, 2012.
+* Georgetown University, Washington, DC, USA. BS in Computer Science, 2002.
 
-# Software Publications
+# Software publications
 
 * Tuner (<https://bitbucket.org/gabysbrain/Tuner>)
 
 # Memberships
 
-* IEEE Student Member
-* SIAM Student Member
+* IEEE student member
+* SIAM student member
 
-# Teaching Assistant Appointments
+# Teaching assistant appointments
 
 * CMPT 361 Introduction to Computer Graphics, Fall 2011.
 * CMPT 225 Introduction to Data Structures and Algorithms, Spring 2011.
@@ -60,36 +61,35 @@ layout: page
 
 * Research Assistant, GrUVi Lab, Simon Fraser University Computing Science Department
   January 2011 -- December 2012
-    * 
+    * Developed Tuner, a visualization tool for image segmentation algorithm developers to find optimum parameter settings for their algorithms.
+    * Analyzed the complexity of visualizing high-dimensional continuous functions.
 
 * Research Assistant, NYU Proteus Project, NYU Computer Science Department
   September 2005 -- May 2006
     * Implemented a vizualization tool for multilingual parse trees in Java.
     * Outlined basic idea for improved parse tree visualization.
 
-* Research Assistant, NIST-funded project: "Learning Driving Behaviors for Autonomous Vehicles," Georgetown Computer Science Department 
+* Research Assistant, NIST-funded project: "Learning driving behaviors for autonomous vehicles," Georgetown Computer Science Department 
   May 2002 -- October 2002
-    * Implemented 3-D interaction between a virtual robot and its environment in Visual C.
-    * Developed a collision detection system based on V-Clip to account for penetration and location of impact.
     * Added rigid body dynamics to the SimRobot robotics simulator.
-    * Researched and implemented real-world physical forces: gravity, friction, impact, etc.
+    * Developed a collision detection system based on V-Clip to account for penetration and location of impact.
 
-# Volunteer Positions
+# Volunteer positions
 
-* SFU Teaching Support Staff Union Steward, September 2010 -- September 2012.
+* SFU Teaching Support Staff Union steward, September 2010 -- September 2012.
 * SFU Teaching Support Staff Union
-  Membership Mobilization Comittee Commissioner,
+  Membership Mobilization Committee Commissioner,
   January 2012 -- September 2012.
-* SFU Teaching Support Staff Union Membership Mobilization Comittee Member,
+* SFU Teaching Support Staff Union Membership Mobilization Committee member,
   January 2011 -- September 2012.
-* SFU Computing Science Buddy Coordinator, Incoming student mentorship
+* SFU Computing Science buddy coordinator, Incoming student mentorship
   program, January 2011 -- September 2012.
 
-# Academic Awards
+# Academic awards
 
-* SFU Graduate Fellowship (Masters), $6250, Spring 2012.
+* SFU graduate fellowship (Masters), $6250, Spring 2012.
 
-# Professional Positions
+# Professional positions
 
 * Vice President, Lead Developer, StoneCastle Partners. New York, NY
   September 2007 -- June 2010
@@ -128,7 +128,7 @@ layout: page
     * Assisted with the coordination of the CDO Analytics testing team.
     * Wrote specifications based on analysts' suggestions and work flow.
 
-# Other Activities
+# Other activities
 
 * Skiing
 * Rock climbing
