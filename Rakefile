@@ -8,7 +8,7 @@ ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = true
-deploy_default = "rsync"
+deploy_default = "heroku"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -290,6 +290,13 @@ multitask :push do
     system "git push origin #{deploy_branch} --force"
     puts "\n## Github Pages deploy complete"
   end
+end
+
+desc "deploy to heroku"
+task :heroku do
+  puts "\n## Pushing website to heroku"
+  sh "git push heroku"
+  puts "\n## Heroku deploy complete"
 end
 
 desc "Update configurations to support publishing to root or sub directory"
