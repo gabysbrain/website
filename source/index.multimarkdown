@@ -3,12 +3,12 @@ layout: page
 ---
 
 ![headshot][headshot]
-Hello! I am a MSc student in the [GrUVi Lab][gruvi] of the 
-[Computer Science Department][sfucs] at 
-Simon Fraser University. 
+Hello! I am a PhD student in the [VDA Lab][vda] of the 
+[Faculty of Computer Science][univiecs] at 
+the University of Vienna.
 My supervisor is [Dr. Torsten Möller][torsten].
 
-Email: ttorsney at sfu dot ca
+Email: thomas.torsney-weir@univie.ac.at
 
 # Research Interests #
 
@@ -22,7 +22,9 @@ modeling in order to perform optimization in high-dimensional spaces.
 
 [gruvi]: http://gruvi.cs.sfu.ca
 [sfucs]: http://www.cs.sfu.ca
+[univiecs]: http://cs.univie.ac.at
 [torsten]: http://www.cs.sfu.ca/~torsten
+[vda]: http://cs.univie.ac.at/research/research-groups/visualization-and-data-analysis/
 
 [headshot]: {{ root_url }}/images/headshot.jpg "headshot" class=inline
 
