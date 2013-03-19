@@ -6,9 +6,8 @@ require 'sinatra/base'
 $root = ::File.dirname(__FILE__)
 
 use Rack::Rewrite do
+  r302 %r{/papers/(.*)}, 'http://homepage.univie.ac.at/thomas.torsney-weir/papers/$1'
   # redirect old (and misspelled) wordpress link
-  #r302 %r{/downloads/(.*)}, 'http://www.cs.sfu.ca/~ttorsney/personal/downloads/$1'
-  r302 %r{/papers/(.*)}, 'http://www.cs.sfu.ca/~ttorsney/personal/papers/$1'
   r301 %r{2012/05/19/reproducible-research/$}, '/reproducable-research/'
   #r301 %r{[0-9]{4}/[0-9]{2}/[0-9]{2}(/.+)}, '$1'
 end
