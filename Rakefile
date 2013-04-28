@@ -294,6 +294,7 @@ end
 
 desc "deploy to heroku"
 task :heroku do
+  Rake::Task[:setup_repo].execute
   puts "\n## Pushing website to heroku"
   sh "git push heroku"
   puts "\n## Heroku deploy complete"
