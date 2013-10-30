@@ -2,24 +2,27 @@
 layout: layout
 ---
 
-{% assign index = true %}
 <h1>Research</h1>
-{% for proj in site.posts %}
-  {% if proj.layout == 'project' and proj.category == 'research' %}
-    {% assign content = proj.content %}
-    <div class="project-preview">
-      {% include project.html %}
-    </div>
-  {% endif %}
-{% endfor %}
+<% sitemap.where(:layout.include => "project").all.each do |proj| %>
+  <% if proj.data.category == "research" %>
+    <h3><%= link_to proj.data.title, proj.path %></h3>
+    <% if proj.data.teaser %>
+      <%= link_to image_tag(proj.data.teaser), proj.path %>
+    <% end %>
+    <%= proj.data.summary %>
+    <%= partial "project_links", :locals => {:proj => proj.data} %>
+  <% end %>
+<% end %>
 
 <h1>Other</h1>
-{% for proj in site.posts %}
-  {% if proj.layout == 'project' and proj.category != 'research' %}
-    {% assign content = proj.content %}
-    <div class="project-preview">
-      {% include project.html %}
-    </div>
-  {% endif %}
-{% endfor %}
+<% sitemap.where(:layout.include => "project").all.each do |proj| %>
+  <% if proj.data.category != "research" %>
+    <h3><%= link_to proj.data.title, proj.path %></h3>
+    <% if proj.data.teaser %>
+      <%= link_to image_tag(proj.data.teaser), proj.path %>
+    <% end %>
+    <%= proj.data.summary %>
+    <%= partial "project_links", :locals => {:proj => proj.data} %>
+  <% end %>
+<% end %>
 

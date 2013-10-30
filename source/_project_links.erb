@@ -1,13 +1,13 @@
 
 <ul class="button-group">
-  <% if current_page.data.source %>
-    <li><%= link_to 'source', current_page.data.source, :class => 'small button' %></li>
+  <% if proj.source %>
+    <li><%= link_to 'source', proj.source, :class => 'small button' %></li>
   <% end %>
-  <% if current_page.data.video %>
-    <li><%= link_to 'video', current_page.data.video, :class => 'small button' %></li>
+  <% if proj.video %>
+    <li><%= link_to 'video', proj.video, :class => 'small button' %></li>
   <% end %>
-  <% if current_page.data.paper %>
-    <li><%= link_to 'paper', current_page.data.paper, :class => 'small button' %></li>
+  <% if proj.paper %>
+    <li><%= link_to 'paper', proj.paper, :class => 'small button' %></li>
   <% end %>
 </ul>
 

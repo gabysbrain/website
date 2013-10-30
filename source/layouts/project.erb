@@ -6,7 +6,7 @@
       <div class="teaser">
         <%= image_tag current_page.data.teaser %>
       </div>
-      <%= partial "project_links" %>
+      <%= partial "project_links", :locals => {:proj => current_page.data} %>
       <%= yield %>
       <% if current_page.data.citation %>
         <div class="citation">
