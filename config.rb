@@ -1,3 +1,5 @@
+require 'lib/tilt-multimarkdown'
+
 ###
 # Blog settings
 ###
