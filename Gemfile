@@ -1,22 +1,12 @@
-source "https://rubygems.org"
-ruby "1.9.3"
+# If you have OpenSSL installed, we recommend updating
+# the following line to use "https"
+source 'http://rubygems.org'
 
-group :development do
-  gem 'heroku'
-end
+gem "middleman", "~> 3.1.6"
+gem "middleman-blog", "~> 3.3.0"
+gem "zurb-foundation"
+gem "compass"
 
-gem 'rake', '~> 0.9'
-gem 'jekyll', '~> 0.12'
-gem 'rdiscount', '~> 2.0.7'
-gem 'RedCloth', '~> 4.2.9'
-gem 'haml', '~> 3.1.7'
-gem 'compass', '~> 0.12.2'
-gem 'sass', '~> 3.2'
-gem 'sass-globbing', '~> 1.0.0'
-gem 'rubypants', '~> 0.2.0'
-gem 'rb-fsevent', '~> 0.9'
-gem 'stringex', '~> 1.4.0'
-gem 'liquid', '~> 2.3.0'
-gem 'directory_watcher', '1.4.1'
-gem 'rpeg-multimarkdown', '~> 0.1.1'
-gem 'sinatra', '~> 1.4.2'
+# For feed.xml.builder
+gem "builder", "~> 3.0"
+
