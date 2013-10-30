@@ -29,6 +29,9 @@ end
 
 page "/feed.xml", :layout => false
 
+# section layouts
+page "/project/*", :layout => "project"
+
 ### 
 # Compass
 ###
