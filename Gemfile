@@ -7,6 +7,7 @@ gem "middleman-blog", "~> 3.3.0"
 gem "zurb-foundation"
 gem "compass"
 gem "rpeg-multimarkdown"
+gem "nokogiri"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
