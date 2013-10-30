@@ -9,15 +9,81 @@
   <title>Tom Torsney-Weir</title>
 
   
-  <link rel="stylesheet" href="stylesheets/site.css">
-  
-
-  <script src="javascripts/vendor/custom.modernizr.js"></script>
+  <%= stylesheet_link_tag 'site' %>
+  <%= javascript_include_tag 'vendor/custom.modernizr' %>
 
 </head>
 <body>
 
-  <%= yield %>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+       <ul class="button-group">
+         <li><%= link_to 'Projects', '/projects', :class => 'button' %></li>
+         <li><%= link_to 'CV',       '/cv.html',  :class => 'button' %></li>
+         <li><%= link_to 'Blog',     '/blog',     :class => 'button' %></li>
+        </ul>
+      </div>
+      <h1>Tom Torsney-Weir</h1>
+      <hr />
+    </div>
+  </div>
+ 
+  <!-- End Nav -->
+ 
+ 
+  <!-- Main Page Content and Sidebar -->
+ 
+  <div class="row">
+ 
+    <!-- Main Blog Content -->
+    <div class="large-9 columns" role="content">
+ 
+      <%= yield %>
+
+    </div>
+ 
+    <!-- End Main Content -->
+ 
+ 
+    <!-- Sidebar -->
+ 
+    <aside class="large-3 columns">
+ 
+      <!--
+      <h5>Categories</h5>
+      <ul class="side-nav">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Code</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Fun</a></li>
+        <li><a href="#">Weasels</a></li>
+      </ul>
+ 
+      <div class="panel">
+        <h5>Featured</h5>
+        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+        <a href="#">Read More &rarr;</a>
+      </div>
+      -->
+ 
+    </aside>
+ 
+    <!-- End Sidebar -->
+  </div>
+ 
+  <!-- End Main Content and Sidebar -->
+ 
+ 
+  <!-- Footer -->
+ 
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <p>&copy; Copyright Tom Torsney-Weir</p>
+    </div>
+  </footer>
+
 
 </body>
 </html>

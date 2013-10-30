@@ -1,6 +1,3 @@
----
-layout: page
----
 
 ![headshot][headshot]
 Hello! I am a PhD student in the [VDA Lab][vda] of the 
