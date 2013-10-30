@@ -30,6 +30,7 @@ end
 page "/feed.xml", :layout => false
 
 # section layouts
+page "/blog/*",    :layout => "post"
 page "/project/*", :layout => "project"
 
 ### 
