@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 title: "Public/private git for research"
 date: 2013-10-29 09:31
 comments: true
@@ -26,7 +25,7 @@ I detail my specific setup below.
 
 <!-- more -->
 
-## Set up 
+## Set Up 
 
 In this example I have my public repo at `github.com` and my private repo 
 hosted at the (fake) address `private.com`.
@@ -91,4 +90,6 @@ everything is up to date.
 git branch -r
 ```
 
+I check that all my public branches should be mapped to the public remote and
+all my private branches are mapped to my private remote.
 
