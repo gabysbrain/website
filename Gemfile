@@ -20,3 +20,5 @@ gem 'liquid', '~> 2.3.0'
 gem 'directory_watcher', '1.4.1'
 gem 'rpeg-multimarkdown', '~> 0.1.1'
 gem 'sinatra', '~> 1.4.2'
+gem 'newrelic_rpm'
+

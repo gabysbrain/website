@@ -37,6 +37,7 @@ GEM
     maruku (0.7.0)
     mime-types (1.25)
     netrc (0.7.7)
+    newrelic_rpm (3.6.8.168)
     posix-spawn (0.3.6)
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
@@ -74,6 +75,7 @@ DEPENDENCIES
   heroku
   jekyll (~> 0.12)
   liquid (~> 2.3.0)
+  newrelic_rpm
   rake (~> 0.9)
   rb-fsevent (~> 0.9)
   rdiscount (~> 2.0.7)
