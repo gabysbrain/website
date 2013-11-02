@@ -8,17 +8,17 @@ category: programming
 ---
 
 
-For research code, I feel that it's very important that my code is available
-online so that anyone can access and read it. I also want people to be able to
-view all the individual changesets that went into the software.  That way they
-can see the full thought-process that went into a project.  That is why, for
-example, [Tuner](http://github.com/torsneyt/tuner) is on GitHub.
+I feel that it's very important that any code I write for my research is
+available online so that anyone can access and read it. I also want people to
+be able to view all the individual changesets that went into the software.
+That way they can see the full thought-process that went into a project.  That
+is why, for example, [Tuner](http://github.com/torsneyt/tuner) is on GitHub.
 
-However, when I am developing a feature for a paper, I may not want the code
-to be public until after the paper is accepted.  Furthermore, I want to keep
-my private changes online so that I can share them with collaborators.  So
-what to do?  What I do is have 2 online git repos. A public one and a private
-one.  Then, I use feature branches in the style of
+However, when I am developing a feature for a paper, I don't want the code to
+be public until after the paper is accepted.  Furthermore, I want to keep my
+private changes online so that I can share them with collaborators.  So what
+to do?  What I do is have 2 git repos online, a public one and a private one.
+Then, I use feature branches in the style of
 [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) to keep
 track of all my changes.  I keep them in my private repo until I'm ready to
 expose them to the world and then move them to my public repo once I'm done.
@@ -26,7 +26,7 @@ I detail my specific setup below.
 
 <!-- more -->
 
-## set up 
+## Set up 
 
 In this example I have my public repo at `github.com` and my private repo 
 hosted at the (fake) address `private.com`.
@@ -62,7 +62,7 @@ confusing as to which one I should be merging into.
 
 ## Workflow
 
-now that all the basic structure is set up we can easily handle new branches.
+Now that all the basic structure is set up we can easily handle new branches.
 Here is an example of creating a new private feature branch, doing some work
 on it, and then moving it to my public repo.
 
@@ -90,10 +90,5 @@ everything is up to date.
 ``` console
 git branch -r
 ```
-
-## Conclusion
-
-and that's it!  once my internal development branches are in the public repo I
-can then, for example, issue pull requests into a main feature branch.
 
 
