@@ -2,6 +2,9 @@ require 'bundler/setup'
 require 'sinatra/base'
 require 'newrelic_rpm'
 
+# NewRelic with Unicorn
+NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
+
 # The project root directory
 $root = ::File.dirname(__FILE__)
 
@@ -24,3 +27,4 @@ class SinatraStaticServer < Sinatra::Base
 end
 
 run SinatraStaticServer
+
