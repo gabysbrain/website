@@ -1,0 +1,37 @@
+!!!
+/[if IE 8] <html class="no-js lt-ie9" lang="en" > <![endif]
+/[if gt IE 8]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:name => "viewport", :content => "width=device-width"}
+    -#%title Tom Torsney-Weir
+    %title= data.page.title
+  
+    = stylesheet_link_tag 'site'
+    = javascript_include_tag 'vendor/custom.modernizr'
+
+  %body
+
+    %div.row
+      %header.large-3.columns
+        %nav
+          -#%ul.title-area
+            -#%li.name
+          = image_tag 'headshot.jpg'
+          %h1= link_to 'Tom Torsney-Weir', '/'
+          %section
+            %ul
+              %li= link_to 'Projects', '/projects'
+              %li= link_to 'CV',       '/cv.html'
+              %li= link_to 'Blog',     '/blog'
+ 
+      %div.large-9.columns{:role => "content"}= yield
+ 
+ 
+    %footer.row
+      %div.large-12.columns
+        %hr
+        %p &copy; Copyright Tom Torsney-Weir
+

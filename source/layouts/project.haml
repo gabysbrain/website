@@ -1,0 +1,11 @@
+
+- wrap_layout :layout do
+  %article
+    %h1= current_page.data.title
+    - if current_page.data.teaser
+      %div.teaser= image_tag current_page.data.teaser
+      = partial "project_links", :locals => {:proj => current_page.data}
+      = yield
+    - if current_page.data.citation
+      %div.citation= current_page.data.citation
+
