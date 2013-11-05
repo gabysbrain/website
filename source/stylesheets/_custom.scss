@@ -1,0 +1,37 @@
+
+body > div.row:first-of-type {
+  padding-top: 2em;
+}
+
+// Custom taglist processing
+.taglist {
+  display: inline;
+  list-style: none;
+
+  .tag {
+    display:inline;
+  }
+
+  .tag:last-child:after {
+    content: "";
+  }
+  
+  .tag:after {
+    content: ", ";
+  }
+}
+
+.project-links {
+  @extend .button-group;
+
+  .link {
+    @extend .button;
+    @extend .tiny;
+  }
+}
+
+#content h2 {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+

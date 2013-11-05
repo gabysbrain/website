@@ -16,18 +16,30 @@
 
     %div.row
       %header.large-3.columns
-        %nav
-          -#%ul.title-area
-            -#%li.name
-          = image_tag 'headshot.jpg'
-          %h1= link_to 'Tom Torsney-Weir', '/'
-          %section
-            %ul
+        %section.title-area
+          -#= image_tag 'headshot.jpg'
+          %h1.title= link_to 'Tom Torsney-Weir', '/'
+          %h2.position PhD student
+          %ul.address
+            %li VDA lab
+            %li Faculty of Computer Science
+            %li University of Vienna
+            %li Währingerstrasse 29/3.34
+            %li 1020 Wien, Austria
+
+          %hr
+          -#%section
+            -# put the social links here!
+          %nav
+            %ul.menu
               %li= link_to 'Projects', '/projects'
-              %li= link_to 'CV',       '/cv.html'
               %li= link_to 'Blog',     '/blog'
+              %li= link_to 'CV',       '/cv.html'
+              %li= link_to 'Contact',  '/contact.html'
+              %li= link_to 'About',    '/about.html'
  
-      %div.large-9.columns{:role => "content"}= yield
+
+      %div.large-9.columns{:id => "content", :role => "content"}= yield
  
  
     %footer.row
