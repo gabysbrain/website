@@ -1,6 +1,17 @@
 
 - wrap_layout :layout do
   %article
-    %h1= current_page.data.title
+    %h1= current_article.title
+    %div.row.byline
+      %div.large-12.columns
+        %h6.date= current_article.date.strftime('%b %e, %Y')
+
     = yield
+
+    %footer
+      - unless current_article.tags.empty?
+        Tags:
+        %ul.taglist
+          - current_article.tags.each do |tagname|
+            %li.tag= link_to tagname, tag_path(tagname)
 
