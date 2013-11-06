@@ -1,5 +1,14 @@
 
 - wrap_layout :layout do
+  %nav.blog-nav
+    %span.left
+      - if current_article.previous_article
+        %i.fa.fa-angle-left
+        = link_to current_article.previous_article.title, current_article.previous_article
+    %span.right
+      - if current_article.next_article
+        = link_to current_article.next_article.title, current_article.next_article
+        %i.fa.fa-angle-right
   %article
     %h1= current_article.title
     %div.row.byline

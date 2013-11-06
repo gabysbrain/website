@@ -3,6 +3,15 @@ body > div.row:first-of-type {
   padding-top: 2em;
 }
 
+.blog-nav {
+  //@extend .row;
+
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2em;
+  padding-top: 1em;
+}
+
 // Custom taglist processing
 .taglist {
   display: inline;
