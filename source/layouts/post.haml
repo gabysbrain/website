@@ -24,3 +24,6 @@
           - current_article.tags.each do |tagname|
             %li.tag= link_to tagname, tag_path(tagname)
 
+      / disqus integration
+      = partial 'disqus'
+
