@@ -11,19 +11,22 @@
         %i.fa.fa-angle-right
   %article
     %h1.article-title= current_article.title
-    %div.row.byline
-      %div.large-12.columns
-        %h6.date= current_article.date.strftime('%b %e, %Y')
+    %section.byline
+      %h6.date= current_article.date.strftime('%b %e, %Y')
+      - unless current_article.tags.empty?
+        %ul.taglist
+          - current_article.tags.each do |tagname|
+            %li.tag
+              = link_to tag_path(tagname) do
+                %i.fa.fa-tag.fa-fw
+                = tagname
 
     ~ yield
 
     %footer
-      - unless current_article.tags.empty?
-        Tags:
-        %ul.taglist
-          - current_article.tags.each do |tagname|
-            %li.tag= link_to tagname, tag_path(tagname)
 
-      / disqus integration
-      = partial 'disqus'
+  / disqus integration
+  %aside.comments
+    %h2 Comments
+    = partial 'disqus'
 
