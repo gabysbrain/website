@@ -6,7 +6,7 @@
       %div.large-12.columns
         %h6.date= current_article.date.strftime('%b %e, %Y')
 
-    = yield
+    ~ yield
 
     %footer
       - unless current_article.tags.empty?

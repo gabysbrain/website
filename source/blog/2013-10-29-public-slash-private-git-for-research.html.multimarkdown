@@ -36,7 +36,7 @@ hosted at the (fake) address `private.com`.
 The first thing I do is remove the "origin" remote mapping. This way it's
 unambiguous whether I'm pushing a branch to my public repo or my private one.
 
-``` console
+``` shell
 git remote remove origin
 git remote add public git@github.com:torsneyt/tuner.git
 git remote add private git@private.com:torsneyt/tuner_dev.git
@@ -49,7 +49,7 @@ I have branches `release_2.0` and `bugfix` in the public repo and a
 `secret_feature` branch in my private repo.  Then I just map these the normal
 way:
 
-```console
+``` bash
 git branch release_2.0 public/release_2.0
 git branch bugfix public/bugfix
 git branch secret_feature private/secret_feature

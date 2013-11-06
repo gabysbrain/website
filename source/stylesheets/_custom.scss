@@ -30,8 +30,24 @@ body > div.row:first-of-type {
   }
 }
 
-#content h2 {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+#content {
+  h1 {
+    //margin-left: 1em;
+    margin-top: 0;
+  }
+
+  h2 {
+    padding-left: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+
+  .button-group {
+    margin-top: 1em;
+  }
 }
 

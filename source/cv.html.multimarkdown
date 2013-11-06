@@ -1,8 +1,11 @@
 ---
+title: CV
 layout: page
 ---
 
-# Refereed journal publications
+# CV
+
+## Refereed journal publications
 
 * Philippe J. Giabbanelli, __Thomas Torsney-Weir__, and Vijay Kumar Mago. 
   A fuzzy cognitive map of the psychosocial determinants of obesity. 
@@ -13,14 +16,14 @@ layout: page
   using visual response surface exploration. IEEE Transactions on 
   Visualization and Computer Graphics, 17(12):1892–1901, November-December 2011.
 
-# Conference publications
+## Conference publications
 
 * Philippe J. Giabbanelli, __Thomas Torsney-Weir__, and Diane T. Finegood. 
   Building a system dynamics model of individual energy balance related 
   behaviour. In Second Canadian Obesity Summit, volume 35, page 201, 
   Montreal, April-May 2011.
 
-# Other
+## Other
 
 * __Thomas Torsney-Weir__.
     Visual analysis of high-dimensional parameter spaces.
@@ -31,34 +34,34 @@ layout: page
   parameter finding for image segmentation algorithms using visual response
   surface exploration. SFU Computing Science Department TR–2011–01.
 
-# Invited talks
+## Invited talks
 
 * "Tuner." Visualization and virtual reality research group, 
   University of Leeds, Leeds, UK September 19, 2013.
 * "Tuner." MADAI workshop, Duke University, Durham, NC June 20, 2012.
 * "Visualization of computer models."  MoCCSy Graduate Seminar, Burnaby, BC September 16, 2011.
 
-# Education
+## Education
 
 * Simon Fraser University, Burnaby, BC, Canada. MSc in Computer Science, 2012.
 * Georgetown University, Washington, DC, USA. BS in Computer Science, 2002.
 
-# Software publications
+## Software publications
 
 * Tuner (<https://www.tomtorsneyweir.com/tuner>)
 
-# Memberships
+## Memberships
 
 * IEEE student member
 * SIAM student member
 
-# Teaching assistant appointments
+## Teaching assistant appointments
 
 * CMPT 361 Introduction to Computer Graphics, Fall 2011.
 * CMPT 225 Introduction to Data Structures and Algorithms, Spring 2011.
 * CMPT 225 Introduction to Data Structures and Algorithms, Fall 2010.
 
-# Other academic positions
+## Other academic positions
 
 * Research Assistant, GrUVi Lab, Simon Fraser University Computing Science Department
   January 2011 -- December 2012
@@ -75,7 +78,7 @@ layout: page
     * Added rigid body dynamics to the SimRobot robotics simulator.
     * Developed a collision detection system based on V-Clip to account for penetration and location of impact.
 
-# Volunteer positions
+## Volunteer positions
 
 * SFU Teaching Support Staff Union steward, September 2010 -- September 2012.
 * SFU Teaching Support Staff Union
@@ -86,11 +89,11 @@ layout: page
 * SFU Computing Science buddy coordinator, Incoming student mentorship
   program, January 2011 -- September 2012.
 
-# Academic awards
+## Academic awards
 
 * SFU graduate fellowship (Masters), $6250, Spring 2012.
 
-# Professional positions
+## Professional positions
 
 * Vice President, Lead Developer, StoneCastle Partners. New York, NY
   September 2007 -- June 2010
@@ -129,7 +132,7 @@ layout: page
     * Assisted with the coordination of the CDO Analytics testing team.
     * Wrote specifications based on analysts' suggestions and work flow.
 
-# Other activities
+## Other activities
 
 * Skiing
 * Rock climbing
