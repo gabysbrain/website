@@ -4,19 +4,31 @@ module Tilt
   class MultiMarkdownTemplate < Template
 
     def self.engine_initialized?
-      defined? MultiMarkdown
+      # make sure mutlimarkdown is in the path
+      # from http://stackoverflow.com/questions/2108727/which-in-ruby-checking-if-program-exists-in-path-from-ruby
+      cmd = 'multimarkdown'
+      exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
+      ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
+        exts.each { |ext|
+          exe = File.join(path, "#{cmd}#{ext}")
+          return exe if File.executable? exe
+        }
+      end
+      return nil
     end
 
     def initialize_engine
-      require_template_library 'multimarkdown'
     end
 
     def prepare
-      @engine = ::MultiMarkdown.new(data)
+      @source = data
     end
 
     def evaluate(scope, locals, &block)
-      @engine.to_html
+      require 'open3'
+      stdout, stderr, status = Open3.capture3("multimarkdown -t html -s", 
+                                              :stdin_data=>@source)
+      stdout
     end
 
     def allows_script?
