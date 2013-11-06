@@ -21,6 +21,17 @@ body > div.row:first-of-type {
   }
 }
 
+.sociallist {
+  display: inline;
+  list-style: none;
+  margin-top: 1em;
+
+  li {
+    display: inline;
+  }
+
+}
+
 .project-links {
   @extend .button-group;
 
