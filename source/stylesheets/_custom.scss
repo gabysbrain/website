@@ -3,6 +3,14 @@ body > div.row:first-of-type {
   padding-top: 2em;
 }
 
+.article-title {
+  color: black;
+
+  border-bottom-style: none !important;
+  border-bottom-width: 0 !important;
+  padding-left: 0 !important;
+}
+
 .blog-nav {
   //@extend .row;
 

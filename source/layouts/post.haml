@@ -10,7 +10,7 @@
         = link_to current_article.next_article.title, current_article.next_article
         %i.fa.fa-angle-right
   %article
-    %h1= current_article.title
+    %h1.article-title= current_article.title
     %div.row.byline
       %div.large-12.columns
         %h6.date= current_article.date.strftime('%b %e, %Y')
