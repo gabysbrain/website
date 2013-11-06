@@ -57,15 +57,19 @@ for adding boilerplate code.  I particularly like this for adding the knitr
 code blocks.  With the fork of SnipMate I have set up 
 (<https://github.com/gabysbrain/snipmate.vim>) typing `rcode` expands to
 
-    <!--begin.rcode ${1},cache=TRUE,dependson='${2}'
-    ${3}
-    end.rcode-->
+```
+<!--begin.rcode ${1},cache=TRUE,dependson='${2}'
+${3}
+end.rcode-->
+```
 
 and typing `rfig` expands to
 
-    <!--begin.rcode ${1},cache=TRUE,dependson='${2}',fig.width=${3:12},fig.height=${4:12},dev='png'
-    ${5}
-    end.rcode-->
+```
+<!--begin.rcode ${1},cache=TRUE,dependson='${2}',fig.width=${3:12},fig.height=${4:12},dev='png'
+${5}
+end.rcode-->
+```
 
 I'm also using the multimarkdown syntax highlighter: 
 <https://github.com/jngeist/vim-multimarkdown>.
@@ -116,6 +120,6 @@ require some interaction with a running version of R though.
 But for now, I'm happy that I can easily make a record of what I've done
 each week and my supervisor is happy that I can show what I've done!
 
-[preview]: {{root_url}}/images/notebook-preview.png "preview image" 
+[preview]: /images/notebook-preview.png "preview image" 
            width=640px class=block
 

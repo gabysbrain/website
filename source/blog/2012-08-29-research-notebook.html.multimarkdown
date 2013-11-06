@@ -73,7 +73,7 @@ the extension is now `multimarkdown`.  I found that because
 octopress/jekyll's extension mapping will match partial extensions `mmd` was
 being detected as a different file type than multimarkdown.
 
-{% codeblock plugins/multimarkdown.rb lang:ruby %}
+``` ruby plugins/multimarkdown.rb
 # multimarkdown renderer for jekyll
 #
 # adapted from: https://github.com/danieldriver/jekyll/commit/a07766e3c5cb1c78b7b77643f850a67cb721763a
@@ -101,7 +101,7 @@ module Jekyll
 
   end
 end
-{% endcodeblock %}
+```
 
 ### knitr
 
@@ -115,7 +115,7 @@ the text directly to knitr so that we can index the cache by blog post name.
 That way there's a unique cache directory for each blog post and identical
 cache section names in different blog posts won't clobber each other.
 
-{% codeblock plugins/knitr.rb lang:ruby %}
+``` ruby plugins/knitr.rb
 require 'tempfile'
 
 module Jekyll
@@ -169,7 +169,7 @@ module Jekyll
     end
   end
 end
-{% endcodeblock %}
+```
 
 #### `knit_markdown.R`
 
@@ -184,7 +184,7 @@ to highlight R code we need to wrap it in liquid `codeblock` tags.  The
 hook for that is done by lines 69-71.  The rest just sets all the hooks I
 want to use and renders the files using knitr.
 
-{% codeblock plugins/knit_markdown.R lang:r %}
+``` R plugins/knit_markdown.R
 #!/usr/bin/Rscript
 
 library(knitr)
@@ -276,7 +276,7 @@ opts_knit$set(progress=FALSE)
 opts_knit$set(out.format='custom')
 opts_knit$set(input.dir=getwd())
 knit(in.file, out.file)
-{% endcodeblock %}
+```
 
 ## Conclusion
 
