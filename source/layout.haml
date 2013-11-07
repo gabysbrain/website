@@ -11,6 +11,9 @@
   
     = stylesheet_link_tag 'site'
     = javascript_include_tag 'vendor/custom.modernizr'
+    = javascript_include_tag 'vendor/jquery'
+    = javascript_include_tag 'foundation/foundation'
+    = javascript_include_tag 'foundation/foundation.dropdown'
 
     = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
 
@@ -32,26 +35,37 @@
         %section.title-area
           -#= image_tag 'headshot.jpg'
           %h1.title= link_to 'Tom Torsney-Weir', '/'
-          %h2.position PhD student
-          %ul.address
-            %li VDA research group
-            %li Faculty of Computer Science
-            %li University of Vienna
-            %li Währingerstrasse 29/3.34
-            %li 1090 Wien, Austria
+          %div.hide-for-small
+            %h2.position PhD student
+            %ul.address
+              %li VDA research group
+              %li Faculty of Computer Science
+              %li University of Vienna
+              %li Währingerstrasse 29/3.34
+              %li 1090 Wien, Austria
 
-          %hr
+            %hr
           -#%section
             -# put the social links here!
-          %nav
-            %ul.menu
-              %li= link_to 'Projects', '/projects'
-              %li= link_to 'Blog',     '/blog'
-              %li= link_to 'CV',       '/cv.html'
-              -#%li= link_to 'Contact',  '/contact.html'
-              %li= link_to 'About',    '/about.html'
-          %hr
-          = partial 'social'
+          %nav.site-nav
+            %div.hide-for-medium-up
+              %button{'data-dropdown' => "main-menu-button", :class => 'button dropdown'} Test
+              %ul#main-menu-button.menu.f-dropdown
+                %li= link_to 'Projects', '/projects'
+                %li= link_to 'Blog',     '/blog'
+                %li= link_to 'CV',       '/cv.html'
+                -#%li= link_to 'Contact',  '/contact.html'
+                %li= link_to 'About',    '/about.html'
+            %div.hide-for-small
+              %ul#main-menu-list.menu
+                %li= link_to 'Projects', '/projects'
+                %li= link_to 'Blog',     '/blog'
+                %li= link_to 'CV',       '/cv.html'
+                -#%li= link_to 'Contact',  '/contact.html'
+                %li= link_to 'About',    '/about.html'
+          %div.hide-for-small
+            %hr
+            = partial 'social'
 
  
 
@@ -62,4 +76,8 @@
       %div.large-12.columns
         %hr
         %p &copy; Copyright Tom Torsney-Weir
+
+    -#= partial 'foundation'
+    :javascript
+      $(document).foundation();
 
