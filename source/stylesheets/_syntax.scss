@@ -1,0 +1,99 @@
+@import "solarized";
+
+code {
+  background: $solarized-base03;
+  border: 1px solid darken($solarized-base02, 5);
+  color: $solarized-base1;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+pre {
+  background: $solarized-base03;
+  border: 1px solid darken($solarized-base02, 5);
+  color: $solarized-base1;
+  overflow: auto;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+
+  code {
+    color: $solarized-base1;
+    overflow: auto;
+    border: none;
+    padding: 0;
+
+    // Mappings for all the prism.js classes
+    .token.comment {
+      color: $solarized-base01 !important; 
+      font-style: italic !important;
+    }
+    .token.prolog {
+      color: $solarized-base01 !important; 
+      font-style: italic !important;
+    }
+    .token.doctype {
+      color: $solarized-base01 !important; 
+      font-style: italic !important;
+    }
+    .token.cdata {
+      color: $solarized-base01 !important; 
+      font-style: italic !important;
+    }
+    .token.class-name {
+      color: $solarized-magenta !important;
+    }
+    .token.punctuation {
+      color: $solarized-base1;
+    }
+    .token.boolean {
+      color: $solarized-green !important;
+      font-weight: bold !important;
+    }
+    .token.number {
+      color: $solarized-cyan !important;
+    }
+    .token.constant {
+      color: $solarized-yellow !important;
+    }
+    .token.function {
+      color: $solarized-blue !important;
+      font-weight: bold !important;
+    }
+    .token.string {
+      color: $solarized-cyan !important;
+    }
+    .token.builtin {
+      color: $solarized-yellow !important;
+    }
+    .token.operator {
+      color: $solarized-base1 !important;
+      font-weight: bold !important;
+    }
+    .token.variable {
+      color: $solarized-blue !important;
+    }
+    .token.keyword {
+      color: $solarized-orange !important;
+      font-weight: bold !important;
+    }
+    .token.regex {
+      color: $solarized-cyan !important;
+    }
+    .token.important {
+      color: $solarized-base1 !important;
+      font-weight: bold !important;
+    }
+
+    .token.property {}
+    .token.tag {}
+    .token.symbol {}
+    .token.selector {}
+    .token.attr-name {}
+    .token.entity {}
+    .token.url {}
+    .token.atrule {}
+    .token.attr-value {}
+    .token.entity {}
+  }
+}
+
