@@ -76,8 +76,9 @@ body > div.row:first-of-type {
 
   h2 {
     padding-left: 0.5em;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom-style: $hr-border-style;
+    border-bottom-width: $hr-border-width;
+    border-bottom-color: $hr-border-color;
   }
 
   ul {
