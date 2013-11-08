@@ -1,4 +1,5 @@
 require 'lib/tilt-multimarkdown'
+require 'nokogiri'
 
 ###
 # Blog settings
@@ -12,8 +13,21 @@ activate :blog do |blog|
   blog.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   blog.layout = "post"
-  blog.summary_separator = /(<!-- more -->)/
+  # blog.summary_separator = /(<!-- more -->)/
   # blog.summary_length = 250
+  blog.summary_generator = Proc.new do |resource, rendered, length, ellipses|
+    summary_sep = /(<!-- more -->)/
+    # first check if there's a read more link
+    # otherwise trim by length
+    if rendered.match(summary_sep)
+      rendered = rendered.split(summary_sep).first
+    else
+      rendered = resource.default_summary_generator(rendered, length, ellipses)
+    end
+    # finally make sure we cut off before the first sub-section
+    rendered = rendered.split(/<h2.*>/).first
+    rendered
+  end
   # blog.year_link = ":year.html"
   # blog.month_link = ":year/:month.html"
   # blog.day_link = ":year/:month/:day.html"
