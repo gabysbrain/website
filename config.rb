@@ -43,6 +43,12 @@ end
 
 activate :directory_indexes
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote = 'gh-pages'
+  deploy.branch = 'master'
+end
+
 #set :build_dir, 'tmp'
 
 page "/feed.xml", :layout => false

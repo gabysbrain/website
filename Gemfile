@@ -9,8 +9,7 @@ gem "middleman-blog", "~> 3.3.0"
 gem "zurb-foundation"
 gem "compass"
 gem "nokogiri"
-gem "rack-contrib"
-gem "puma"
+gem "middleman-deploy"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
