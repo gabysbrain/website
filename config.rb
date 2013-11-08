@@ -43,6 +43,8 @@ end
 
 activate :directory_indexes
 
+set :build_dir, '/tmp'
+
 page "/feed.xml", :layout => false
 
 # section layouts
