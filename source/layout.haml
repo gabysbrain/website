@@ -47,22 +47,8 @@
             %hr
           -#%section
             -# put the social links here!
-          %nav.site-nav
-            %div.hide-for-medium-up
-              %button{'data-dropdown' => "main-menu-button", :class => 'button dropdown'} Test
-              %ul#main-menu-button.menu.f-dropdown
-                %li= link_to 'Projects', '/projects'
-                %li= link_to 'Blog',     '/blog'
-                %li= link_to 'CV',       '/cv.html'
-                -#%li= link_to 'Contact',  '/contact.html'
-                %li= link_to 'About',    '/about.html'
-            %div.hide-for-small
-              %ul#main-menu-list.menu
-                %li= link_to 'Projects', '/projects'
-                %li= link_to 'Blog',     '/blog'
-                %li= link_to 'CV',       '/cv.html'
-                -#%li= link_to 'Contact',  '/contact.html'
-                %li= link_to 'About',    '/about.html'
+          = partial 'site_nav'
+
           %div.hide-for-small
             %hr
             = partial 'social'

@@ -1,0 +1,20 @@
+
+- links = [['Projects', '/projects'], 
+           ['Blog', '/blog'], 
+           ['CV', '/cv.html'],
+           ['Contact', '/contact.html'],
+           ['About', '/about.html']]
+
+%nav.site-nav
+  %div.hide-for-medium-up
+    %button.menu-button{'data-dropdown' => "main-menu-button"}
+      Links
+      %i.fa.fa-bars
+    %ul#main-menu-button.right.menu.f-dropdown
+      - links.each do |name, link|
+        %li= link_to name, link
+  %div.hide-for-small
+    %ul#main-menu-list.menu
+      - links.each do |name, link|
+        %li= link_to name, link
+
