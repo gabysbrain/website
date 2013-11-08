@@ -12,7 +12,8 @@
   %article
     %h1.article-title= current_article.title
     %section.byline
-      %h6.date= current_article.date.strftime('%b %e, %Y')
+      %h6.date
+        %time= current_article.date.strftime('%b %e, %Y')
       - unless current_article.tags.empty?
         %ul.taglist
           - current_article.tags.each do |tagname|
