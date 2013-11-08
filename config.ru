@@ -10,7 +10,7 @@ require "middleman/rack"
 require "rack/contrib/try_static"
 
 # Build the static site when the app boots
-puts `bundle exec middleman build`
+puts `bundle exec middleman build --verbose`
 
 # Enable proper HEAD responses
 use Rack::Head
