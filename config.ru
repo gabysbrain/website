@@ -1,30 +1,33 @@
-require 'bundler/setup'
-require 'sinatra/base'
-require 'newrelic_rpm'
+#require 'newrelic_rpm'
 
 # NewRelic with Unicorn
-NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
+#NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
 
-# The project root directory
-$root = ::File.dirname(__FILE__)
+require "rubygems"
 
-class SinatraStaticServer < Sinatra::Base
+require "rack"
+require "middleman/rack"
+require "rack/contrib/try_static"
 
-  get(/.+/) do
-    send_sinatra_file(request.path) {404}
-  end
+# Build the static site when the app boots
+`bundle exec middleman build`
 
-  not_found do
-    send_file(File.join(File.dirname(__FILE__), 'public', '404.html'), {:status => 404})
-  end
+# Enable proper HEAD responses
+use Rack::Head
+# Attempt to serve static HTML files
+use Rack::TryStatic,
+    :root => "build",
+    :urls => %w[/],
+    :try => ['.html', 'index.html', '/index.html']
 
-  def send_sinatra_file(path, &missing_file_block)
-    file_path = File.join(File.dirname(__FILE__), 'public',  path)
-    file_path = File.join(file_path, 'index.html') unless file_path =~ /\.[a-z]+$/i
-    File.exist?(file_path) ? send_file(file_path) : missing_file_block.call
-  end
-
-end
-
-run SinatraStaticServer
-
+# Serve a 404 page if all else fails
+run lambda { |env|
+  [
+    404,
+    {
+      "Content-Type"  => "text/html",
+      "Cache-Control" => "public, max-age=60"
+    },
+    File.open("build/404/index.html", File::RDONLY)
+  ]
+}
