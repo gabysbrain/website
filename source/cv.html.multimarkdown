@@ -1,0 +1,143 @@
+---
+title: CV
+layout: page
+---
+
+# CV
+
+## Refereed journal publications
+
+* Philippe J. Giabbanelli, __Thomas Torsney-Weir__, and Vijay Kumar Mago. 
+  A fuzzy cognitive map of the psychosocial determinants of obesity. 
+  Applied Soft Computing, 12(12):3711–3724, December 2012.
+* __Thomas Torsney-Weir__, Ahmed Saad, Torsten Möller, Britta Weber, 
+  Hans-Christian Hege, Jean- Marc Verbavatz, and Steven Bergner. 
+  Tuner: Principled parameter finding for image segmentation algorithms 
+  using visual response surface exploration. IEEE Transactions on 
+  Visualization and Computer Graphics, 17(12):1892–1901, November-December 2011.
+
+## Conference publications
+
+* Philippe J. Giabbanelli, __Thomas Torsney-Weir__, and Diane T. Finegood. 
+  Building a system dynamics model of individual energy balance related 
+  behaviour. In Second Canadian Obesity Summit, volume 35, page 201, 
+  Montreal, April-May 2011.
+
+## Other
+
+* __Thomas Torsney-Weir__.
+    Visual analysis of high-dimensional parameter spaces.
+    Masters thesis, Department of Computing Science, 
+    Simon Fraser University, 2012.
+* __Thomas Torsney-Weir__, Ahmed Saad, Torsten Möller, Britta Weber,
+  Hans-Christian Hege, and Jean-Marc Verbavatz. (2011) PReSM: Principled
+  parameter finding for image segmentation algorithms using visual response
+  surface exploration. SFU Computing Science Department TR–2011–01.
+
+## Invited talks
+
+* "Tuner." Visualization and virtual reality research group, 
+  University of Leeds, Leeds, UK September 19, 2013.
+* "Tuner." MADAI workshop, Duke University, Durham, NC June 20, 2012.
+* "Visualization of computer models."  MoCCSy Graduate Seminar, Burnaby, BC September 16, 2011.
+
+## Education
+
+* Simon Fraser University, Burnaby, BC, Canada. MSc in Computer Science, 2012.
+* Georgetown University, Washington, DC, USA. BS in Computer Science, 2002.
+
+## Software publications
+
+* Tuner (<https://www.tomtorsneyweir.com/tuner>)
+
+## Memberships
+
+* IEEE student member
+* SIAM student member
+
+## Teaching assistant appointments
+
+* CMPT 361 Introduction to Computer Graphics, Fall 2011.
+* CMPT 225 Introduction to Data Structures and Algorithms, Spring 2011.
+* CMPT 225 Introduction to Data Structures and Algorithms, Fall 2010.
+
+## Other academic positions
+
+* Research Assistant, GrUVi Lab, Simon Fraser University Computing Science Department
+  January 2011 -- December 2012
+    * Developed Tuner, a visualization tool for image segmentation algorithm developers to find optimum parameter settings for their algorithms.
+    * Analyzed the complexity of visualizing high-dimensional continuous functions.
+
+* Research Assistant, NYU Proteus Project, NYU Computer Science Department
+  September 2005 -- May 2006
+    * Implemented a vizualization tool for multilingual parse trees in Java.
+    * Outlined basic idea for improved parse tree visualization.
+
+* Research Assistant, NIST-funded project: "Learning driving behaviors for autonomous vehicles," Georgetown Computer Science Department 
+  May 2002 -- October 2002
+    * Added rigid body dynamics to the SimRobot robotics simulator.
+    * Developed a collision detection system based on V-Clip to account for penetration and location of impact.
+
+## Volunteer positions
+
+* SFU Teaching Support Staff Union steward, September 2010 -- September 2012.
+* SFU Teaching Support Staff Union
+  Membership Mobilization Committee Commissioner,
+  January 2012 -- September 2012.
+* SFU Teaching Support Staff Union Membership Mobilization Committee member,
+  January 2011 -- September 2012.
+* SFU Computing Science buddy coordinator, Incoming student mentorship
+  program, January 2011 -- September 2012.
+
+## Academic awards
+
+* SFU graduate fellowship (Masters), $6250, Spring 2012.
+
+## Professional positions
+
+* Vice President, Lead Developer, StoneCastle Partners. New York, NY
+  September 2007 -- June 2010
+    * Implemented an investment management system for a variety of asset types
+      using Pylons/Python, the Dojo javascript framework, and PostgreSQL.
+    * Specified and supervised the integration of the Alfresco document 
+      management system with the investment management system to track key 
+      investment decisions and deal documents.
+    * Designed a GIS system for monitoring areas of the country risky to banks.
+    * Built a genetic algorithm to find the optimal method to perform field 
+      visits across the country.
+    * Used the Condor grid service to implement a CDO evaluation system that 
+      enabled a Unix server to call a Windows-only application.
+    * Wrote a simple web crawler to download rural newspaper articles to 
+      a central data store so analysts could browse regional news not covered 
+      by the major news aggregation sites.
+
+* Vice President, Lead Developer, Bear Stearns Asset Management. New York, NY
+  July 2004 -- July 2006, March 2007 -- September 2007
+    * Supervised a team of 4 to design and implement a front-office 
+      portfolio surveillance system for a structured finance hedge fund 
+      using a SQL database using Java and Ruby on Rails.
+    * Used Condor to parallelize various long-running tasks across multiple 
+      compute nodes.
+    * Assisted with the design and implementation of a proprietary credit 
+      risk model for an internally managed fund.
+    * Interacted directly with business staff to design and implement 
+      a variety of portfolio management systems.
+
+* Senior Associate, Moody's Investors Service. New York, NY 
+  March 2003 -- July 2004
+    * Implemented a spread-based Monte Carlo asset simulation in C.
+    * Created a combination Excel spreadsheet and C to create an Excel 
+      add-in to rate combo notes.
+    * Assisted analysts with modeling complex waterfall steps in CDO Analytics.
+    * Assisted with the coordination of the CDO Analytics testing team.
+    * Wrote specifications based on analysts' suggestions and work flow.
+
+## Other activities
+
+* Skiing
+* Rock climbing
+* Cycling
+* Scuba diving
+* Photography
+
+

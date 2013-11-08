@@ -1,0 +1,41 @@
+
+// Custom stuff for everything in the title area
+.title-area {
+  a {
+    color: black;
+  }
+  .title {
+    @extend h1;
+    font-size: $title-font-size;
+    @media #{$screen} and (max-width:"#{$small-screen}") {
+      display: inline;
+    }
+  }
+  .position {
+    @extend .subheader;
+    font-size: $subtitle-and-nav-font-size;
+  }
+  .address{
+    display:inline;
+    list-style: none;
+  }
+
+  nav {
+    @media #{$screen} and (max-width:"#{$small-screen}") {
+      display: inline;
+    }
+
+    .menu-button {
+      @include button;
+      @include dropdown-button(small, #fff, false);
+      @extend .tiny;
+      @extend .right;
+    }
+
+    .menu {
+      @include side-nav;
+      font-size: $subtitle-and-nav-font-size;
+    }
+  }
+}
+

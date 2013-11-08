@@ -1,0 +1,92 @@
+
+body > div.row:first-of-type {
+  padding-top: 2em;
+}
+
+.article-title {
+  color: black;
+
+  border-bottom-style: none !important;
+  border-bottom-width: 0 !important;
+  padding-left: 0 !important;
+}
+
+.blog-nav {
+  //@extend .row;
+
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2em;
+  padding-top: 1em;
+}
+
+.comments {
+  margin-top: 2em;
+}
+
+.byline {
+  @include grid-row;
+
+  .date {
+    display: inline;
+  }
+
+  // Custom taglist processing
+  .taglist {
+    @extend .button-group;
+    @extend .right;
+    display: inline;
+    margin: 0 !important;
+  
+    .tag {
+      @extend .button;
+      @extend .tiny;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.sociallist {
+  display: inline;
+  list-style: none;
+  margin-top: 1em;
+
+  li {
+    display: inline;
+  }
+
+}
+
+.project-links {
+  @extend .button-group;
+
+  .link {
+    @extend .button;
+    @extend .tiny;
+  }
+}
+
+#content {
+  h1 {
+    //margin-left: 1em;
+    margin-top: 0;
+  }
+
+  h2 {
+    padding-left: 0.5em;
+    border-bottom-style: $hr-border-style;
+    border-bottom-width: $hr-border-width;
+    border-bottom-color: $hr-border-color;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+
+  .button-group {
+    margin-top: 1em;
+  }
+}
+

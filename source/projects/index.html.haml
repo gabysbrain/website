@@ -1,0 +1,18 @@
+---
+layout: layout
+---
+
+- projects = sitemap.where(:layout.include => "project").all
+
+%h1 Projects
+
+%h2 Research
+- projects.each do |proj|
+  - if proj.data.category == "research"
+    = partial "project_summary", :locals => {:proj => proj}
+
+%h2 Other
+- projects.each do |proj|
+  - if proj.data.category != "research"
+    = partial "project_summary", :locals => {:proj => proj}
+

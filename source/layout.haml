@@ -1,0 +1,69 @@
+!!!
+/[if IE 8] <html class="no-js lt-ie9" lang="en" > <![endif]
+/[if gt IE 8]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:name => "viewport", :content => "width=device-width"}
+    %title Tom Torsney-Weir
+    %title= data.page.title
+  
+    = stylesheet_link_tag 'site'
+    = javascript_include_tag 'vendor/custom.modernizr'
+    = javascript_include_tag 'vendor/jquery'
+    = javascript_include_tag 'foundation/foundation'
+    = javascript_include_tag 'foundation/foundation.dropdown'
+
+    = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
+
+    / google analytics
+    = partial 'google_analytics'
+
+    -#= stylesheet_link_tag 'prism.js/prism.default'
+    = javascript_include_tag 'vendor/prism.js/prism'
+    -#= stylesheet_link_tag 'highlight.js/foundation'
+    -#= javascript_include_tag 'vendor/highlight.pack.js'
+    -#:javascript
+      -#hljs.tabReplace = '  ';
+      -#hljs.initHighlightingOnLoad();
+
+  %body
+
+    %div.row
+      %header.large-3.columns
+        %section.title-area
+          -#= image_tag 'headshot.jpg'
+          %h1.title= link_to 'Tom Torsney-Weir', '/'
+          %div.hide-for-small
+            %h2.position PhD student
+            %ul.address
+              %li VDA research group
+              %li Faculty of Computer Science
+              %li University of Vienna
+              %li Währingerstrasse 29/3.34
+              %li 1090 Wien, Austria
+
+            %hr
+          -#%section
+            -# put the social links here!
+          = partial 'site_nav'
+
+          %div.hide-for-small
+            %hr
+            = partial 'social'
+
+ 
+
+      %div.large-9.columns{:id => "content", :role => "content"}= yield
+ 
+ 
+    %footer.row
+      %div.large-12.columns
+        %hr
+        %p &copy; Copyright Tom Torsney-Weir
+
+    -#= partial 'foundation'
+    :javascript
+      $(document).foundation();
+
