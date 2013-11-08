@@ -27,6 +27,8 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
+activate :directory_indexes
+
 page "/feed.xml", :layout => false
 
 # section layouts
