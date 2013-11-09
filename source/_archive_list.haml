@@ -5,11 +5,7 @@
   - if prev_page
     %p= link_to 'Previous page', prev_page
 
-%ul
-  - page_articles.each_with_index do |article, i|
-    %li.archive_item
-      = link_to article.title, article
-      %span= article.date.strftime('%b %e, %Y')
+= partial 'article_shortlist', :locals => {:articles => page_articles}
 
 - if paginate && next_page
   - if next_page
