@@ -14,3 +14,9 @@ layout: page
     %li Machine Learning
 
 
+-#%h2 Research projects
+-#= partial 'recent_research'
+
+%h2 Recent posts
+= partial 'article_shortlist', :locals => {:articles => page_articles[0, 5]}
+
