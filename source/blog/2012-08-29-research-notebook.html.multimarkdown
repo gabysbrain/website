@@ -73,7 +73,7 @@ the extension is now `multimarkdown`.  I found that because
 octopress/jekyll's extension mapping will match partial extensions `mmd` was
 being detected as a different file type than multimarkdown.
 
-``` language-ruby line-numbers plugins/multimarkdown.rb
+``` language-ruby plugins/multimarkdown.rb
 # multimarkdown renderer for jekyll
 #
 # adapted from: https://github.com/danieldriver/jekyll/commit/a07766e3c5cb1c78b7b77643f850a67cb721763a
@@ -108,7 +108,7 @@ end
 The knitr plugin consists of 2 files `knitr.rb` which is just a wrapper
 for `knit_markdown.R` which does most of the work.
 
-#### `knitr.rb`
+#### knitr.rb
 
 Here's the code for `knitr.rb`.  It uses tempfiles instead of just sending
 the text directly to knitr so that we can index the cache by blog post name.
@@ -171,7 +171,7 @@ module Jekyll
 end
 ```
 
-#### `knit_markdown.R`
+#### knit_markdown.R
 
 This is the script that does most of the heavy lifting.  Extensions to knitr's
 processing is handled through various "hooks."  These are described in the

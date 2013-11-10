@@ -33,7 +33,7 @@ anyway.
 When creating a post I just have to make sure that for blog posts my yaml
 front matter includes a `layout: post` line as shown below:
 
-``` yaml
+``` language-yaml
 ---
 layout: post
 title: "Reproducable research"
@@ -45,7 +45,7 @@ categories: research
 
 and projects include a `layout: project` line:
 
-``` yaml
+``` language-yaml
 ---
 layout: project
 title: "Tuner"
@@ -64,7 +64,7 @@ I then made sure that there were layout files called `post.html` and
 Then, when creating my [blog index](/blog/) page, I just have to check 
 if `layout = 'post'`
 
-```html
+``` language-html linenums
 {% for post in paginator.posts %}
   {% if post.layout == 'post' %}
   {% assign content = post.content %}
@@ -78,7 +78,7 @@ if `layout = 'post'`
 For the projects list I manually list the categories right now.  So, for 
 example, the "Research" section of my [projects list](/projects) looks like
 
-```html
+``` language-html linenums
 <h1>Research</h1>
 {% for proj in site.posts %}
   {% if proj.layout == 'project' and proj.category == 'research' %}
@@ -95,7 +95,7 @@ example, the "Research" section of my [projects list](/projects) looks like
 The last step was to make sure that creating new posts via the Rakefile
 automatically add the layout directive.  My new post task now looks like:
 
-``` ruby
+``` language-ruby linenums
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
 task :new_post, :title do |t, args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
@@ -126,7 +126,7 @@ extra fields that the project layout uses for my projects like a teaser image,
 and links for demo videos, citations, websites, etc.  My new project task
 looks like
 
-``` ruby
+``` language-ruby linenums
 desc "Begin a new project in #{source_dir}/#{projects_dir}"
 task :new_project, :title do |t, args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
