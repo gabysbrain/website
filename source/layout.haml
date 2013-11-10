@@ -24,8 +24,17 @@
     / google analytics
     = partial 'google_analytics'
 
-    -#= stylesheet_link_tag 'prism.js/prism.default'
-    = javascript_include_tag 'vendor/prism.js/prism'
+    = stylesheet_link_tag 'prettify.js/tomorrow-night-light'
+    = javascript_include_tag 'vendor/prettify.js/prettify'
+
+    :javascript
+      $(document).ready(function() {
+        //$('pre').addClass('prettyprint');
+        $('pre code').each(function() {
+          $(this).parent().addClass('prettyprint');
+        });
+        prettyPrint();
+      });
 
   %body
 
