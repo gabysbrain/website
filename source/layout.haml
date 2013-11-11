@@ -25,15 +25,7 @@
     = partial 'google_analytics'
 
     = javascript_include_tag 'vendor/prettify.js/prettify'
-
-    :javascript
-      $(document).ready(function() {
-        //$('pre').addClass('prettyprint');
-        $('pre code').each(function() {
-          $(this).parent().addClass('prettyprint');
-        });
-        prettyPrint();
-      });
+    = javascript_include_tag 'code-highlight'
 
   %body
 
