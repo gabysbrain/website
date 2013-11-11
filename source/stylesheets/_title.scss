@@ -15,10 +15,6 @@
     @extend .subheader;
     font-size: $subtitle-and-nav-font-size;
   }
-  .address{
-    display:inline;
-    list-style: none;
-  }
 
   nav {
     @media #{$screen} and (max-width:"#{$small-screen}") {

@@ -1,5 +1,8 @@
 require 'lib/tilt-multimarkdown'
+require 'lib/social_helpers'
 require 'nokogiri'
+
+helpers SocialHelpers
 
 ###
 # Blog settings
