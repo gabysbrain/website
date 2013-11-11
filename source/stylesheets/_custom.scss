@@ -53,6 +53,23 @@ body > div.row:first-of-type {
   }
 }
 
+.selected-projects {
+  @include block-grid(3);
+  img {
+    padding: 1px;
+    border-style: $hr-border-style;
+    border-width: $hr-border-width;
+    border-color: $hr-border-color;
+    //background-color: #ff0;
+  }
+
+  li {
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
 .sociallist {
   display: inline;
   list-style: none;

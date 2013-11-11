@@ -3,7 +3,7 @@ layout: project
 title: "R notebook"
 category: other
 summary: A notebook-style interface to R that allows annotationed data analysis using R, LaTeX formulas, and multimarkdown text
-teaser: r-notebook_demo.png
+teaser: r-notebook_teaser.png
 video: 
 source: https://github.com/torsneyt/r-notebook
 paper: 
