@@ -5,7 +5,7 @@ layout: page
 
 # About me
 
-![](/images/me.jpg "My face")
+![](<%= lorem.image('600x380') %> "Me!")
 
 I am a PhD student at the University of Vienna in Austria.  I study how
 visualization and statistical methods can be used to help scientists
@@ -15,16 +15,14 @@ I try to spend as much time in the outdoors as possible. I love skiing,
 hiking, climbing, and scuba diving.  I have also been known to run or bike
 occasionally.
 
-My email address is thomas.torsney-weir AT univie.ac.at
+My email address is [thomas.torsney-weir@univie.ac.at](<%= email_url %>).
 
-I can be found either as "torsneyt" on Github and Facebook
-or "gabysbrain" on Twitter and foursquare.
+I can also be found as "torsneyt" on [Github](<%= github_url %>) and
+[Facebook](<%= facebook_url %>)
+or "gabysbrain" on
+[Twitter](<%= twitter_url %>), [Instagram](none), and
+[foursquare](<%= foursquare_url %>).
 
 My work address is:
-
-    VDA research group
-    Faculty of Computer Science
-    University of Vienna
-    Währingerstrasse 29/3.34
-    1090 Wien, Austria
+<%= partial 'address' %>
 
