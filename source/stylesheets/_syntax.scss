@@ -1,44 +1,51 @@
 /* Pretty printing styles. Used with prettify.js.
  *
- * Name:	Stanley Ng
- * Email: 	stanleyhlng@googlegroups.com
- * 
- * Credits:
- * https://github.com/chriskempson/tomorrow-theme
+ * from angular.js
  *
  * Modified for sass
  */
 
-$code-bg-color: #ffffff;
-$code-base-color: #4d4d4c;
+$code-bg-color: #f7f7f9;
+$code-base-color: #000000;
 
 p {
   code {
-    background-color: $code-bg-color;
+    //background-color: $code-bg-color;
     color: $code-base-color;
-    border: 1px solid #E1E1E8;
-    padding-left: 0.25em;
-    padding-right: 0.25em;
-    padding-top: 0.25em;
-    padding-bottom: 0;
+    //border: 1px solid #E1E1E8;
+    //padding-left: 0.25em;
+    //padding-right: 0.25em;
+    //padding-top: 0.25em;
+    //padding-bottom: 0;
   }
 }
 
 pre.prettyprint {
 
+  .linenums {
+    -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+    -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+    box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+  }
   /* Put a border around prettyprinted code snippets. */
   background-color: $code-bg-color;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #E1E1E8;
+  border-radius: 4px;
   
   /* Specify class=linenums on a pre to get line numbering */
   ol.linenums {
-    color: #8e908c;
-    margin: 0 0 0 40px; }
-  
-  ol.linenums li {
-    line-height: 18px;
-    padding-left: 12px; }
+    margin: 0 0 0 33px; /* IE indents via margin-left */
+
+    li {
+      padding-left: 12px;
+      font-size:12px;
+      color: #bebec5;
+      line-height: 18px;
+      text-shadow: 0 1px 0 #fff;
+      list-style-type:decimal!important;
+    }
+  }
 
   code {
     //border: none;
@@ -48,47 +55,17 @@ pre.prettyprint {
       color: $code-base-color;
     }
     
-    .str {
-      color: #718c00; }
-    
-    .kwd {
-      color: #8959a8; }
-    
-    .com {
-      color: #8e908c;
-      font-style: italic; }
-    
-    .typ {
-      color: #f5871f; }
-    
-    .lit {
-      color: #eab700; }
-    
-    .pun {
-      color: #4d4d4c; }
-    
-    .opn {
-      color: #4d4d4c; }
-    
-    .clo {
-      color: #4d4d4c; }
-    
-    .tag {
-      color: #c82829; }
-    
-    .atn {
-      color: #eab700; }
-    
-    .atv {
-      color: #3e999f; }
-    
-    .dec {
-      color: #f5871f; }
-    
-    .var {
-      color: #c82829; }
-    
-    .fun {
-      color: #c82829; }
+    .str { color: #080 }  /* string content */
+    .kwd { color: #008 }  /* a keyword */
+    .com { color: #800 }  /* a comment */
+    .typ { color: #606 }  /* a type name */
+    .lit { color: #066 }  /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    .pun, .opn, .clo { color: #660 }
+    .tag { color: #008 }  /* a markup tag name */
+    .atn { color: #606 }  /* a markup attribute name */
+    .atv { color: #080 }  /* a markup attribute value */
+    .dec, .var { color: #606 }  /* a declaration; a variable name */
+    .fun { color: red }  /* a function name */
   }
 }
