@@ -33,7 +33,7 @@ anyway.
 When creating a post I just have to make sure that for blog posts my yaml
 front matter includes a `layout: post` line as shown below:
 
-``` language-yaml
+``` language-yaml linenums
 ---
 layout: post
 title: "Reproducable research"
@@ -45,7 +45,7 @@ categories: research
 
 and projects include a `layout: project` line:
 
-``` language-yaml
+``` language-yaml linenums
 ---
 layout: project
 title: "Tuner"
