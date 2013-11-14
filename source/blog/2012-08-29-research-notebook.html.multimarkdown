@@ -76,7 +76,7 @@ being detected as a different file type than multimarkdown.
 ``` language-ruby linenums plugins/multimarkdown.rb
 # multimarkdown renderer for jekyll
 #
-# adapted from: https://github.com/danieldriver/jekyll/commit/a07766e3c5cb1c78b7b77643f850a67cb721763a
+# adapted from: http://git.io/9-RWUg
 
 
 module Jekyll
