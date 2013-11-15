@@ -12,6 +12,7 @@ li.archive-item {
 
   time {
     @include grid-column(2, $pull: 10);
+    white-space: nowrap;
   }
 }
 
