@@ -78,6 +78,12 @@ body > div.row:first-of-type {
   }
 }
 
+.sidebar {
+  @media #{$screen} and (min-width: "#{$small-screen}") {
+    @include grid-column(3);
+  }
+}
+
 .site-footer {
   @include grid-column(12);
 }
@@ -112,6 +118,10 @@ body > div.row:first-of-type {
 }
 
 #content {
+  @media #{$screen} and (min-width: "#{$small-screen}") {
+    @include grid-column(9);
+  }
+
   h1 {
     //margin-left: 1em;
     margin-top: 0;
