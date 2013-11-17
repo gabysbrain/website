@@ -20,18 +20,67 @@
     @media #{$screen} and (max-width:"#{$small-screen}") {
       display: inline;
     }
-
-    .menu-button {
-      @include button;
-      @include dropdown-button(small, #fff, false);
-      @extend .tiny;
-      @extend .right;
+    @media #{$screen} and (min-width:"#{$small-screen}") {
+      position: relative;
     }
+
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+    
+
+    //.menu-button {
+      //@include button;
+      //@include dropdown-button(small, #fff, false);
+      //@extend .tiny;
+      //@extend .right;
+    //}
 
     .menu {
       @include side-nav;
       font-size: $subtitle-and-nav-font-size;
+      width: 100%;
+
+      li {
+        width: 100%;
+        @media #{$screen} and (max-width:"#{$small-screen}") {
+          a {
+            background: $ttw-green;
+            color: white;
+            border-bottom: 1px solid white;
+            padding: 0.25em 0.75em;
+          }
+        }
+      }
+
     }
+  }
+
+  nav.opened {
+    max-height: 9999px;
+  }
+
+  @media #{$screen} and (min-width: "#{$small-screen}") {
+    nav.closed {
+      max-height: none;
+    }
+  }
+
+  #menu-toggle {
+    @extend .hide-for-medium-up;
+    @extend .right;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: $ttw-green;
+    font-size: $subtitle-and-nav-font-size;
   }
 }
 
