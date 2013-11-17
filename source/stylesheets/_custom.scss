@@ -53,6 +53,18 @@ body > div.row:first-of-type {
   }
 }
 
+.project-summary-entry {
+  @include grid-row;
+  
+  .teaser {
+    @include grid-column(3);
+  }
+
+  .project-summary-info {
+    @include grid-column(9);
+  }
+}
+
 .selected-projects {
   @include block-grid(3);
   img {
@@ -66,6 +78,14 @@ body > div.row:first-of-type {
   }
 }
 
+.sidebar {
+  @include grid-column(3);
+}
+
+.site-footer {
+  @include grid-column(12);
+}
+
 .sociallist {
   display: inline;
   list-style: none;
@@ -74,7 +94,6 @@ body > div.row:first-of-type {
   li {
     display: inline;
   }
-
 }
 
 .teaser {
@@ -97,6 +116,8 @@ body > div.row:first-of-type {
 }
 
 #content {
+  @include grid-column(9);
+
   h1 {
     //margin-left: 1em;
     margin-top: 0;

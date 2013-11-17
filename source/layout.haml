@@ -35,7 +35,7 @@
   %body
 
     %div.row
-      %header.large-3.columns
+      %header.sidebar
         %section.title-area
           -#= image_tag 'headshot.jpg'
           %h1.title= link_to 'Tom Torsney-Weir', '/'
@@ -54,11 +54,11 @@
 
  
 
-      %div.large-9.columns{:id => "content", :role => "content"}= yield
+      %div{:id => "content", :role => "content"}= yield
  
  
     %footer.row
-      %div.large-12.columns
+      %div.site-footer
         %hr
         %p &copy; Copyright Tom Torsney-Weir
         -#

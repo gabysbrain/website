@@ -1,9 +1,9 @@
 
-%article.row
-  %div.large-3.columns.teaser
+%article.project-summary-entry
+  %div.teaser
     - if proj.data.teaser
       = link_to image_tag(proj.data.teaser), proj
-  %dev.large-9.columns
+  %div.project.summary-info
     %h3= link_to proj.data.title, proj
     = proj.data.summary
     = partial "project_links", :locals => {:proj => proj.data}
