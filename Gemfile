@@ -10,6 +10,8 @@ gem "zurb-foundation"
 gem "compass"
 gem "nokogiri"
 gem "middleman-deploy"
+gem "therubyracer"
+gem "oj"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
