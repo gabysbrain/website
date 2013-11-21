@@ -7,7 +7,7 @@ tags: research
 ---
 
 I recently set up a 
-[fork](https://github.com/torsneyt/r-notebook) 
+[fork](https://github.com/gabysbrain/r-notebook) 
 of the Octopress blogging software to generate posts
 that contain explanatory text, LaTex math, and output from R code.
 
@@ -35,7 +35,7 @@ each category.
 
 The project is set up as a fork of Octopress so if you're interested
 in using it the project as well as the installation instructions are at 
-<https://github.com/torsneyt/r-notebook>.
+<https://github.com/gabysbrain/r-notebook>.
 
 ## Example post
 
@@ -281,7 +281,7 @@ knit(in.file, out.file)
 ## Conclusion
 
 And that's about it.  The rest of the changes are in the
-[repository](https://github.com/torsneyt/r-notebook) of course.  
+[repository](https://github.com/gabysbrain/r-notebook) of course.  
 Feel free to fork the repository
 for your own work and let me know what you think!
 

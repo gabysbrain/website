@@ -13,7 +13,7 @@ module SocialHelpers
   end
 
   def github_url
-    'https://github.com/torsneyt'
+    'https://github.com/gabysbrain'
   end
 
   def twitter_url

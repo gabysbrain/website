@@ -36,7 +36,7 @@ with any data and the rest of my project.
 The rest of this post goes into detail about how I've set up Vim, knitr, and
 [Marked.app](http://markedapp.com/) on my Mac to automatically update my
 report every time I save.  The code is located at
-<https://github.com/torsneyt/r-notebook>.
+<https://github.com/gabysbrain/r-notebook>.
 
 ## Editor: Vim
 

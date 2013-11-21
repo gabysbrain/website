@@ -5,7 +5,7 @@ category: other
 summary: A notebook-style interface to R that allows annotationed data analysis using R, LaTeX formulas, and multimarkdown text
 teaser: r-notebook_teaser.png
 video: 
-source: https://github.com/torsneyt/r-notebook
+source: https://github.com/gabysbrain/r-notebook
 paper: 
 ---
 

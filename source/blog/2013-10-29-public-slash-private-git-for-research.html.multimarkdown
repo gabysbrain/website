@@ -11,7 +11,7 @@ I feel that it's very important that any code I write for my research is
 available online so that anyone can access and read it. I also want people to
 be able to view all the individual changesets that went into the software.
 That way they can see the full thought-process that went into a project.  That
-is why, for example, [Tuner](http://github.com/torsneyt/tuner) is on GitHub.
+is why, for example, [Tuner](http://github.com/gabysbrain/tuner) is on GitHub.
 
 However, when I am developing a feature for a paper, I don't want the code to
 be public until after the paper is accepted.  Furthermore, I want to keep my
@@ -37,8 +37,8 @@ unambiguous whether I'm pushing a branch to my public repo or my private one.
 
 ``` language-sh
 git remote remove origin
-git remote add public git@github.com:torsneyt/tuner.git
-git remote add private git@private.com:torsneyt/tuner_dev.git
+git remote add public git@github.com:gabysbrain/tuner.git
+git remote add private git@private.com:gabysbrain/tuner_dev.git
 ```
 
 ### Branches
