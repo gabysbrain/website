@@ -6,6 +6,7 @@ body > div.row:first-of-type {
 .address {
   display:inline;
   list-style: none;
+  margin-left: 0;
 }
 
 .article-title {
@@ -38,14 +39,15 @@ body > div.row:first-of-type {
 
   // Custom taglist processing
   .taglist {
-    @extend .button-group;
+    //@extend .button-group;
     @extend .right;
     display: inline;
     margin: 0 !important;
   
     .tag {
-      @extend .button;
-      @extend .tiny;
+      //@extend .button;
+      //@extend .tiny;
+      @include label();
       a {
         color: white;
       }
