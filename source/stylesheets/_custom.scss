@@ -6,6 +6,7 @@ body > div.row:first-of-type {
 .address {
   display:inline;
   list-style: none;
+  margin-left: 0;
 }
 
 .article-title {
@@ -38,14 +39,15 @@ body > div.row:first-of-type {
 
   // Custom taglist processing
   .taglist {
-    @extend .button-group;
+    //@extend .button-group;
     @extend .right;
     display: inline;
     margin: 0 !important;
   
     .tag {
-      @extend .button;
-      @extend .tiny;
+      //@extend .button;
+      //@extend .tiny;
+      @include label();
       a {
         color: white;
       }
@@ -79,7 +81,7 @@ body > div.row:first-of-type {
 }
 
 .sidebar {
-  @media #{$screen} and (min-width: "#{$small-screen}") {
+  @media #{$medium-up} {
     @include grid-column(3);
   }
 }
@@ -118,7 +120,7 @@ body > div.row:first-of-type {
 }
 
 #content {
-  @media #{$screen} and (min-width: "#{$small-screen}") {
+  @media #{$medium-up} {
     @include grid-column(9);
   }
 

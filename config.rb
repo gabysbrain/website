@@ -60,6 +60,15 @@ page "/feed.xml", :layout => false
 page "/blog/*",    :layout => "post"
 page "/project/*", :layout => "project"
 
+###
+# Sprockets
+###
+
+# Foundation 5 js path
+ready do 
+  sprockets.append_path File.join(root, 'bower_components')
+end
+
 ### 
 # Compass
 ###
@@ -69,9 +78,9 @@ page "/project/*", :layout => "project"
 # require 'susy'
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+#compass_config do |config|
+# config.output_style = :compact
+#end
 
 ###
 # Page options, layouts, aliases and proxies

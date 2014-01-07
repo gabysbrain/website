@@ -6,7 +6,7 @@ ruby '2.0.0'
 
 gem "middleman", "~> 3.1.6"
 gem "middleman-blog", "~> 3.3.0"
-gem "zurb-foundation"
+gem "foundation"
 gem "compass"
 gem "nokogiri"
 gem "middleman-deploy"

@@ -16,20 +16,10 @@
     %link{:rel=>"alternate", :type=>"application/atom+xml", 
           :title=>"Tom Torsney-Weir's feed", :href=> "/feed.xml"}
     = stylesheet_link_tag 'site'
-    = javascript_include_tag 'vendor/custom.modernizr'
-    = javascript_include_tag 'vendor/jquery'
-    = javascript_include_tag 'foundation/foundation'
-
     = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
 
     / google analytics
     = partial 'google_analytics'
-
-    = javascript_include_tag 'vendor/prettify.js/prettify'
-    = javascript_include_tag 'code-highlight'
-
-    = javascript_include_tag 'vendor/responsive-nav/responsive-nav.min'
-    = javascript_include_tag 'site-nav'
 
   %body
 
@@ -67,7 +57,5 @@
           and
           = link_to 'Foundation', 'http://foundation.zurb.com'
 
-    -#= partial 'foundation'
-    :javascript
-      $(document).foundation();
+    = javascript_include_tag 'site'
 
