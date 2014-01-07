@@ -1,6 +1,10 @@
 @import "foundation/scss/foundation/functions";
 
+@import url(http://fonts.googleapis.com/css?family=Raleway|Oxygen);
+
 $base-font-size: 14px;
+$body-font-family: 'Oxygen', sans-serif;
+$header-font-family: 'Raleway', sans-serif;
 
 $rem-base: $base-font-size;
 

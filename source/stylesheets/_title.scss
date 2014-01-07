@@ -42,10 +42,11 @@
 
     .menu {
       @include side-nav;
-      font-size: $subtitle-and-nav-font-size;
       width: 100%;
 
       li {
+        font-family: $header-font-family;
+        font-size: $subtitle-and-nav-font-size;
         width: 100%;
         @media #{$small-only} {
           a {
