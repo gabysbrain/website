@@ -65,7 +65,9 @@ page "/project/*", :layout => "project"
 ###
 
 # Foundation 5 js path
-sprockets.append_path File.join(root, 'bower_components')
+ready do 
+  sprockets.append_path File.join(root, 'bower_components')
+end
 
 ### 
 # Compass
@@ -76,10 +78,9 @@ sprockets.append_path File.join(root, 'bower_components')
 # require 'susy'
 
 # Change Compass configuration
-compass_config do |config|
-  config.add_import_path "bower_components/foundation/scss"
+#compass_config do |config|
 # config.output_style = :compact
-end
+#end
 
 ###
 # Page options, layouts, aliases and proxies

@@ -79,7 +79,7 @@ body > div.row:first-of-type {
 }
 
 .sidebar {
-  @media #{$screen} and (min-width: "#{$small-screen}") {
+  @media #{$small-only} {
     @include grid-column(3);
   }
 }
@@ -118,7 +118,7 @@ body > div.row:first-of-type {
 }
 
 #content {
-  @media #{$screen} and (min-width: "#{$small-screen}") {
+  @media #{$small-only} {
     @include grid-column(9);
   }
 
