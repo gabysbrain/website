@@ -1,7 +1,8 @@
+@import "foundation/scss/foundation/functions";
 
 $base-font-size: 14px;
 
-$em-base: $base-font-size;
+$rem-base: $base-font-size;
 
 // Various global styles
 $default-float: left;
@@ -11,17 +12,17 @@ $ttw-green: rgb(75, 135, 73);
 $primary-color: $ttw-green;
 
 // Control header font sizes
-$h1-font-size: em-calc(36);
-$h2-font-size: em-calc(32);
-$h3-font-size: em-calc(28);
-$h4-font-size: em-calc(24);
-$h5-font-size: em-calc(18);
-$h6-font-size: em-calc(15);
+$h1-font-size: rem-calc(36);
+$h2-font-size: rem-calc(32);
+$h3-font-size: rem-calc(28);
+$h4-font-size: rem-calc(24);
+$h5-font-size: rem-calc(18);
+$h6-font-size: rem-calc(15);
 
 // Style paragraphs
 $paragraph-font-family: inherit;
 $paragraph-font-weight: normal;
-$paragraph-font-size: 1em;
+$paragraph-font-size: 1rem;
 
 // Style <code> tags
 $code-font-weight: normal;
@@ -31,14 +32,14 @@ $code-font-weight: normal;
 //
 
 // We use this to control padding.
-$side-nav-padding: em-calc(0 0);
+$side-nav-padding: rem-calc(0 0);
 
 // We use these to control list styles.
-$side-nav-list-margin: em-calc(0 0 0 0);
+$side-nav-list-margin: rem-calc(0 0 0 0);
 
 // The title and main nav bar link size
-$title-font-size: em-calc(24);
-$subtitle-and-nav-font-size: em-calc(18);
+$title-font-size: rem-calc(24);
+$subtitle-and-nav-font-size: rem-calc(18);
 
 // Solarized settings
 $solarized-theme: light;

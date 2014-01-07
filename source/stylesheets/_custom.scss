@@ -79,7 +79,7 @@ body > div.row:first-of-type {
 }
 
 .sidebar {
-  @media #{$small-only} {
+  @media #{$medium-up} {
     @include grid-column(3);
   }
 }
@@ -118,7 +118,7 @@ body > div.row:first-of-type {
 }
 
 #content {
-  @media #{$small-only} {
+  @media #{$medium-up} {
     @include grid-column(9);
   }
 
