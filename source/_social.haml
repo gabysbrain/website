@@ -1,27 +1,21 @@
 
-%ul.sociallist.fa-lg
+%ul.sociallist.svg
   %li
-    = link_to email_url do
-      %i.fa.fa-envelope
-      -#Email
+    = link_to email_url, {:class=>"webicon mail small"} do
+      Email
   %li
-    = link_to twitter_url do
-      %i.fa.fa-twitter
-      -#Twitter
+    = link_to twitter_url, {:class=>"webicon twitter small"} do
+      Twitter
   %li
-    = link_to facebook_url do
-      %i.fa.fa-facebook
-      -#Facebook
+    = link_to facebook_url, {:class=>"webicon facebook small"} do
+      Facebook
   %li
-    = link_to foursquare_url do
-      %i.fa.fa-foursquare
-      -#foursquare
+    = link_to foursquare_url, {:class=>"webicon foursquare small"} do
+      foursquare
   %li
-    = link_to github_url do
-      %i.fa.fa-github
-      -#Github
+    = link_to github_url, {:class=>"webicon github small"} do
+      Github
   %li
-    = link_to '/feed.xml' do
-      %i.fa.fa-rss
-      -#RSS
+    = link_to '/feed.xml', {:class=>"webicon rss small"} do
+      RSS
 
