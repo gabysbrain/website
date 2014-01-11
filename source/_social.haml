@@ -6,7 +6,7 @@
            ["github", "Github", github_url, "Github projects"],
            ["rss", "RSS", '/feed.xml', "Subscribe"]]
 
-%ul.sociallist.svg
+%ul.sociallist
   - links.each do |icon,text,url,tooltip|
     %li
       %span.has-tip{:title=>tooltip, "data-tooltip"=>"", "data-options"=>"disable_for_touch:true"}

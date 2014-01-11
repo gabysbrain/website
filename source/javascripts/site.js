@@ -1,3 +1,4 @@
+//= require modernizr/modernizr
 //= require jquery/jquery
 //= require foundation/js/foundation
 //= require vendor/prettify.js/prettify
