@@ -99,6 +99,10 @@ body > div.row:first-of-type {
   li {
     display: inline;
   }
+
+  .has-tip {
+    border-bottom: none;
+  }
 }
 
 .teaser {

@@ -1,21 +1,15 @@
 
+- links = [["mail", "Email", email_url, "Email me"],
+           ["twitter", "Twitter", twitter_url, "Follow me on Twitter"],
+           ["facebook", "Facebook", facebook_url, "Facebook"],
+           ["foursquare", "foursquare", foursquare_url, "Follow me on foursquare"],
+           ["github", "Github", github_url, "Github projects"],
+           ["rss", "RSS", '/feed.xml', "Subscribe"]]
+
 %ul.sociallist.svg
-  %li
-    = link_to email_url, {:class=>"webicon mail small"} do
-      Email
-  %li
-    = link_to twitter_url, {:class=>"webicon twitter small"} do
-      Twitter
-  %li
-    = link_to facebook_url, {:class=>"webicon facebook small"} do
-      Facebook
-  %li
-    = link_to foursquare_url, {:class=>"webicon foursquare small"} do
-      foursquare
-  %li
-    = link_to github_url, {:class=>"webicon github small"} do
-      Github
-  %li
-    = link_to '/feed.xml', {:class=>"webicon rss small"} do
-      RSS
+  - links.each do |icon,text,url,tooltip|
+    %li
+      %span.has-tip{:title=>tooltip, "data-tooltip"=>"", "data-options"=>"disable_for_touch:true"}
+        = link_to url, {:class=>"webicon #{icon} small"} do
+          = text
 
