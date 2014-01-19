@@ -48,6 +48,7 @@ end
 
 activate :citations do |options|
   options.bibtex = "/Users/tom/Dropbox/Research/All.bib"
+  options.style = "ieee"
 end
 
 activate :directory_indexes
