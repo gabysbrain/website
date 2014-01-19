@@ -54,6 +54,10 @@ end
 activate :directory_indexes
 
 activate :deploy do |deploy|
+  # build before deployment
+  deploy.build_before = true
+
+  # publish to github pages
   deploy.method = :git
   deploy.remote = 'gh-pages'
   deploy.branch = 'master'
