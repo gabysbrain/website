@@ -12,6 +12,7 @@ gem "nokogiri"
 gem "middleman-deploy"
 gem "therubyracer"
 gem "oj"
+gem "middleman-imageoptim"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

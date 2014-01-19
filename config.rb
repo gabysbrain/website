@@ -44,6 +44,13 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
+activate :imageoptim do |options|
+  options.threads = true
+
+  # disable pngout
+  options.pngout_options = false
+end
+
 activate :directory_indexes
 
 activate :deploy do |deploy|
