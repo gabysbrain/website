@@ -1,8 +1,10 @@
 require 'lib/tilt-multimarkdown'
 require 'lib/social_helpers'
+require 'lib/citations'
 require 'nokogiri'
 
 helpers SocialHelpers
+#helpers Test
 
 ###
 # Blog settings
@@ -44,6 +46,8 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
+activate :citations do |options|
+  options.bibtex = "/Users/tom/Dropbox/Research/All.bib"
 end
 
 activate :directory_indexes
