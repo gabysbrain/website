@@ -14,6 +14,9 @@ gem "therubyracer"
 gem "oj"
 gem "middleman-imageoptim"
 
+gem "bibtex-ruby"
+gem "citeproc-ruby"
+
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 
