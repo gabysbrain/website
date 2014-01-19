@@ -17,6 +17,8 @@ class Citations < Middleman::Extension
 
   helpers do
     def cite_full(key)
+      # need to convert latex special characters, like {\"o} to unicode
+      @@bibtex[key].convert_latex
       CiteProc.process(@@bibtex[key].to_citeproc, :style => @@cite_style)
     end
   end
