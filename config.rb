@@ -44,11 +44,6 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-activate :imageoptim do |options|
-  options.threads = true
-
-  # disable pngout
-  options.pngout_options = false
 end
 
 activate :directory_indexes
@@ -145,10 +140,13 @@ configure :build do
   # Use relative URLs
   # activate :relative_assets
   
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
+  # Compress images after build
+  activate :imageoptim do |options|
+    options.threads = true
+
+    # disable pngout
+    options.pngout_options = false
+  end
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
