@@ -33,6 +33,8 @@ body > div.row:first-of-type {
 .byline {
   @include grid-row;
 
+  padding-bottom: 0.5em;
+
   .date {
     display: inline;
   }
