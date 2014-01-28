@@ -1,9 +1,0 @@
-
-task :serve do
-  system('bundle exec middleman')
-end
-
-task :deploy do
-  system('bundle exec middleman deploy')
-end
-
