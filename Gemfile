@@ -4,8 +4,8 @@ source 'http://rubygems.org'
 
 ruby '2.0.0'
 
-gem "middleman", "~> 3.1.6"
-gem "middleman-blog", "~> 3.3.0"
+gem "middleman", "~> 3.1"
+gem "middleman-blog", "~> 3.3"
 gem "foundation"
 gem "compass"
 gem "nokogiri"
