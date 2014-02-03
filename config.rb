@@ -1,4 +1,3 @@
-require 'lib/tilt-multimarkdown'
 require 'lib/social_helpers'
 require 'lib/citations'
 require 'nokogiri'

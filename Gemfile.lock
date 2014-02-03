@@ -92,7 +92,7 @@ GEM
       sprockets-sass (~> 1.0.0)
     mini_portile (0.5.2)
     multi_json (1.8.2)
-    multimarkdown-cli (0.0.1)
+    multimarkdown-cli (0.0.2)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
@@ -145,7 +145,7 @@ DEPENDENCIES
   middleman-blog (~> 3.3.0)
   middleman-deploy
   middleman-imageoptim
-  multimarkdown-cli
+  multimarkdown-cli (~> 0.0.2)
   nokogiri
   oj
   therubyracer
