@@ -20,54 +20,5 @@ p {
   }
 }
 
-pre.prettyprint.linenums {
-    -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-    -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-    box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-  }
+@import "highlightjs/styles/zenburn";
 
-pre.prettyprint {
-
-  /* Put a border around prettyprinted code snippets. */
-  background-color: $code-bg-color;
-  padding: 8px;
-  border: 1px solid #E1E1E8;
-  border-radius: 4px;
-  margin-bottom: $paragraph-margin-bottom;
-  
-  /* Specify class=linenums on a pre to get line numbering */
-  ol.linenums {
-    margin: 0 0 0 33px; /* IE indents via margin-left */
-    padding: 0;
-
-    li {
-      padding-left: 12px;
-      color: #bebec5;
-      line-height: 18px;
-      text-shadow: 0 1px 0 #fff;
-      list-style-type:decimal!important;
-    }
-  }
-
-  code {
-    //border: none;
-    //padding: 0;
-
-    .pln {
-      color: $code-base-color;
-    }
-    
-    .str { color: #080 }  /* string content */
-    .kwd { color: #008 }  /* a keyword */
-    .com { color: #800 }  /* a comment */
-    .typ { color: #606 }  /* a type name */
-    .lit { color: #066 }  /* a literal value */
-    /* punctuation, lisp open bracket, lisp close bracket */
-    .pun, .opn, .clo { color: #660 }
-    .tag { color: #008 }  /* a markup tag name */
-    .atn { color: #606 }  /* a markup attribute name */
-    .atv { color: #080 }  /* a markup attribute value */
-    .dec, .var { color: #606 }  /* a declaration; a variable name */
-    .fun { color: red }  /* a function name */
-  }
-}

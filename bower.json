@@ -1,6 +1,7 @@
 {
   "name": "www.tomtorsneyweir.com",
   "dependencies": {
-    "foundation": "zurb/bower-foundation#~5.0"
+    "foundation": "zurb/bower-foundation#~5.0",
+    "highlightjs": "~8.0.0"
   }
 }
