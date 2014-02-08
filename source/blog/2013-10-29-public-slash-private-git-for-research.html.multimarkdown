@@ -86,7 +86,7 @@ git branch -r -d private/next_idea
 I usually look at my branch mappings at this point to double check that
 everything is up to date.
 
-``` language-sh
+```  language-sh
 git branch -r
 ```
 
