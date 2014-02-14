@@ -76,7 +76,8 @@ page "/project/*", :layout => "project"
 
 # Foundation 5 js path
 ready do 
-  sprockets.append_path File.join(root, 'bower_components')
+  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+  sprockets.append_path File.join(root, @bower_config["directory"])
 end
 
 ### 
