@@ -16,7 +16,7 @@ gem "middleman-imageoptim"
 gem "multimarkdown-cli", "~> 0.0.2"
 
 gem "bibtex-ruby"
-gem "citeproc-ruby"
+gem "citeproc-ruby", "~> 0.0.6"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
