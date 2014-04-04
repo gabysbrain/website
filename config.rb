@@ -46,7 +46,7 @@ activate :blog do |blog|
 end
 
 activate :citations do |options|
-  options.bibtex = "/Users/tom/Dropbox/Research/All.bib"
+  options.bibtex = "/Users/tom/Dropbox/Research/all.bib"
   options.style = "ieee"
 end
 
