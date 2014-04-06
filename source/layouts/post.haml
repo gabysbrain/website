@@ -1,4 +1,7 @@
 
+- content_for :js do
+  = javascript_include_tag 'post'
+
 - wrap_layout :layout do
   %nav.blog-nav
     %span.left
@@ -22,6 +25,10 @@
                 %i.fa.fa-tag.fa-fw
                 = tagname
 
+    %section{:class => "pagenav", 
+             "data-magellan-expedition"=>"fixed",
+             "data-options"=>"destination_threshold:120;throttle_delay:0;"}
+      %dl.sub-nav
     ~ yield
 
     %footer
