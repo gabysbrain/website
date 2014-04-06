@@ -52,6 +52,10 @@ end
 
 activate :directory_indexes
 
+# use debugging javascripts
+set :debug_assets, true
+
+
 activate :deploy do |deploy|
   # build before deployment
   deploy.build_before = true
