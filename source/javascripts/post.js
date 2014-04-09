@@ -1,2 +1,0 @@
-//= require post-nav.js
-
