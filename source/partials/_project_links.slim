@@ -1,0 +1,9 @@
+
+ul.project-links
+  - if proj.source
+    li = link_to 'source', proj.source, {:class => 'link'}
+  - if proj.video
+    li = link_to 'video', proj.video, {:class => 'link'}
+  - if proj.paper
+    li = link_to 'paper', proj.paper, {:class => 'link'}
+
