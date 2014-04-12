@@ -14,6 +14,7 @@ gem "therubyracer"
 gem "oj"
 gem "middleman-imageoptim"
 gem "multimarkdown-cli"
+gem "slim"
 
 gem "bibtex-ruby"
 gem "citeproc-ruby", "~> 0.0.6"
