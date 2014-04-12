@@ -8,9 +8,8 @@ html.no-js lang="en"
     meta name="viewport" content="width=device-width"
     title 
       - if current_page.data.title 
-        = current_page.data.title
-        = " - "
-      TomTorsneyWeir.com
+        = current_page.data.title + " - "
+      | TomTorsneyWeir.com
   
     link rel="alternate" type="application/atom+xml" title="Tom Torsney-Weir's feed" href="/feed.xml"
     = stylesheet_link_tag 'site'
