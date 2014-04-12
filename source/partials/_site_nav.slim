@@ -1,15 +1,10 @@
 
-- links = [['About', '/about.html'],
-           ['Projects', '/projects'], 
-           ['Blog', '/blog'], 
-           ['CV', '/cv.html']]
-
 div#menu-toggle
   i.fa.fa-bars
   Menu
 
 nav.site-nav
   ul#main-menu-list.menu
-    - links.each do |name, link|
-      li= link_to name, link
+    - data.site_nav_links.each do |link|
+      li = link_to link.name, link.url
 
