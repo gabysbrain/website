@@ -147,7 +147,7 @@ DEPENDENCIES
   middleman-blog (~> 3.3)
   middleman-deploy
   middleman-imageoptim
-  multimarkdown-cli (~> 0.0.2)
+  multimarkdown-cli
   nokogiri
   oj
   therubyracer

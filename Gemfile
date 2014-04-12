@@ -13,7 +13,7 @@ gem "middleman-deploy"
 gem "therubyracer"
 gem "oj"
 gem "middleman-imageoptim"
-gem "multimarkdown-cli", "~> 0.0.2"
+gem "multimarkdown-cli"
 
 gem "bibtex-ruby"
 gem "citeproc-ruby", "~> 0.0.6"
