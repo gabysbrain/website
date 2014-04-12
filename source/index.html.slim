@@ -18,9 +18,9 @@ section
 
 section
   h2 Projects
-  = partial 'featured_projects'
+  == partial 'featured_projects'
 
 section
   h2 Recent blog posts
-  = partial 'article_shortlist', :locals => {:articles => page_articles[0, 5]}
+  == partial 'article_shortlist', :locals => {:articles => page_articles[0, 5]}
 

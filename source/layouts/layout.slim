@@ -39,7 +39,7 @@ html.no-js lang="en"
  
 
       div#content role="content"
-        = yield
+        == yield
  
  
     footer.row
@@ -48,5 +48,5 @@ html.no-js lang="en"
         p &copy; Copyright Tom Torsney-Weir
 
     = javascript_include_tag 'site'
-    = yield_content :js
+    == yield_content :js
 
