@@ -1,0 +1,53 @@
+doctype html
+/[if IE 8] <html class="no-js lt-ie9" lang="en" > <![endif]
+/[if gt IE 8]><!
+html.no-js lang="en"
+  / <![endif]
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width"
+    title 
+      - if current_page.data.title 
+        = current_page.data.title
+        = " - "
+      TomTorsneyWeir.com
+  
+    link rel="alternate" type="application/atom+xml" title="Tom Torsney-Weir's feed" href="/feed.xml"
+    = stylesheet_link_tag 'site'
+    = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
+
+    / google analytics
+    == partial 'google_analytics'
+
+  body
+
+    div.row
+      header.sidebar
+        section.title-area
+          -#= image_tag 'headshot.jpg'
+          h1.title = link_to 'Tom Torsney-Weir', '/'
+          div.hide-for-small
+            h2.position PhD student
+            == partial 'address'
+
+            hr
+          == partial 'site_nav'
+
+          div.hide-for-small
+            hr
+            == partial 'social'
+
+ 
+
+      div#content role="content"
+        = yield
+ 
+ 
+    footer.row
+      div.site-footer
+        hr
+        p &copy; Copyright Tom Torsney-Weir
+
+    = javascript_include_tag 'site'
+    = yield_content :js
+

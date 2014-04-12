@@ -6,10 +6,10 @@
            ["github", "Github", github_url, "Github projects"],
            ["rss", "RSS", '/feed.xml', "Subscribe"]]
 
-%ul.sociallist
+ul.sociallist
   - links.each do |icon,text,url,tooltip|
-    %li
-      %span.has-tip{:title=>tooltip, "data-tooltip"=>"", "data-options"=>"disable_for_touch:true"}
+    li
+      span.has-tip title=tooltip data-tooltip="" data-options="disable_for_touch:true"
         = link_to url, {:class=>"webicon #{icon} small"} do
           = text
 

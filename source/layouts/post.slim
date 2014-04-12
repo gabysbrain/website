@@ -1,33 +1,33 @@
 
 - wrap_layout :layout do
-  %nav.blog-nav
-    %span.left
+  nav.blog-nav
+    span.left
       - if current_article.previous_article
-        %i.fa.fa-angle-left
+        i.fa.fa-angle-left
         = link_to current_article.previous_article.title, current_article.previous_article
-    %span.right
+    span.right
       - if current_article.next_article
         = link_to current_article.next_article.title, current_article.next_article
-        %i.fa.fa-angle-right
-  %article
-    %h1.article-title= current_article.title
-    %section.byline
-      %h6.date
-        %time= current_article.date.strftime('%b %e, %Y')
+        i.fa.fa-angle-right
+  article
+    h1.article-title = current_article.title
+    section.byline
+      h6.date
+        time = current_article.date.strftime('%b %e, %Y')
       - unless current_article.tags.empty?
-        %ul.taglist
+        ul.taglist
           - current_article.tags.each do |tagname|
-            %li.tag
+            li.tag
               = link_to tag_path(tagname) do
-                %i.fa.fa-tag.fa-fw
+                i.fa.fa-tag.fa-fw
                 = tagname
 
-    ~ yield
+    = yield
 
-    %footer
+    footer
 
   / disqus integration
-  %aside.comments
-    %h2 Comments
-    = partial 'disqus'
+  aside.comments
+    h2 Comments
+    == partial 'disqus'
 

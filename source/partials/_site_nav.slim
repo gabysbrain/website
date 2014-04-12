@@ -4,12 +4,12 @@
            ['Blog', '/blog'], 
            ['CV', '/cv.html']]
 
-%div#menu-toggle
-  %i.fa.fa-bars
+div#menu-toggle
+  i.fa.fa-bars
   Menu
 
-%nav.site-nav
-  %ul#main-menu-list.menu
+nav.site-nav
+  ul#main-menu-list.menu
     - links.each do |name, link|
-      %li= link_to name, link
+      li= link_to name, link
 

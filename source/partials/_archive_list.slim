@@ -1,14 +1,15 @@
 
 - if paginate && num_pages > 1
-  %p= "Page #{page_number} of #{num_pages}"
+  p 
+    | Page #{page_number} of #{num_pages}
 
   - if prev_page
-    %p= link_to 'Previous page', prev_page
+    p = link_to 'Previous page', prev_page
 
 = partial 'article_shortlist', :locals => {:articles => page_articles}
 
 - if paginate && next_page
   - if next_page
-    %p= link_to 'Next page', next_page
+    p = link_to 'Next page', next_page
 
 

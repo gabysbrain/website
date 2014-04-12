@@ -1,11 +1,10 @@
 
 - projects = ["Tuner", "R notebook"]
 
-%ul.selected-projects
+ul.selected-projects
   - projects.each do |proj_name|
     - proj = sitemap.where(:layout => "project", :title => proj_name).first
-    %li
+    li
       = link_to image_tag(proj.data.teaser), proj
-      %h3= link_to proj.data.title, proj
-      -#= proj.data.summary
+      h3 = link_to proj.data.title, proj
 

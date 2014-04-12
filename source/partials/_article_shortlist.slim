@@ -1,0 +1,8 @@
+
+ul.blog-archive
+  - articles.each do |article|
+    li.archive-item
+      = link_to article.title, article
+      time = article.date.strftime('%b %e, %Y')
+    
+
