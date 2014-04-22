@@ -21,6 +21,15 @@ class Citations < Middleman::Extension
       @@bibtex[key].convert_latex
       CiteProc.process(@@bibtex[key].to_citeproc, :style => @@cite_style)
     end
+
+    def find_pubs(search_key, author)
+      bib_name = BibTeX::Name.parse(author)
+      results = @@bibtex.query(search_key) do |e|
+        e.respond_to?(:author) and e.author and e.author.include? bib_name
+      end
+      results.sort! {|x,y| y.year.to_i-x.year.to_i}
+      results.map {|x| x.key}
+    end
   end
 end
 

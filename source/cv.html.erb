@@ -1,0 +1,41 @@
+---
+title: CV
+layout: page
+---
+
+<% data.cv.map do |section_name, content| %>
+
+  <h2><%= section_name %></h2>
+
+  <% if    content.type == "pubs" then %>
+    <% if content.pubs.kind_of?(Array) %>
+      <% pub_list = content.pubs %>
+    <% else %>
+      <% pub_list = find_pubs(content.pubs, "Thomas Torsney-Weir") %>
+    <% end %>
+    <ul>
+    <% pub_list.each do |pub| %>
+      <li><%= cite_full(pub) %></li>
+    <% end %>
+    </ul>
+  <% elsif content.type == "jobs" then %>
+    <% content.jobs.each do |job| %>
+      <h3><%= job.location %></h3>
+      <%= job.title %>
+      <%= job.dates.start %> &ndash; <%= job.dates.finish %>
+      <ul>
+      <% job.achievements.each do |item| %>
+        <li><%= item %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  <% elsif content.type == "other" then %>
+    <ul>
+      <% content.content.each do |item| %>
+        <li><%= item %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<% end %>
+
