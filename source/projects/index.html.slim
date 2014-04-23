@@ -3,7 +3,7 @@ title: Tom's projects
 layout: layout
 ---
 
-- projects = sitemap.where(:layout.include => "project").all
+- projects = current_resource.children
 
 h1 Projects
 
