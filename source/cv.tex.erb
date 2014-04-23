@@ -14,6 +14,8 @@ layout: false
 \usepackage{titlesec}
 \usepackage{enumitem}
 
+\setlist{nolistsep}
+
 %% Internals
 
 \renewcommand*{\author}[1] {\renewcommand*{\theauthor}{#1}}
@@ -96,7 +98,7 @@ layout: false
     <%= job.location %>
     <% if job.achievements %>
       \begin{itemize} 
-        \setlength{\itemsep}{-2pt}
+        %%\setlength{\itemsep}{-2pt}
         <% job.achievements.each do |a| %>
           \item[-] <%= a %>
         <% end %>
