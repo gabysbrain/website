@@ -1,0 +1,35 @@
+
+.pub-list li {
+ list-style-type: none;
+ padding-bottom: 0.5em;
+}
+
+.event-list li {
+  @include grid-row(nest);
+  display: block;
+
+  p {
+    @include grid-column(10, $push: 2);
+    margin-bottom: 0;
+  }
+
+  time {
+    @include grid-column(2, $pull: 10);
+  }
+}
+
+.job {
+
+  header {
+
+    .title {
+    }
+    .duration {
+    }
+  }
+}
+
+.misclist {
+  @include block-grid(3);
+}
+
