@@ -7,7 +7,7 @@ layout: page
 
 - data.cv.map do |section_name, content|
 
-  section class="#{content.type}"
+  section class="#{content.type} cv-section"
     h2 = section_name
 
     - case content.type
@@ -24,8 +24,10 @@ layout: page
         section.job
           header
             h4.location = job.location
-            h5.subheader.title = job.title
-            time.duration == "#{job.dates.start} &ndash; #{job.dates.finish}"
+            .clearfix
+              h5.subheader.title.left = job.title
+              time.duration.right 
+                == "#{job.dates.start} &ndash; #{job.dates.finish}"
           - if job.achievements
             ul.achievements
               - job.achievements.each do |item|
@@ -39,7 +41,5 @@ layout: page
     - when "other"
       ul.misclist
         - content.content.each do |item|
-          li 
-            markdown:
-              #{item}
+          li == item
 
