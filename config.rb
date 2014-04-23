@@ -158,12 +158,12 @@ configure :build do
   # activate :relative_assets
   
   # Compress images after build
-  #activate :imageoptim do |options|
-    #options.threads = true
+  activate :imageoptim do |options|
+    options.threads = true
 
     # disable pngout
-    #options.pngout_options = false
-  #end
+    options.pngout_options = false
+  end
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
