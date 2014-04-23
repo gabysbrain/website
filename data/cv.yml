@@ -10,43 +10,57 @@ Other publications:
   pubs:
   - 'Torsney-Weir:2012'
   - 'Torsney-Weir:2011a'
+
 Invited talks:
-  type: other
-  content:
-  - '"Tuner." Visualization and virtual reality research group, University of Leeds, Leeds, UK September 19, 2013.'
-  - '"Tuner." MADAI workshop, Duke University, Durham, NC June 20, 2012.'
-  - '"Visualization of computer models." MoCCSy Graduate Seminar, Burnaby, BC September 16, 2011.'
+  type: events
+  events:
+  - name: '"Tuner." Visualization and virtual reality research group, University of Leeds, Leeds, UK.'
+    date: Sep 19, 2013
+  - name: '"Tuner." MADAI workshop, Duke University, Durham, NC.'
+    date: Jun 20, 2012
+  - name: '"Visualization of computer models." MoCCSy Graduate Seminar, Burnaby, BC.'
+    date: Sep 16, 2011
+
 Education:
-  type: other
-  content:
-  - Simon Fraser University, Burnaby, BC, Canada. MSc in Computer Science, 2012.
-  - Georgetown University, Washington, DC, USA. BS in Computer Science, 2002.
+  type: events
+  events:
+  - name: Simon Fraser University, Burnaby, BC, Canada. MSc in Computer Science.
+    date: 2012
+  - name: Georgetown University, Washington, DC, USA. BS in Computer Science.
+    date: 2002
 
 Software publications:
   type: other
   content:
-  - Tuner (<https://www.tomtorsneyweir.com/tuner>)
+  - <a href="https://www.tomtorsneyweir.com/tuner">Tuner</a>
 
 Reviewerships:
-  type: other
-  content:
-  - IEEE Transactions on Visualization and Computer Graphics, 2014, 2013, 2012.
-  - EuroVis, 2014, 2013, 2012.
-  - International Conference on Intelligent User Interfaces, 2014.
-  - Computers and Graphics, 2013.
+  type: events
+  events:
+  - name: IEEE Transactions on Visualization and Computer Graphics.
+    date: 2012-2014
+  - name: EuroVis.
+    date: 2012-2014
+  - name: International Conference on Intelligent User Interfaces.
+    date: 2014
+  - name: Computers and Graphics.
+    date: 2014
 
 Teaching assistant appointments:
-  type: other
-  content:
-  - CMPT 361 Introduction to Computer Graphics, Fall 2011.
-  - CMPT 225 Introduction to Data Structures and Algorithms, Spring 2011.
-  - CMPT 225 Introduction to Data Structures and Algorithms, Fall 2010.
+  type: events
+  events:
+  - name: CMPT 361 Introduction to Computer Graphics.
+    date: Fall 2011
+  - name: CMPT 225 Introduction to Data Structures and Algorithms.
+    date: Spring 2011
+  - name: CMPT 225 Introduction to Data Structures and Algorithms.
+    date: Fall 2010
 
 Academic positions:
   type: jobs
   jobs:
   - title: Research assistant
-    location: GrUVi Lab, Simon Fraser University Computing Science Department
+    location: GrUVi Lab, SFU Computing Science Department
     dates: 
       start: January 2011 
       finish: December 2012
@@ -72,21 +86,36 @@ Academic positions:
     - Developed a collision detection system based on V-Clip to account for penetration and location of impact.
 
 Volunteer positions:
-  type: other
-  content:
-  - SFU Teaching Support Staff Union steward, September 2010 -- September 2012.
-  - SFU Teaching Support Staff Union
-    Membership Mobilization Committee Commissioner,
-    January 2012 -- September 2012.
-  - SFU Teaching Support Staff Union Membership Mobilization Committee member,
-    January 2011 -- September 2012.
-  - SFU Computing Science buddy coordinator, Incoming student mentorship
-    program, January 2011 -- September 2012.
+  type: jobs
+  jobs:
+  - title: Steward
+    location: SFU Teaching Support Staff Union
+    dates:
+      start: Sep 2010
+      finish: Sep 2012
+  - title: Membership Mobilization Committee Commissioner
+    location: SFU Teaching Support Staff Union
+    dates:
+      start: Jan 2012
+      finish: Sep 2012
+  - title: Membership mobilization committee member
+    location: SFU Teaching Support Staff Union
+    dates:
+      start: Jan 2011
+      finish: Sep 2012
+  - title: Buddy coordinator
+    location: SFU Computing Science Department
+    dates: 
+      start: Jan 2011
+      finish: Sep 2012
+    achievements:
+    - Coordinated incoming student mentorship program 
 
 Academic awards:
-  type: other
-  content:
-  - SFU graduate fellowship (Masters), $6250, Spring 2012.
+  type: events
+  events:
+  - name: SFU graduate fellowship (Masters), $6250. 
+    date: Spring 2012
 
 Professional positions:
   type: jobs
