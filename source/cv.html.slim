@@ -1,0 +1,45 @@
+---
+title: CV
+layout: page
+---
+
+= link_to "pdf version", "/cv.pdf"
+
+- data.cv.map do |section_name, content|
+
+  section class="#{content.type}"
+    h2 = section_name
+
+    - case content.type
+    - when "pubs"
+      - if content.pubs.kind_of?(Array)
+        - pub_list = content.pubs
+      - else
+        - pub_list = find_pubs(content.pubs, "Thomas Torsney-Weir")
+      ul.pub-list
+        - pub_list.each do |pub|
+          li = cite_full(pub)
+    - when "jobs"
+      - content.jobs.each do |job|
+        section.job
+          header
+            h4.location = job.location
+            h5.subheader.title = job.title
+            time.duration == "#{job.dates.start} &ndash; #{job.dates.finish}"
+          - if job.achievements
+            ul.achievements
+              - job.achievements.each do |item|
+                li = item
+    - when "events"
+      ul.event-list
+        - content.events.each do |event|
+          li
+            p = event.name
+            time = event.date
+    - when "other"
+      ul.misclist
+        - content.content.each do |item|
+          li 
+            markdown:
+              #{item}
+
