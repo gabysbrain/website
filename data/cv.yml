@@ -29,10 +29,10 @@ Education:
   - name: Georgetown University, Washington, DC, USA. BS in Computer Science.
     date: 2002
 
-Software publications:
-  type: other
-  content:
-  - <a href="https://www.tomtorsneyweir.com/tuner">Tuner</a>
+#Software publications:
+  #type: other
+  #content:
+  #- <a href="https://www.tomtorsneyweir.com/tuner">Tuner</a>
 
 Reviewerships:
   type: events
@@ -98,11 +98,11 @@ Volunteer positions:
     dates:
       start: Jan 2012
       finish: Sep 2012
-  - title: Membership mobilization committee member
+  - title: Membership Mobilization Committee member
     location: SFU Teaching Support Staff Union
     dates:
       start: Jan 2011
-      finish: Sep 2012
+      finish: Jan 2012
   - title: Buddy coordinator
     location: SFU Computing Science Department
     dates: 
@@ -114,7 +114,7 @@ Volunteer positions:
 Academic awards:
   type: events
   events:
-  - name: SFU graduate fellowship (Masters), $6250. 
+  - name: SFU graduate fellowship (Masters), CAD 6,250.
     date: Spring 2012
 
 Professional positions:
