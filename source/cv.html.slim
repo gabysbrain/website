@@ -3,7 +3,11 @@ title: CV
 layout: page
 ---
 
-= link_to "pdf version", "/cv.pdf"
+
+.clearfix
+  h1.left CV
+  = link_to "/cv.pdf", {:class => "button small radius right"} do 
+    | pdf version
 
 - data.cv.map do |section_name, content|
 
