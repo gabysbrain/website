@@ -1,5 +1,7 @@
 
 ul.project-links
+  - if proj.download
+    li = link_to 'download', proj.download, {:class => 'link'}
   - if proj.source
     li = link_to 'source', proj.source, {:class => 'link'}
   - if proj.video
