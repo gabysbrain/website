@@ -48,13 +48,13 @@
         font-family: $header-font-family;
         font-size: $subtitle-and-nav-font-size;
         width: 100%;
-        @media #{$small-only} {
-          a {
+        a:not(.button) {
+          @media #{$small-only} {
             background: $ttw-green;
             color: white;
             border-bottom: 1px solid white;
-            padding: 0.25em 0.75em;
           }
+          padding: 0.25rem 0.75rem;
         }
       }
 
