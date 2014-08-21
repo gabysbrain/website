@@ -6,6 +6,8 @@ html.no-js lang="en"
   head
     meta charset="utf-8"
     meta name="viewport" content="width=device-width"
+    - if current_page.data.noindex
+      meta name="robots" content="noindex"
     title 
       - if current_page.data.title 
         = current_page.data.title + " - "
