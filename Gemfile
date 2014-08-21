@@ -15,6 +15,7 @@ gem "therubyracer"
 gem "oj"
 gem "middleman-imageoptim"
 gem "multimarkdown-cli"
+gem "middleman-google_drive", '~> 0.2.1'
 gem "slim"
 
 gem "bibtex-ruby"
