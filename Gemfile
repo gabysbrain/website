@@ -11,15 +11,13 @@ gem "foundation"
 gem "compass"
 gem "nokogiri"
 gem "middleman-deploy"
+gem "middleman-citation"
 gem "therubyracer"
 gem "oj"
 gem "middleman-imageoptim"
 gem "multimarkdown-cli"
 gem "middleman-google_drive", '~> 0.2.1'
 gem "slim"
-
-gem "bibtex-ruby"
-gem "citeproc-ruby", "~> 0.0.6"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"

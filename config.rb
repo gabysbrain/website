@@ -1,7 +1,7 @@
 require 'lib/social_helpers'
-require 'lib/citations'
 require 'lib/tex2pdf'
 require 'nokogiri'
+require 'middleman-citation'
 
 helpers SocialHelpers
 #helpers Test
@@ -46,7 +46,7 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-activate :citations do |options|
+activate :citation do |options|
   options.bibtex = "/Users/tom/Dropbox/Research/all.bib"
   options.style = "ieee"
 end
