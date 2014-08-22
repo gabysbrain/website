@@ -2,6 +2,7 @@ require 'lib/social_helpers'
 require 'lib/citations'
 require 'lib/tex2pdf'
 require 'nokogiri'
+require 'better_errors'
 
 helpers SocialHelpers
 #helpers Test
@@ -175,5 +176,10 @@ configure :build do
   # set :http_path, "/Content/images/"
 
   activate :cvmaker
+end
+
+configure :development do
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
 end
 

@@ -12,8 +12,14 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
+    better_errors (2.0.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     bibtex-ruby (4.0.3)
       latex-decode (~> 0.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     celluloid (0.15.2)
       timers (~> 1.1.0)
@@ -21,6 +27,7 @@ GEM
     citeproc-ruby (0.0.6)
       logging (~> 1.5)
       nokogiri (~> 1.5)
+    coderay (1.1.0)
     coffee-script (2.3.0)
       coffee-script-source
       execjs
@@ -37,6 +44,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    debug_inspector (0.0.2)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -217,7 +225,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
   bibtex-ruby
+  binding_of_caller
   builder (~> 3.0)
   citeproc-ruby (~> 0.0.6)
   compass
