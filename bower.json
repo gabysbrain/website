@@ -1,7 +1,7 @@
 {
   "name": "www.tomtorsneyweir.com",
   "dependencies": {
-    "foundation": "zurb/bower-foundation#~5.3",
+    "foundation": "zurb/bower-foundation#~5.4",
     "highlightjs": "~8.0.0",
     "webicons": "https://github.com/adamfairhead/webicons",
     "responsive-nav": "~1.0.32"
