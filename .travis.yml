@@ -2,9 +2,9 @@ language: ruby
 rvm:
   - 2.0.0
 before_install:
-  - wget https://github.com/fletcher/MultiMarkdown-4/archive/4.5.3.tar.gz
-  - tar xzf 4.5.3.tar.gz
-  - cd 4.5.3 && ./configure --prefix=/usr && make && make install
+  - wget https://github.com/fletcher/MultiMarkdown-4/archive/4.5.3.tar.gz -O /tmp/mmd-4.5.3.tar.gz
+  - tar xzvf mmd-4.5.3.tar.gz
+  - cd mmd-4.5.3 && ./configure --prefix=/usr && make && make install
 script:
   - bundle exec middleman build
 after_success:
