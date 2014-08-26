@@ -1,6 +1,10 @@
 language: ruby
 rvm:
   - 2.0.0
+os:
+  - osx
+brefore_install:
+  - brew install multimarkdown
 script:
   - bundle exec middleman build
 after_success:
