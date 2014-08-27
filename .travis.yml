@@ -4,7 +4,7 @@ rvm:
 before_install:
   - wget https://github.com/fletcher/MultiMarkdown-4/archive/4.5.3.tar.gz -O /tmp/mmd-4.5.3.tar.gz
   - cd /tmp && tar xzvf mmd-4.5.3.tar.gz
-  - cd MultiMarkdown-4-4.5.3 && ./configure --prefix=/usr && make && make install
+  - cd MultiMarkdown-4-4.5.3 && make && make install
 script:
   - bundle exec middleman build
 after_success:
