@@ -8,6 +8,7 @@ before_install:
   - git submodule update
   - make
   - sudo make install
+  - bundle install
 script:
   - bundle exec middleman build
 after_success:
