@@ -1,9 +1,11 @@
 require 'lib/social_helpers'
+require 'lib/date_helpers'
 require 'lib/tex2pdf'
 require 'nokogiri'
 require 'middleman-citation'
 
 helpers SocialHelpers
+helpers DateHelpers
 #helpers Test
 
 ###
@@ -164,12 +166,12 @@ configure :build do
   # activate :relative_assets
   
   # Compress images after build
-  activate :imageoptim do |options|
-    options.threads = true
+  #activate :imageoptim do |options|
+    #options.threads = true
 
-    # disable pngout
-    options.pngout_options = false
-  end
+    ## disable pngout
+    #options.pngout_options = false
+  #end
   
   # Or use a different image path
   # set :http_path, "/Content/images/"

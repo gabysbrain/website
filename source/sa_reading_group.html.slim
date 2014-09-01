@@ -31,7 +31,9 @@ table
   - data.sa_reading_group['Schedule'].each do |row|
     tr
       td
-        = row['Date'].strftime('%b %e, %Y') if row['Date']
+        - if row['Date']
+          - dt = parse_date(row['Date'])
+          = dt.strftime('%b %e, %Y')
       td= row['Topic']
       td= row['Presenter']
       td
