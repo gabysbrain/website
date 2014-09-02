@@ -64,7 +64,7 @@ ignore "/cv.pdf"
 
 activate :deploy do |deploy|
   # build before deployment
-  deploy.build_before = true
+  deploy.build_before = false
 
   # publish to github pages
   deploy.method = :git
