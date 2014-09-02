@@ -22,3 +22,6 @@ bower_components
 # Don't publish secrets!
 .google_client_secrets.json
 
+# don't include temporary bibtex file
+all.bib
+

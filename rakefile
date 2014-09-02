@@ -1,0 +1,17 @@
+
+task :download_bib do
+  %x(curl -L -o all.bib https://www.dropbox.com/s/th9r55x8z8yemff/all.bib?dl=0)
+end
+
+task :build => [:download_bib] do
+  %x(bundle exec middleman build)
+end
+
+task :clean do
+  %x(rm -rf build)
+end
+
+task :deploy => [:clean, :build] do
+  %(bundle exec middleman deploy)
+end
+

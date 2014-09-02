@@ -48,9 +48,11 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-activate :citation do |options|
-  options.bibtex = "/Users/tom/Dropbox/Research/all.bib"
-  options.style = "ieee"
+configure :development do
+  activate :citation do |options|
+    options.bibtex = "/Users/tom/Dropbox/Research/all.bib"
+    options.style = "ieee"
+  end
 end
 
 activate :directory_indexes
@@ -113,13 +115,18 @@ configure :build do
   
   # Minify Javascript on build
   activate :minify_javascript
+
+  activate :citation do |options|
+    options.bibtex = "all.bib"
+    options.style = "ieee"
+  end
   
   # Enable cache buster
   # activate :cache_buster
   
   # Use relative URLs
   # activate :relative_assets
-  
+
   # Compress images after build
   activate :imageoptim do |options|
     options.threads = true
