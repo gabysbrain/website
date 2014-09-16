@@ -25,7 +25,7 @@ table
     th(width=103) Date
     th Topic
     th Paper
-    th Notes
+    th Links
   tbody
   - data.sa_reading_group['Schedule'].each do |row|
     tr
@@ -42,3 +42,8 @@ table
         br
         = "#{row['Author']}, #{row['Year']}"
       td
+        - if row['Date']
+          - dt = parse_date(row['Date'])
+          - path = "/sa_reading_group/notes/#{dt.strftime('%Y-%m-%d')}.html"
+          - pg = sitemap.find_resource_by_path(path)
+          = link_to('Notes', pg.url) if pg
