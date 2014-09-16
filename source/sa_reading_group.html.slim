@@ -11,10 +11,10 @@ p
     how it differs from uncertainty analysis, and how we can use visualization
     of uncertainty to help better analyze simulation models.
 
-p 
-  | We will meet to discuss on Tuesdays at 4pm CET/8am MST for one hour. The 
+p
+  | We will meet to discuss on Tuesdays at 4pm CET/8am MST for one hour. The
     meeting will start with a 10 minute overview of the paper by the presenter
-    followed by a discussion for the remaining time. Ideally, the presenter 
+    followed by a discussion for the remaining time. Ideally, the presenter
     should send out the slides the night before to everyone to prepare
     questions/comments.
 
@@ -24,9 +24,8 @@ table
   thead
     th(width=103) Date
     th Topic
-    th Presenter
     th Paper
-    th Links
+    th Notes
   tbody
   - data.sa_reading_group['Schedule'].each do |row|
     tr
@@ -35,7 +34,6 @@ table
           - dt = parse_date(row['Date'])
           = dt.strftime('%b %e, %Y')
       td= row['Topic']
-      td= row['Presenter']
       td
         - if row['Link']
           = link_to row['Title'], row['Link']
@@ -44,6 +42,3 @@ table
         br
         = "#{row['Author']}, #{row['Year']}"
       td
-        - if row['Slides']
-          = link_to "slides", row['Slides']
-
