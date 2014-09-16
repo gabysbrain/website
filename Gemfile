@@ -22,3 +22,8 @@ gem "slim"
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
