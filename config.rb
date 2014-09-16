@@ -79,21 +79,17 @@ activate :google_drive, load_sheets: {
 
 page "/feed.xml", :layout => false
 
-# section layouts
-page "/blog/*",    :layout => "post"
-page "/project/*", :layout => "project"
-
 ###
 # Sprockets
 ###
 
 # Foundation 5 js path
-ready do 
+ready do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
   sprockets.append_path File.join(root, @bower_config["directory"])
 end
 
-### 
+###
 # Compass
 ###
 
@@ -111,17 +107,20 @@ end
 ###
 
 # Per-page layout changes:
-# 
+#
 # With no layout
 # page "/path/to/file.html", :layout => false
-# 
+#
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
-# 
+#
 # A path which all have the same layout
 # with_layout :admin do
 #   page "/admin/*"
 # end
+page "/blog/*",    :layout => "post"
+page "/project/*", :layout => "project"
+
 
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
@@ -154,16 +153,16 @@ set :partials_dir, 'partials'
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
-  
+
   # Minify Javascript on build
   activate :minify_javascript
-  
+
   # Enable cache buster
   # activate :cache_buster
-  
+
   # Use relative URLs
   # activate :relative_assets
-  
+
   # Compress images after build
   activate :imageoptim do |options|
     options.threads = true
@@ -171,7 +170,7 @@ configure :build do
     # disable pngout
     options.pngout_options = false
   end
-  
+
   # Or use a different image path
   # set :http_path, "/Content/images/"
 
@@ -182,4 +181,3 @@ configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
 end
-
