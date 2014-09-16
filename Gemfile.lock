@@ -156,7 +156,6 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.1)
     multi_json (1.10.1)
-    multimarkdown-cli (0.0.2)
     multipart-post (2.0.0)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
@@ -236,6 +235,7 @@ DEPENDENCIES
   builder (~> 3.0)
   compass
   foundation
+  kramdown
   middleman (~> 3.3)
   middleman-blog
   middleman-citation
@@ -243,7 +243,6 @@ DEPENDENCIES
   middleman-google_drive (~> 0.2.1)
   middleman-imageoptim
   middleman-livereload
-  multimarkdown-cli
   nokogiri
   oj
   slim

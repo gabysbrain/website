@@ -25,9 +25,9 @@ I detail my specific setup below.
 
 <!-- more -->
 
-## Set Up 
+## Set Up
 
-In this example I have my public repo at `github.com` and my private repo 
+In this example I have my public repo at `github.com` and my private repo
 hosted at the (fake) address `private.com`.
 
 ### Remotes
@@ -35,7 +35,7 @@ hosted at the (fake) address `private.com`.
 The first thing I do is remove the "origin" remote mapping. This way it's
 unambiguous whether I'm pushing a branch to my public repo or my private one.
 
-``` language-sh
+```
 git remote remove origin
 git remote add public git@github.com:gabysbrain/tuner.git
 git remote add private git@private.com:gabysbrain/tuner_dev.git
@@ -48,7 +48,7 @@ I have branches `release_2.0` and `bugfix` in the public repo and a
 `secret_feature` branch in my private repo.  Then I just map these the normal
 way:
 
-``` language-sh
+```
 git branch release_2.0 public/release_2.0
 git branch bugfix public/bugfix
 git branch secret_feature private/secret_feature
@@ -68,7 +68,7 @@ on it, and then moving it to my public repo.
 First we check out a new branch and then
 push it upstream to my private repo.
 
-``` language-sh
+```
 git checkout -b next_idea
 git push --set-upstream private next_idea
 ```
@@ -78,7 +78,7 @@ branch I will share with contributors.  Once I'm ready to There's no remote
 move command so we have to do it manually by pushing it upstream to the public
 repo and then deleting it on the private one.  
 
-``` language-sh
+```
 git push --set-upstream public next_idea
 git branch -r -d private/next_idea
 ```
@@ -86,10 +86,9 @@ git branch -r -d private/next_idea
 I usually look at my branch mappings at this point to double check that
 everything is up to date.
 
-```  language-sh
+```
 git branch -r
 ```
 
 I check that all my public branches should be mapped to the public remote and
 all my private branches are mapped to my private remote.
-

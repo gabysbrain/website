@@ -39,7 +39,7 @@ activate :blog do |blog|
   # blog.year_link = ":year.html"
   # blog.month_link = ":year/:month.html"
   # blog.day_link = ":year/:month/:day.html"
-  blog.default_extension = ".multimarkdown.erb"
+  blog.default_extension = ".md.erb"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
@@ -82,6 +82,12 @@ activate :google_drive, load_sheets: {
 #set :build_dir, 'tmp'
 
 page "/feed.xml", :layout => false
+
+###
+# Markdown config
+###
+set :markdown_engine, :kramdown
+set :markdown, :input => 'GFM', :hard_wrap => false
 
 ###
 # Sprockets

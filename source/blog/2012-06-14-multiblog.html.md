@@ -12,7 +12,7 @@ posts and one for my projects.  The issue with jekyll/Octopress is that all
 valid files in any `_posts` directory are all combinied into one big list.
 Jekyll/Octopress doesn't differentiate the posts stored in different places on
 the file system.  I wanted two separate index pages.  One would list all my
-blog posts in the standard blog index format and the other would be a 
+blog posts in the standard blog index format and the other would be a
 different layout listing all my projects.
 
 <!--more-->
@@ -26,14 +26,14 @@ found is that all variables in the yaml front matter are available so I can
 use effectively the same method as the category one but checking against the
 value of the `layout` variable instead of `category`.  This works great for me
 since my blog posts and project "posts" have completely different layouts
-anyway. 
+anyway.
 
 ## Example yaml front matter
 
 When creating a post I just have to make sure that for blog posts my yaml
 front matter includes a `layout: post` line as shown below:
 
-``` language-yaml linenums
+```
 ---
 layout: post
 title: "Reproducable research"
@@ -45,7 +45,7 @@ categories: research
 
 and projects include a `layout: project` line:
 
-``` language-yaml linenums
+```
 ---
 layout: project
 title: "Tuner"
@@ -61,10 +61,10 @@ I then made sure that there were layout files called `post.html` and
 
 ## Index pages
 
-Then, when creating my [blog index](/blog/) page, I just have to check 
+Then, when creating my [blog index](/blog/) page, I just have to check
 if `layout = 'post'`
 
-``` language-html linenums
+```
 {% for post in paginator.posts %}
   {% if post.layout == 'post' %}
   {% assign content = post.content %}
@@ -75,10 +75,10 @@ if `layout = 'post'`
 {% endfor %}
 ```
 
-For the projects list I manually list the categories right now.  So, for 
+For the projects list I manually list the categories right now.  So, for
 example, the "Research" section of my [projects list](/projects) looks like
 
-``` language-html linenums
+```
 <h1>Research</h1>
 {% for proj in site.posts %}
   {% if proj.layout == 'project' and proj.category == 'research' %}
@@ -95,7 +95,7 @@ example, the "Research" section of my [projects list](/projects) looks like
 The last step was to make sure that creating new posts via the Rakefile
 automatically add the layout directive.  My new post task now looks like:
 
-``` language-ruby linenums
+```
 desc "Begin a new post in #{source_dir}/#{posts_dir}"
 task :new_post, :title do |t, args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
@@ -126,7 +126,7 @@ extra fields that the project layout uses for my projects like a teaser image,
 and links for demo videos, citations, websites, etc.  My new project task
 looks like
 
-``` language-ruby linenums
+```
 desc "Begin a new project in #{source_dir}/#{projects_dir}"
 task :new_project, :title do |t, args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
@@ -157,7 +157,5 @@ end
 
 ## Conclusion
 
-That's it!  Now I can have as many sub blogs as I want and keep the 
+That's it!  Now I can have as many sub blogs as I want and keep the
 category field available for categorizing posts.
-
-

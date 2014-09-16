@@ -15,7 +15,7 @@ gem "middleman-citation"
 gem "therubyracer"
 gem "oj"
 gem "middleman-imageoptim"
-gem "multimarkdown-cli"
+gem "kramdown"
 gem "middleman-google_drive", '~> 0.2.1'
 gem "slim"
 
@@ -26,4 +26,3 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
 end
-

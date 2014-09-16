@@ -6,8 +6,8 @@ comments: true
 tags: research
 ---
 
-I recently set up a 
-[fork](https://github.com/gabysbrain/r-notebook) 
+I recently set up a
+[fork](https://github.com/gabysbrain/r-notebook)
 of the Octopress blogging software to generate posts
 that contain explanatory text, LaTex math, and output from R code.
 
@@ -15,17 +15,17 @@ that contain explanatory text, LaTex math, and output from R code.
 
 ## Motivation
 
-For my research I've been preparing weekly reports to send out before 
+For my research I've been preparing weekly reports to send out before
 meetings.  For me at least, writing things out really cements concepts
 and usually helps to filter out a lot of the cruft of poorly thought out
 ideas.  I started by emailing out pdfs I generated using a combination of
-[knitr](http://yihui.name/knitr/) and 
+[knitr](http://yihui.name/knitr/) and
 [multimarkdown](http://fletcherpenney.net/multimarkdown/).  
 The problem with emailing pdfs
 is that I needed to keep track of all the old reports, they weren't indexed,
 and I couldn't generate things like cross links between reports.
 
-What I really wanted was a blog.  I've been really liking 
+What I really wanted was a blog.  I've been really liking
 [Octopress](http://octopress.org) as the platform for this blog.  
 I like the fact it creates static pages which
 I can then upload to my web account at my University and put them behind
@@ -34,7 +34,7 @@ reports around, allows links among posts, and generates lists of posts for
 each category.
 
 The project is set up as a fork of Octopress so if you're interested
-in using it the project as well as the installation instructions are at 
+in using it the project as well as the installation instructions are at
 <https://github.com/gabysbrain/r-notebook>.
 
 ## Example post
@@ -47,20 +47,20 @@ execution and automatically linked into the post.  The math is handled by
 
 ## Combining the pieces
 
-I wanted to keep using [knitr](http://yihui.name/knitr/) and 
-[MathJax](http://www.mathjax.org) as 
-[before](/reproducable-research).  They 
+I wanted to keep using [knitr](http://yihui.name/knitr/) and
+[MathJax](http://www.mathjax.org) as
+[before](/reproducable-research).  They
 work really well for my purposes.
 
-I recently found out that version 0.7 of knitr supports executing languages 
+I recently found out that version 0.7 of knitr supports executing languages
 other than R which is fantastic!  I haven't had a chance to try it out yet
 so I'm not sure how well it works.  There's a demo page for it here:
 <http://yihui.name/knitr/demo/engines/>
 
-Adding MathJax to Octopress was just a simple matter of adding a link to 
+Adding MathJax to Octopress was just a simple matter of adding a link to
 the MathJax javascript file to the page template in Octopress.
 
-The major additions are written as 2 plugins: 
+The major additions are written as 2 plugins:
 `multimarkdown.rb`, which adds multimarkdown support to
 Octopress, and `knitr.rb`, which runs all the blog posts through knitr
 to execute the R code and generate the plots and such before the final
@@ -69,11 +69,11 @@ mmd to html conversion.
 ### mmd plugin
 
 The original version is [here](https://github.com/danieldriver/jekyll/commit/a07766e3c5cb1c78b7b77643f850a67cb721763a).  The only real change I made was that
-the extension is now `multimarkdown`.  I found that because 
+the extension is now `multimarkdown`.  I found that because
 octopress/jekyll's extension mapping will match partial extensions `mmd` was
 being detected as a different file type than multimarkdown.
 
-``` language-ruby linenums plugins/multimarkdown.rb
+```
 # multimarkdown renderer for jekyll
 #
 # adapted from: http://git.io/9-RWUg
@@ -115,7 +115,7 @@ the text directly to knitr so that we can index the cache by blog post name.
 That way there's a unique cache directory for each blog post and identical
 cache section names in different blog posts won't clobber each other.
 
-``` language-ruby linenums plugins/knitr.rb
+```
 require 'tempfile'
 
 module Jekyll
@@ -139,10 +139,10 @@ module Jekyll
         end
       end
     end
-    
+
     # runs everything through knitr
     def knit(name, content)
-      #knit_content, status = Open3.capture2(KNITR_PATH, name, 
+      #knit_content, status = Open3.capture2(KNITR_PATH, name,
                                             #:stdin_data=>content)
       # set up the tempfiles to do the translation
       src_file = Tempfile.new('srcfile')
@@ -163,7 +163,7 @@ module Jekyll
       src_file.unlink
       dst_file.unlink
 
-      # This is a hack to get the double backslashes in latex math 
+      # This is a hack to get the double backslashes in latex math
       # working with liquid templates
       knit_content.gsub(/\\\\$/){"\\\\\\\\"}
     end
@@ -184,7 +184,7 @@ to highlight R code we need to wrap it in liquid `codeblock` tags.  The
 hook for that is done by lines 69-71.  The rest just sets all the hooks I
 want to use and renders the files using knitr.
 
-``` language-ruby linenums plugins/knit_markdown.R
+```
 #!/usr/bin/Rscript
 
 library(knitr)
@@ -234,7 +234,7 @@ query_plot_hook <- function(x, options) {
     mov.linkname <- paste(image.load.path, basename(mov.fname), sep='')
     if(is.na(ffmpeg.opts)) ffmpeg.opts <- NULL
 
-    ffmpeg.cmd <- paste("ffmpeg", "-y", "-r", 1/options$interval, 
+    ffmpeg.cmd <- paste("ffmpeg", "-y", "-r", 1/options$interval,
                         "-i", fig.fname, mov.fname)
     system(ffmpeg.cmd, ignore.stdout=TRUE)
 
@@ -248,7 +248,7 @@ query_plot_hook <- function(x, options) {
       if('loop' %in% mov.opts) 'loop="loop"')
     sprintf('<video %s><source src="%s?%d" type="video/mp4" />video of chunk %s</video>', opt.str, mov.linkname, pic.sample(), options$label)
   } else {
-    sprintf('![plot of chunk %s](%s%s?%d) ', 
+    sprintf('![plot of chunk %s](%s%s?%d) ',
             options$label, base, filename, pic.sample())
   }
 }
@@ -284,5 +284,3 @@ And that's about it.  The rest of the changes are in the
 [repository](https://github.com/gabysbrain/r-notebook) of course.  
 Feel free to fork the repository
 for your own work and let me know what you think!
-
-

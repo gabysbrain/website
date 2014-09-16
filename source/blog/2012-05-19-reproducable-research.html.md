@@ -22,15 +22,15 @@ and images, some code to munge data, and text to explain what I'm doing.
 
 <!--more-->
 
-![][preview]
+![preview image](/images/notebook-preview.png)
 
 I use R for any sort of numerical computing and multimarkdown has been my
 go-to markup language for some time.  My favorite feature of multimarkdown is
-its support for processing LaTeX math.  Now that the 
+its support for processing LaTeX math.  Now that the
 [knitr package](http://yihui.name/knitr/) is out I
 can tie my analysis code (written in R) to my explanations (written in
-markdown).  What's also great about this system is that my analysis is 
-contained entirely in a text file that I can store in source control along 
+markdown).  What's also great about this system is that my analysis is
+contained entirely in a text file that I can store in source control along
 with any data and the rest of my project.  
 
 The rest of this post goes into detail about how I've set up Vim, knitr, and
@@ -44,8 +44,8 @@ The best thing about this method is that it's pretty much editor agnostic.
 Marked doesn't care what editor you use as long as it's editing markdown.
 So, I get to use the only text editor I've ever liked: vim!
 
-I linked Marked to vim with the instructions from 
-[A Whole lot of Bollocks' blog post](http://captainbollocks.tumblr.com/post/9858989188/linking-macvim-and-marked-app) 
+I linked Marked to vim with the instructions from
+[A Whole lot of Bollocks' blog post](http://captainbollocks.tumblr.com/post/9858989188/linking-macvim-and-marked-app)
 so that I can hit `<leader>-m` and have the file I'm editing open in Marked.
 Once the file is open it automatically updates every time I save.
 
@@ -54,7 +54,7 @@ To make my editing more efficient I use the
 which brings TextMate-style snippets to vim.  Basically, you can type a shorter
 string, hit tab, and have it expand into anything you want.  It's really great
 for adding boilerplate code.  I particularly like this for adding the knitr
-code blocks.  With the fork of SnipMate I have set up 
+code blocks.  With the fork of SnipMate I have set up
 (<https://github.com/gabysbrain/snipmate.vim>) typing `rcode` expands to
 
 ```
@@ -71,7 +71,7 @@ ${5}
 end.rcode-->
 ```
 
-I'm also using the multimarkdown syntax highlighter: 
+I'm also using the multimarkdown syntax highlighter:
 <https://github.com/jngeist/vim-multimarkdown>.
 
 ## Processor: knitr
@@ -81,7 +81,7 @@ box for processing R code embedded in a markdown document.  The killer feature
 (other than the markdown output) in my opinion is its caching and and
 dependency layer so I don't have to wait for R to recompute every section when
 I just change one. It's also smart enough to recompute any blocks that depend
-on the one I changed. 
+on the one I changed.
 
 The main issue is that knitr is designed to be run from the desired working
 directory. This is how it sets the locations for the images and cache files.
@@ -93,17 +93,17 @@ images will be in the proper place.
 
 This script also allows me to add some custom hooks into the markdown
 processor. I mostly use this to test out new features before submitting them
-to the main knitr development. 
+to the main knitr development.
 
 ## Viewer: Marked
 
 This all gets piped through Marked.  Marked.app is an amazing and simple
 markdown preview tool. When the preview is open it watches my source file for
-changes and automatically updates when I save in vim. 
+changes and automatically updates when I save in vim.
 
 By default it uses its own multimarkdown processor but you can override that
 with your own.  It also supports a custom css file. The one I'm using is
-slightly modified from the github theme but with nicer tables. 
+slightly modified from the github theme but with nicer tables.
 
 ## Future
 
@@ -114,12 +114,8 @@ private research blog that we all share.
 I'd also like to add a lot more interactive features to the HTML. The killer
 features would be interactive manipulation of graphics and having those
 changes reflected in the source document.  It would also be great if I could
-inspect R objects directly in the HTML document as well.  This would 
+inspect R objects directly in the HTML document as well.  This would
 require some interaction with a running version of R though.
 
 But for now, I'm happy that I can easily make a record of what I've done
 each week and my supervisor is happy that I can show what I've done!
-
-[preview]: /images/notebook-preview.png "preview image" 
-           width=640px class=block
-
