@@ -10,6 +10,5 @@ ul.sociallist
   - links.each do |icon,text,url,tooltip|
     li
       span.has-tip title=tooltip data-tooltip="" data-options="disable_for_touch:true"
-        = link_to url, {:class=>"webicon #{icon} small"} do
-          = text
-
+        = link_to url, {:class=>"icon #{icon}"} do
+          //-= text
