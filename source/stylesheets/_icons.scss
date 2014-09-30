@@ -23,6 +23,10 @@
     @extend .fa-github-alt;
   }
 
+  &.linkedin {
+    @extend .fa-linkedin;
+  }
+  
   &.rss {
     @extend .fa-rss;
   }
