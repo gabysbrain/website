@@ -8,17 +8,18 @@
   li {
     display: inline-block;
     margin-right: .25em;
+    line-height: 2em;
 
     .icon {
       display: block;
       width: 2em;
       height: 2em;
-      padding: .5em;
       border-radius: 50%;
+      padding: 0em;
       background: gray;
       color: white;
       text-align: center;
-      vertical-align: text-top;
+      vertical-align: middle;
     }
 
     .mail {

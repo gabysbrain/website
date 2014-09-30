@@ -2,7 +2,6 @@
 
 .icon:before {
   @extend .fa;
-  //@extend .fa-1x;
 
   &.mail {
     @extend .fa-envelope-o;
