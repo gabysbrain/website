@@ -1,11 +1,9 @@
-require 'lib/social_helpers'
 require 'lib/date_helpers'
 require 'lib/tex2pdf'
 require 'nokogiri'
 require 'middleman-citation'
 require 'better_errors'
 
-helpers SocialHelpers
 helpers DateHelpers
 #helpers Test
 

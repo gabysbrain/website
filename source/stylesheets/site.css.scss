@@ -3,7 +3,8 @@
 
 @import "foundation/scss/foundation";
 
-@import "webicons";
+// Icons for everything
+@import "icons";
 
 // The title area processing
 @import "title";
@@ -13,6 +14,9 @@
 
 // The historical blog list stuff
 @import "blog_archive";
+
+// Social icons
+@import "social";
 
 // Things for my CV
 @import "cv";

@@ -7,8 +7,6 @@ $body-font-family: 'Oxygen', sans-serif;
 $header-font-family: 'Raleway', sans-serif;
 $code-font-family: 'Anonymous Pro', Consolas, Courier, monospace;
 
-$webicons-url: "/images/webicons/" !default;
-
 $rem-base: $base-font-size;
 
 // Various global styles
@@ -54,4 +52,3 @@ $solarized-theme: light;
 // Tooltips
 $tooltip-font-size: 12px;
 $tooltip-padding: rem-calc(6);
-

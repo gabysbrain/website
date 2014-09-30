@@ -45,7 +45,7 @@ body > div.row:first-of-type {
     @extend .right;
     display: inline;
     margin: 0 !important;
-  
+
     .tag {
       //@extend .button;
       //@extend .tiny;
@@ -59,7 +59,7 @@ body > div.row:first-of-type {
 
 .project-summary-entry {
   @include grid-row;
-  
+
   .teaser {
     @include grid-column(3);
   }
@@ -90,21 +90,6 @@ body > div.row:first-of-type {
 
 .site-footer {
   @include grid-column(12);
-}
-
-.sociallist {
-  display: inline;
-  list-style: none;
-  margin-top: 1em;
-  margin-left: 0;
-
-  li {
-    display: inline;
-  }
-
-  .has-tip {
-    border-bottom: none;
-  }
 }
 
 .teaser {
@@ -151,4 +136,3 @@ body > div.row:first-of-type {
     margin-top: 1em;
   }
 }
-

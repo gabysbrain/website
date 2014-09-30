@@ -1,0 +1,33 @@
+@import "font-awesome/scss/font-awesome";
+
+.icon:before {
+  @extend .fa;
+
+  &.mail {
+    @extend .fa-envelope-o;
+  }
+
+  &.twitter {
+    @extend .fa-twitter;
+  }
+
+  &.facebook {
+    @extend .fa-facebook;
+  }
+
+  &.foursquare {
+    @extend .fa-foursquare;
+  }
+
+  &.github {
+    @extend .fa-github-alt;
+  }
+
+  &.linkedin {
+    @extend .fa-linkedin;
+  }
+  
+  &.rss {
+    @extend .fa-rss;
+  }
+}
