@@ -17,6 +17,7 @@ gem "oj"
 gem "middleman-imageoptim"
 gem "kramdown"
 gem "middleman-google_drive", '~> 0.2.1'
+gem "font-awesome-sass"
 gem "slim"
 
 # For feed.xml.builder

@@ -1,4 +1,4 @@
-@import "font-awesome/scss/font-awesome";
+@import "font-awesome";
 
 .icon:before {
   @extend .fa;
@@ -26,7 +26,7 @@
   &.linkedin {
     @extend .fa-linkedin;
   }
-  
+
   &.rss {
     @extend .fa-rss;
   }

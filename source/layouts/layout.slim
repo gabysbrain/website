@@ -8,14 +8,13 @@ html.no-js lang="en"
     meta name="viewport" content="width=device-width"
     - if current_page.data.noindex
       meta name="robots" content="noindex"
-    title 
-      - if current_page.data.title 
+    title
+      - if current_page.data.title
         = current_page.data.title + " - "
       | TomTorsneyWeir.com
-  
+
     link rel="alternate" type="application/atom+xml" title="Tom Torsney-Weir's feed" href="/feed.xml"
     = stylesheet_link_tag 'site'
-    = stylesheet_link_tag '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
 
     / google analytics
     == partial 'google_analytics'
@@ -38,12 +37,12 @@ html.no-js lang="en"
             hr
             == partial 'social'
 
- 
+
 
       div#content role="content"
         == yield
- 
- 
+
+
     footer.row
       div.site-footer
         hr
@@ -51,4 +50,3 @@ html.no-js lang="en"
 
     = javascript_include_tag 'site'
     == yield_content :js
-
