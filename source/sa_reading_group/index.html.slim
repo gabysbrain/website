@@ -40,7 +40,10 @@ table
         - else
           = row['Title']
         br
-        = "#{row['Author']}, #{row['Year']}"
+        - if row['Author']
+          = "#{row['Author']}, #{row['Year']}"
+        - else
+          = row['Year']
       td
         - if row['Date']
           - dt = parse_date(row['Date'])
