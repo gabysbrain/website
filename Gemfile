@@ -7,6 +7,7 @@ ruby '2.0.0'
 gem "middleman", "~> 3.3"
 gem "middleman-blog"
 gem "middleman-livereload"
+gem "middleman-autoprefixer"
 gem "foundation"
 gem "compass"
 gem "nokogiri"

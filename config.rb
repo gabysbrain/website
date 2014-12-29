@@ -47,6 +47,12 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions']
+  config.cascade = false
+  config.inline = true
+end
+
 configure :development do
   activate :citation do |options|
     options.bibtex = "/Users/tom/Dropbox/Research/all.bib"
