@@ -2,6 +2,24 @@
 
 @import url(http://fonts.googleapis.com/css?family=Raleway|Oxygen|Anonymous+Pro);
 
+/*doc
+---
+title: Headers
+name: headers
+category: Typography
+---
+
+Headers use the raleway font.
+
+```html_example
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+```
+*/
 $base-font-size: 14px;
 $body-font-family: 'Oxygen', sans-serif;
 $header-font-family: 'Raleway', sans-serif;
@@ -25,6 +43,19 @@ $h5-font-size: rem-calc(18);
 $h6-font-size: rem-calc(15);
 
 // Style paragraphs
+/*doc
+---
+title: Body text
+name: bodytext
+category: Typography
+---
+
+Main body text uses a 14px Oxygen font
+
+```html_example
+<p>Lorem ipsum dolor sit amet, consectetur, adipisci velit</p>
+```
+*/
 $paragraph-font-family: inherit;
 $paragraph-font-weight: normal;
 $paragraph-font-size: 1rem;
