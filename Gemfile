@@ -20,6 +20,7 @@ gem "kramdown"
 gem "middleman-google_drive", '~> 0.2.1'
 gem "font-awesome-sass"
 gem "slim"
+gem "hologram"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
