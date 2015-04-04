@@ -2,24 +2,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Raleway|Oxygen|Anonymous+Pro);
 
-/*doc
----
-title: Headers
-name: headers
-category: Typography
----
-
-Headers use the raleway font.
-
-```html_example
-<h1>Header 1</h1>
-<h2>Header 2</h2>
-<h3>Header 3</h3>
-<h4>Header 4</h4>
-<h5>Header 5</h5>
-<h6>Header 6</h6>
-```
-*/
 $base-font-size: 14px;
 $body-font-family: 'Oxygen', sans-serif;
 $header-font-family: 'Raleway', sans-serif;
@@ -30,9 +12,21 @@ $rem-base: $base-font-size;
 // Various global styles
 $default-float: left;
 
-// Colors
 $ttw-green: rgb(75, 135, 73);
 $primary-color: $ttw-green;
+
+/**
+ * Headers:
+ * Headers use the raleway font.
+ * 
+ *   @example
+ *   <h1>Header 1</h1>
+ *   <h2>Header 2</h2>
+ *   <h3>Header 3</h3>
+ *   <h4>Header 4</h4>
+ *   <h5>Header 5</h5>
+ *   <h6>Header 6</h6>
+ */
 
 // Control header font sizes
 $h1-font-size: rem-calc(36);
@@ -43,23 +37,31 @@ $h5-font-size: rem-calc(18);
 $h6-font-size: rem-calc(15);
 
 // Style paragraphs
-/*doc
----
-title: Body text
-name: bodytext
-category: Typography
----
-
-Main body text uses a 14px Oxygen font
-
-```html_example
-<p>Lorem ipsum dolor sit amet, consectetur, adipisci velit</p>
-```
-*/
+/**
+ * Body text:
+ * Main body text uses a 14px Oxygen font. Links are colored in the
+ * primary site color (`$ttw-green`)
+ *     
+ *     @example
+ *     <p>Lorem ipsum dolor sit <a href="#">amet</a>, consectetur, adipisci velit</p>
+ */
 $paragraph-font-family: inherit;
 $paragraph-font-weight: normal;
 $paragraph-font-size: 1rem;
 
+/**
+ * Code:
+ * `<pre><code>` blocks use the anonymous pro font and zenburn theme.
+ *
+ *     @example
+ *     <pre><code>
+ *     $(document).ready(function() {
+ *       responsiveNav('.site-nav', {
+ *         customToggle: "menu-toggle"
+ *       });
+ *     });
+ *     </code></pre>
+ */
 // Style <code> tags
 $code-font-weight: normal;
 

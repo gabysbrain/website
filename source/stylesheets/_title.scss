@@ -40,6 +40,18 @@
       //@extend .right;
     //}
 
+    /**
+     * Main menu:
+     * The main menu for the site. Vertical list of green header font links
+     * 
+     *     @example
+     *     <ul class="menu">
+     *     <li>About</li>
+     *     <li>Projects</li>
+     *     <li>Blog</li>
+     *     <li>CV</li>
+     *     </ul>
+     */
     .menu {
       @include side-nav;
       width: 100%;

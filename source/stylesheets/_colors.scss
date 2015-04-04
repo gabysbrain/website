@@ -1,0 +1,46 @@
+
+/**
+ * Colors:
+ * The site uses the foundation colors which are defined in the sass variables
+ * `$primary-color`, `$secondary-color`, `$alert-color`, `$success-color`,
+ * `$warning-color`, and `$info-color`.
+ * Background/foreground colors are defined by `$body-bg` and 
+ * `$body-font-color` respectively.
+ *
+ *     @example
+ *     .colorswatch.primary-color Primary
+ *     .colorswatch.secondary-color Secondary
+ *     .colorswatch.alert-color Alert
+ *     .colorswatch.success-color Success
+ *     .colorswatch.warning-color Warning
+ *     .colorswatch.info-color Info
+ *     .colorswatch.foreground-color Foreground
+ *     .colorswatch.background-color Background
+ *     
+ */
+
+// color swatches for the style docs
+.colorswatch {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 2rem;
+  text-align: center;
+  //vertical-align: bottom;
+  //display: inline;
+}
+$colors: (
+    primary-color: $primary-color,
+    secondary-color: $secondary-color,
+    alert-color: $alert-color,
+    success-color: $success-color,
+    warning-color: $warning-color,
+    info-color: $info-color,
+    foreground-color: $body-font-color,
+    background-color: $body-bg
+);
+@each $color-name, $color-value in $colors {
+  .#{$color-name} {
+    background-color: $color-value;
+  }
+}

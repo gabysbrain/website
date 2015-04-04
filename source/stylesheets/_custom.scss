@@ -1,4 +1,29 @@
 
+/**
+ * Tables:
+ * Tables use the default F5 styling. `thead` and `tbody` must be defined.
+ *
+ *     @example
+ *     table
+ *       thead
+ *         tr
+ *           th Col 1
+ *           th Col 2
+ *           th Col 3
+ *           th Col 4
+ *       tbody
+ *         tr
+ *           td r1c1
+ *           td r1c2
+ *           td r1c3
+ *           td r1c4
+ *         tr
+ *           td r2c1
+ *           td r2c2
+ *           td r2c3
+ *           td r2c4
+ */
+
 body > div.row:first-of-type {
   padding-top: 2em;
 }
@@ -30,6 +55,23 @@ body > div.row:first-of-type {
   margin-top: 2em;
 }
 
+/**
+ * Article header:
+ * Article headers have a title, date, and tags
+ *
+ *     @example
+ *     <article>
+ *     <h1>Best article evar!!!</h1>
+ *     <section class="byline">
+ *       <h6 class="date">2015-04-03</h6>
+ *       <ul class="taglist">
+ *         <li>Tag 1</li>
+ *         <li>Tag 2</li>
+ *         <li>Tag 3</li>
+ *       </ul>
+ *     </section>
+ *     </article>
+ */
 .byline {
   @include grid-row;
 
@@ -57,6 +99,24 @@ body > div.row:first-of-type {
   }
 }
 
+/**
+ * Project summary:
+ * A project summary entry is a special class of `<article>` which shows
+ * a list of all projects in a compact form.
+ *
+ *     @example
+ *     article.project-summary-entry
+ *       .teaser
+ *         a(href="#"): img(src="http://placehold.it/312x312")
+ *       .summary-info
+ *         h3: a(href="#") Mr project
+ *         | This is my project description.  blah blah blah
+ *         ul.project-links
+ *           li: a.link(href="#") download
+ *           li: a.link(href="#") source
+ *           li: a.link(href="#") video
+ *           li: a.link(href="#") paper
+ */
 .project-summary-entry {
   @include grid-row;
 
@@ -69,6 +129,23 @@ body > div.row:first-of-type {
   }
 }
 
+/**
+ * Selected project list:
+ * The selected projects list is basically just the teaser 
+ * image with title link. Ideally, there are up to 3 projects
+ *
+ *     @example
+ *     ul.selected-projects
+ *       li
+ *         a(href="#"): img(src="http://placehold.it/312x312")
+ *         h3: a(href="#") Project 1
+ *       li
+ *         a(href="#"): img(src="http://placehold.it/312x312")
+ *         h3: a(href="#") Project 2
+ *       li
+ *         a(href="#"): img(src="http://placehold.it/312x312")
+ *         h3: a(href="#") Project 3
+ */
 .selected-projects {
   @include block-grid(3);
   img {
@@ -121,6 +198,23 @@ body > div.row:first-of-type {
     margin-top: 0;
   }
 
+  /**
+   * Articles:
+   * Articles use the normal paragraph text but sections should
+   * use `h2` so they have an underline.
+   *
+   *     @example
+   *     <article>
+   *       <p>
+   *         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus odio nec mauris suscipit, ac efficitur nisl tincidunt. Donec porta tellus ac orci elementum varius. Vivamus placerat auctor felis, vitae viverra ipsum aliquet in. Mauris ullamcorper pulvinar tortor, vitae porttitor velit luctus vel. Aliquam eu consectetur est. Ut pharetra volutpat nunc, ac tincidunt neque mollis at. Fusce porta, felis et sagittis suscipit, elit nunc gravida nisl, lacinia egestas sem purus eu massa. Etiam sed pellentesque lorem. Quisque aliquet, ante a interdum mollis, libero felis fermentum nulla, non euismod elit tellus feugiat elit. Suspendisse quis turpis hendrerit velit dapibus suscipit eget non dolor. Curabitur imperdiet et justo at gravida. Aliquam ex ipsum, posuere id orci at, dictum convallis elit.
+   *       </p>
+   *       <h2>Section</h2>
+   *       <p>
+   *         Donec ac elit molestie, auctor libero id, bibendum nibh. In tincidunt suscipit facilisis. Sed nibh quam, facilisis vel sem non, pretium lacinia lorem. Duis lacinia risus at dui tincidunt, a tincidunt ante luctus. Cras nec lorem massa. Mauris quam velit, varius rutrum ipsum at, euismod lacinia justo. Pellentesque pulvinar, metus sed ullamcorper rutrum, elit tortor lobortis augue, sed semper leo tellus in purus.
+   *       </p>
+   *     </article>
+   *     
+   */
   h2 {
     padding-left: 0.5em;
     border-bottom-style: $hr-border-style;

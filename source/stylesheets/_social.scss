@@ -1,4 +1,21 @@
 
+/**
+ * Social icons:
+ * The the social/sharing icons are in an inline list with icons
+ * and different colors for each
+ *
+ *     @example
+ *     ul.sociallist
+ *       li: a(href="#").icon.mail
+ *       li: a(href="#").icon.twitter
+ *       li: a(href="#").icon.facebook
+ *       li: a(href="#").icon.github
+ *       li: a(href="#").icon.linkedin
+ *       li: a(href="#").icon.google-plus
+ *       li: a(href="#").icon.foursquare
+ *       li: a(href="#").icon.instagram
+ *       li: a(href="#").icon.rss
+ */
 .sociallist {
   display: inline;
   list-style: none;
