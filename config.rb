@@ -1,5 +1,6 @@
 require 'lib/date_helpers'
 require 'lib/tex2pdf'
+require 'lib/middleman-styledown'
 require 'nokogiri'
 require 'middleman-citation'
 require 'better_errors'
@@ -46,6 +47,8 @@ activate :blog do |blog|
   # blog.per_page = 10
   # blog.page_link = "page/:num"
 end
+
+activate :styledown
 
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions']
