@@ -55,6 +55,7 @@ body > div.row:first-of-type {
   margin-top: 2em;
 }
 
+// FIXME: figure out why the tags are separated in the style guide
 /**
  * Article header:
  * Article headers have a title, date, and tags
@@ -65,11 +66,12 @@ body > div.row:first-of-type {
  *     <section class="byline">
  *       <h6 class="date">2015-04-03</h6>
  *       <ul class="taglist">
- *         <li>Tag 1</li>
- *         <li>Tag 2</li>
- *         <li>Tag 3</li>
+ *         <li><a href="#">Tag 1</a></li>
+ *         <li><a href="#">Tag 2</a></li>
+ *         <li><a href="#">Tag 3</a></li>
  *       </ul>
  *     </section>
+ *     <p>Start of text...</p>
  *     </article>
  */
 .byline {
