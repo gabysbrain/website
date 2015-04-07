@@ -27,6 +27,14 @@
     @extend .fa-linkedin;
   }
 
+  &.google-plus {
+    @extend .fa-google-plus;
+  }
+
+  &.instagram {
+    @extend .fa-instagram;
+  }
+
   &.rss {
     @extend .fa-rss;
   }
