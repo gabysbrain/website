@@ -93,6 +93,11 @@ body > div.row:first-of-type {
       //@extend .tiny;
       @include label();
       a {
+        &:before {
+          @extend .fa;
+          @extend .fa-tag;
+          @extend .fa-fw;
+        }
         color: white;
       }
     }
