@@ -18,3 +18,4 @@
       </p>
     </div>
     <div class='sg-container' sg-content></div>
+    <script src="javascripts/site.js" type="text/javascript"></script>
