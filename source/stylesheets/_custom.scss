@@ -90,7 +90,7 @@ body > div.row:first-of-type {
     display: inline;
     margin: 0 !important;
 
-    .tag {
+    li, .tag {
       //@extend .button;
       //@extend .tiny;
       @include label();
