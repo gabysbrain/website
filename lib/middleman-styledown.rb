@@ -9,11 +9,8 @@ class StyleguideResource < ::Middleman::Sitemap::Resource
   end
 
   def render(opts={}, locs={}, &block)
-    puts "here 1"
-    Styledown.parse([
-      './styledown_config.md',
-      'source/stylesheets/**.scss'
-    ])
+    scss = Dir.glob("./source/stylesheets/**/*.scss")
+    Styledown.parse(scss + ['./styledown_config.md'])
   end
 
   def template?
@@ -21,7 +18,7 @@ class StyleguideResource < ::Middleman::Sitemap::Resource
   end
 
   def source_file
-    nil
+    "./styledown_config.md"
   end
 
   def binary?
