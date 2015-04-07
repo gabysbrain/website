@@ -9,4 +9,12 @@
 
 ### Body
 
+    <div class="sg-container">
+      <h1>Styleguide</h1>
+      <p>
+        The styleguide for the site which is based on 
+        <a href="http://foundation.zurb.com">foundation</a> 
+        with some tweaks.
+      </p>
+    </div>
     <div class='sg-container' sg-content></div>

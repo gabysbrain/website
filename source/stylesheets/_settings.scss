@@ -51,16 +51,15 @@ $paragraph-font-size: 1rem;
 
 /**
  * Code:
- * `<pre><code>` blocks use the anonymous pro font and zenburn theme.
+ * `<pre><code>` blocks use the anonymous pro font and zenburn theme once
+ * styled with highlight.js
  *
  *     @example
- *     <pre><code>
- *     $(document).ready(function() {
+ *     <pre><code>$(document).ready(function() {
  *       responsiveNav('.site-nav', {
  *         customToggle: "menu-toggle"
  *       });
- *     });
- *     </code></pre>
+ *     });</code></pre>
  */
 // Style <code> tags
 $code-font-weight: normal;

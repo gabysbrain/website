@@ -8,26 +8,35 @@
  * `$body-font-color` respectively.
  *
  *     @example
- *     .colorswatch.primary-color Primary
- *     .colorswatch.secondary-color Secondary
- *     .colorswatch.alert-color Alert
- *     .colorswatch.success-color Success
- *     .colorswatch.warning-color Warning
- *     .colorswatch.info-color Info
- *     .colorswatch.foreground-color Foreground
- *     .colorswatch.background-color Background
+ *     .colorswatch.primary-color: h3.sg Primary
+ *     .colorswatch.secondary-color: h3.sg Secondary
+ *     .colorswatch.alert-color: h3.sg Alert
+ *     .colorswatch.success-color: h3.sg Success
+ *     .colorswatch.warning-color: h3.sg Warning
+ *     .colorswatch.info-color: h3.sg Info
+ *     .colorswatch.foreground-color: h3.sg Foreground
+ *     .colorswatch.background-color: h3.sg Background
  *     
  */
 
-// color swatches for the style docs
+// color swatches mostly for the style docs
 .colorswatch {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+
+  display: inline-block;
+  position: relative;
   margin-bottom: 2rem;
-  text-align: center;
-  //vertical-align: bottom;
-  //display: inline;
+  border: 1px solid #bdbdbd;
+
+  h3 {
+    position: absolute;
+    bottom: -1.5em;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 $colors: (
     primary-color: $primary-color,
