@@ -10,8 +10,6 @@ task :setup do
   sh('bower', 'install')
 end
 
-end
-
 task :build => [:download_bib] do
   sh('bundle', 'exec', 'middleman', 'build')
 end
