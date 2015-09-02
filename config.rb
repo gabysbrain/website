@@ -189,8 +189,9 @@ configure :build do
   activate :imageoptim do |options|
     options.threads = true
 
-    # disable pngout
-    options.pngout_options = false
+    # disable pngout and svgo
+    options.pngout = false
+    options.svgo   = false
   end
 
   # Or use a different image path
