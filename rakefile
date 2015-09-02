@@ -1,17 +1,35 @@
 
 task :download_bib do
-  %x(curl -L -o all.bib https://www.dropbox.com/s/th9r55x8z8yemff/all.bib?dl=0)
+  sh('curl', '-L', '-o', 'all.bib', 'https://www.dropbox.com/s/th9r55x8z8yemff/all.bib?dl=0')
+end
+
+# setup build environment
+task :setup do
+  setup
+end
+
+# setup build environment for codeship
+task :cssetup do
+  sh('rvm', 'use', '$(cat', '.ruby-version)', '--install')
+  setup
 end
 
 task :build => [:download_bib] do
-  %x(bundle exec middleman build)
+  sh('bundle', 'exec', 'middleman', 'build')
 end
 
 task :clean do
-  %x(rm -rf build)
+  sh('rm', '-rf', 'build')
 end
 
 task :deploy => [:clean, :build] do
-  %(bundle exec middleman deploy)
+  sh('bundle', 'exec', 'middleman', 'deploy')
+end
+
+# install dependencies, etc
+def setup
+  sh('bundle', 'install')
+  sh('npm', 'install', 'bower')
+  sh('bower', 'install')
 end
 
