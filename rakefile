@@ -5,13 +5,11 @@ end
 
 # setup build environment
 task :setup do
-  setup
+  sh('bundle', 'install')
+  sh('npm', 'install', 'bower')
+  sh('bower', 'install')
 end
 
-# setup build environment for codeship
-task :cssetup do
-  sh('rvm', 'use', '$(cat', '.ruby-version)', '--install')
-  setup
 end
 
 task :build => [:download_bib] do
@@ -24,12 +22,5 @@ end
 
 task :deploy => [:clean, :build] do
   sh('bundle', 'exec', 'middleman', 'deploy')
-end
-
-# install dependencies, etc
-def setup
-  sh('bundle', 'install')
-  sh('npm', 'install', 'bower')
-  sh('bower', 'install')
 end
 
