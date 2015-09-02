@@ -27,10 +27,10 @@ table
     th Paper
     th Links
   tbody
-  - data.sa_reading_group['Schedule'].each do |row|
+  - data.sa_reading_group.each do |row|
     tr
       td
-        - if row['Date']
+        - if row['Date'] and not row['Date'].empty?
           - dt = parse_date(row['Date'])
           = dt.strftime('%b %e, %Y')
       td= row['Topic']
@@ -45,7 +45,7 @@ table
         - else
           = row['Year']
       td
-        - if row['Date']
+        - if row['Date'] and not row['Date'].empty?
           - dt = parse_date(row['Date'])
           - path = "/sa_reading_group/notes/#{dt.strftime('%Y-%m-%d')}.html"
           - pg = sitemap.find_resource_by_path(path)
