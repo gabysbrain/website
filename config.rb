@@ -58,7 +58,7 @@ end
 
 configure :development do
   activate :citation do |options|
-    options.bibtex = "/Users/tom/Dropbox/Research/all.bib"
+    options.bibtex = "all.bib"
     options.style = "ieee"
   end
 end
