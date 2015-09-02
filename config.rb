@@ -82,10 +82,6 @@ end
 
 activate :livereload
 
-activate :google_drive, load_sheets: {
-  sa_reading_group: '1O_9o7rOx5nJEyqzruzuZFXr3xcYmlVOMG40VF9SRcDo'
-}
-
 #set :build_dir, 'tmp'
 
 page "/feed.xml", :layout => false
