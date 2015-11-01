@@ -1,4 +1,5 @@
 require 'lib/date_helpers'
+require 'lib/cite_tmp'
 require 'lib/tex2pdf'
 require 'lib/middleman-styledown'
 require 'nokogiri'
@@ -6,7 +7,7 @@ require 'middleman-citation'
 require 'better_errors'
 
 helpers DateHelpers
-#helpers Test
+helpers CiteHelpers
 
 ###
 # Blog settings
@@ -90,7 +91,9 @@ page "/feed.xml", :layout => false
 # Markdown config
 ###
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true
+set :markdown, :fenced_code_blocks => true, :tables => true, 
+               :strikethrough => true, :highlight => true,
+               :with_toc_data => true
 
 ###
 # Sprockets
