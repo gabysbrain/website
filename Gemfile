@@ -20,6 +20,7 @@ gem "kramdown"
 gem "font-awesome-sass"
 gem "slim"
 gem "styledown"
+gem "redcarpet"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
