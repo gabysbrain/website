@@ -85,7 +85,7 @@ layout: false
   <% if content.pubs.kind_of?(Array) %>
     <% pub_list = content.pubs %>
   <% else %>
-    <% pub_list = find_pubs(content.pubs, "Thomas Torsney-Weir") %>
+    <% pub_list = citations_search(content.pubs, "Thomas Torsney-Weir") %>
   <% end %>
   <% pub_list.each do |pub| %>
     <%= cite_full(pub) %>
