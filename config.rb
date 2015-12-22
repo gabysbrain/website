@@ -59,7 +59,7 @@ end
 configure :development do
   activate :citation do |options|
     options.bibtex = "all.bib"
-    options.style = "ieee"
+    options.style = "chicago-author-date"
   end
 end
 
