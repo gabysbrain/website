@@ -88,7 +88,7 @@ will make the text of the comment stand out from the rest of the text. They
 also can produce a table of contents-type page listing everything which makes
 it easier to find everything.
 
-### files in tex format should be .tex
+### Files in tex format should be .tex
 
 Many editors and commands look for files with the `.tex` extension so name them
 as such. Using extensions like `.inc`, `.add`, etc for latex source text is
@@ -115,7 +115,7 @@ use the backtick character at the front and the single quote character at the
 end of the text you want to quote. For double quotes use a double backtick and
 double single quotes.  The double quote character on the keyboard won't work. 
 
-### accents, umlauts, etc
+### Accents, umlauts, etc
 
 The `latex`, `pdflatex`, and `bibtex` commands only know the basic ascii
 character set.  They don't handle things like accents and umlauts. Therefore,
@@ -152,7 +152,7 @@ automatically create the text before a reference (like Section, Figure, Table,
 etc).  This text can be customized.  Normally you must do this yourself and
 it's hard to keep things consistent manually as you write.
 
-### figure/table labels go outside captions
+### Figure/table labels go outside captions
 
 There's nothing technically wrong with this though. You are labelling the
 figure, not the caption itself. However, see 
