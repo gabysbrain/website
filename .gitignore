@@ -19,6 +19,9 @@
 # Bower can maintain itself
 bower_components
 
+# Node can maintain itself too
+node_modules
+
 # Don't publish secrets!
 .google_client_secrets.json
 
