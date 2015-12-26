@@ -128,7 +128,7 @@ LaTeX wikibook has a list of all of them
 Some common symbols:
 
 * right accent - `\'`
-* left accent - `\``
+* left accent - ``\` `` 
 * umlaut - `\"`
 
 The alternative is to use the `xetex` command which supports UTF-8 characters
