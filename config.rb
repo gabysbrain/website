@@ -1,4 +1,5 @@
 require 'lib/date_helpers'
+require 'lib/link_helpers'
 require 'lib/cite_tmp'
 require 'lib/tex2pdf'
 require 'lib/middleman-styledown'
@@ -6,6 +7,7 @@ require 'middleman-citation'
 require 'better_errors'
 
 helpers DateHelpers
+helpers LinkHelpers
 helpers CiteHelpers
 
 ###
