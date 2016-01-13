@@ -1,3 +1,12 @@
+@import "font-awesome";
+
+// edit links
+.edit-page-link {
+  &:before {
+    @extend .fa;
+    @extend .fa-pencil-square-o;
+  }
+}
 
 /**
  * Tables:
