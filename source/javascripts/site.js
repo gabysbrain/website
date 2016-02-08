@@ -1,4 +1,4 @@
-//= require modernizr/modernizr
+// require modernizr/modernizr
 //= require jquery/dist/jquery
 //= require responsive-nav/responsive-nav
 //= require _foundation
