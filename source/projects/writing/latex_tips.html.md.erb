@@ -33,7 +33,7 @@ edits and collaborate.
 It's a good idea to create a build file using make or latexmk.
 I recommend a combination of the two. 
 Programs like [TeXworks](https://www.tug.org/texworks/) and 
-[Texpad](https://www.texpadapp.com) will compile your latex and BibTex 
+[Texpad](https://www.texpadapp.com) will compile your latex and BibTeX 
 properly but they can't always handle all image and document conversions
 like running R or python code to generate images/sections.
 
@@ -210,7 +210,7 @@ reference it as '[1, 2]' it is much more readable. However, some publishers
 require the former. In this case even though the source is correct the final
 text will still have, for example, '[1][2].' So, please, double check. 
 
-## BibTex
+## BibTeX
 
 Many of these are thanks to [Torsten Möller]().
 
@@ -222,11 +222,17 @@ like google scholar or Menedeley.  They are often very wrong or incomplete.
 
 So far I see the following problems regularly
 
-* Abbreviated author names. Even if the paper uses their full names?!?!?
+* Abbreviated author names. Even if the paper uses their full names!
 * Abbreviated journal/conference titles
 * Incorrect journal/conference titles
 * Missing month field
 * Missing page numbers
+
+### Don't trust BibTeX style files either
+
+Some style files will put the note field in the citation or do other weird 
+things. I prefer to copy and edit the style file to format the citations 
+correctly rather than changing my bib file.
 
 ### Use the journal reference over the conference
 
