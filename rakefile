@@ -1,6 +1,6 @@
 
 task :download_bib do
-  sh('curl', '-L', '-o', 'all.bib', 'https://www.dropbox.com/s/th9r55x8z8yemff/all.bib?dl=0')
+  sh('curl', '-L', '-o', 'all.bib', 'https://drive.google.com/uc?export=download&id=0B86s_L6H-Lt5LXFiVVFkbFp5Z3c')
 end
 
 # setup build environment
