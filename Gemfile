@@ -4,14 +4,14 @@ source 'http://rubygems.org'
 
 ruby '2.2.2'
 
-gem "middleman", "~> 3"
+gem "middleman", "~> 4"
 gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-autoprefixer"
 gem "foundation"
 gem "compass"
 gem "nokogiri"
-gem "middleman-deploy"
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem "middleman-citation"
 #gem "therubyracer"
 gem "oj"
