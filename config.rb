@@ -132,8 +132,8 @@ sprockets.append_path File.join(root, @bower_config["directory"])
 # with_layout :admin do
 #   page "/admin/*"
 # end
-page "/blog/*",    :layout => "post"
-page "/project/*", :layout => "project"
+#page "/blog/*",      :layout => "post"
+page "/project/*",   :layout => "project"
 
 
 # Proxy (fake) files
@@ -199,3 +199,4 @@ configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
 end
+

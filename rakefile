@@ -1,6 +1,6 @@
 
 task :download_bib do
-  sh('curl', '-L', '-o', 'all.bib', 'https://drive.google.com/uc?export=download&id=0B86s_L6H-Lt5LXFiVVFkbFp5Z3c')
+  sh('curl', '-L', '-o', 'all.bib', 'https://www.dropbox.com/s/22giq4qdaqg64yt/all.bib?dl=0')
 end
 
 # setup build environment
@@ -14,7 +14,16 @@ task :cssetup do
   git_config("Codeship robot")
 end
 
-task :build => [:download_bib] do
+task :update_hl_css do
+  syntax_dir = 'source/stylesheets/syntax'
+  FileUtils.mkdir_p syntax_dir
+  Rake::FileList["bower_components/highlightjs/styles/*.css"].each do |css_file|
+    scss_file = "#{syntax_dir}/_#{File.basename(css_file, ".css")}.scss"
+    FileUtils.copy_file(css_file, scss_file)
+  end
+end
+
+task :build => [:download_bib, :update_hl_css] do
   sh('bundle', 'exec', 'middleman', 'build')
 end
 
