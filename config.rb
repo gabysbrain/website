@@ -75,8 +75,8 @@ activate :deploy do |deploy|
 
   # publish to github pages
   deploy.deploy_method = :git
-  #deploy.remote = 'gh-pages'
-  #deploy.branch = 'master'
+  deploy.remote = 'gh-pages'
+  deploy.branch = 'master'
 end
 
 activate :livereload
