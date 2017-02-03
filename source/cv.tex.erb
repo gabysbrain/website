@@ -81,7 +81,7 @@ layout: false
 
 \section{<%= section_name %>}
 
-<% if    content.type == "pubs" %>
+<% if    content["type"] == "pubs" %>
   <% if content.pubs.kind_of?(Array) %>
     <% pub_list = content.pubs %>
   <% else %>
@@ -92,7 +92,7 @@ layout: false
 
   <% end %>
 
-<% elsif content.type == "jobs" %>
+<% elsif content["type"] == "jobs" %>
   <% content.jobs.each do |job| %>
     {\bf <%= job.title %>} \hfill <%= job.dates.start %> -- <%= job.dates.finish %> \\
     <%= job.location %>
@@ -107,13 +107,13 @@ layout: false
 
   <% end %>
 
-<% elsif content.type == "events" %>
+<% elsif content["type"] == "events" %>
   <% content.events.each do |event| %>
     <%= event.name %> <%= event.date %>
 
   <% end %>
 
-<% elsif content.type == "other" %>
+<% elsif content["type"] == "other" %>
   <%= content.content.join(", ") %>
 <% end %>
 
