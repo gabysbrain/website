@@ -2,9 +2,10 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.3.3'
 
 gem "middleman", "~> 4"
+gem "middleman-sprockets"
 gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-autoprefixer"
@@ -19,7 +20,7 @@ gem "middleman-imageoptim"
 gem "kramdown"
 gem "font-awesome-sass"
 gem "slim"
-gem "styledown"
+#gem "styledown"
 gem "redcarpet"
 
 # For feed.xml.builder

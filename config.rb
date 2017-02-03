@@ -2,7 +2,6 @@ require 'lib/date_helpers'
 require 'lib/link_helpers'
 require 'lib/cite_tmp'
 require 'lib/tex2pdf'
-require 'lib/middleman-styledown'
 require 'middleman-citation'
 require 'better_errors'
 
@@ -50,8 +49,6 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-activate :styledown
-
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions']
   config.cascade = false
@@ -77,9 +74,9 @@ activate :deploy do |deploy|
   deploy.build_before = false
 
   # publish to github pages
-  deploy.method = :git
-  deploy.remote = 'gh-pages'
-  deploy.branch = 'master'
+  deploy.deploy_method = :git
+  #deploy.remote = 'gh-pages'
+  #deploy.branch = 'master'
 end
 
 activate :livereload
@@ -100,11 +97,11 @@ set :markdown, :fenced_code_blocks => true, :tables => true,
 # Sprockets
 ###
 
-# Foundation 5 js path
-ready do
-  @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
-  sprockets.append_path File.join(root, @bower_config["directory"])
-end
+activate :sprockets
+
+# bower path
+@bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
+sprockets.append_path File.join(root, @bower_config["directory"])
 
 ###
 # Compass
@@ -164,8 +161,6 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-set :partials_dir, 'partials'
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -186,13 +181,13 @@ configure :build do
   # activate :relative_assets
 
   # Compress images after build
-  activate :imageoptim do |options|
-    options.threads = true
+  #activate :imageoptim do |options|
+    #options.threads = true
 
-    # disable pngout and svgo
-    options.pngout = false
-    options.svgo   = false
-  end
+    ## disable pngout and svgo
+    #options.pngout = false
+    #options.svgo   = false
+  #end
 
   # Or use a different image path
   # set :http_path, "/Content/images/"

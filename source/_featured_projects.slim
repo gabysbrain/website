@@ -2,7 +2,8 @@
 
 ul.selected-projects
   - data.featured_projects.each do |proj_name|
-    - proj = sitemap.where(:layout => "project", :title => proj_name).first
+    / FIXME: not checking layout might cause problems later...
+    - proj = sitemap.resources.select{|p| p.data.title == proj_name}.first
     li
       = link_to image_tag(proj.data.teaser), proj
       h3 = link_to proj.data.title, proj

@@ -11,10 +11,10 @@ layout: page
 
 - data.cv.map do |section_name, content|
 
-  section class="#{content.type} cv-section"
+  section class="#{content["type"]} cv-section"
     h2 = section_name
 
-    - case content.type
+    - case content["type"]
     - when "pubs"
       - if content.pubs.kind_of?(Array)
         - pub_list = content.pubs
