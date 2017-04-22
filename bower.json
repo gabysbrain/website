@@ -1,8 +1,8 @@
 {
   "name": "www.tomtorsneyweir.com",
   "dependencies": {
-    "foundation": "zurb/bower-foundation#~5.4",
     "highlightjs": "~8.3.0",
-    "responsive-nav": "~1.0.32"
+    "responsive-nav": "~1.0.32",
+    "foundation": "https://github.com/zurb/bower-foundation.git#15d98294916c50ce8e6838bc035f4f136d4dc704"
   }
 }

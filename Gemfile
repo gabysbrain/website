@@ -9,7 +9,7 @@ gem "middleman-sprockets"
 gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-autoprefixer"
-gem "foundation"
+#gem "foundation"
 gem "compass"
 gem "nokogiri"
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
