@@ -17,7 +17,10 @@ in pkgs.stdenv.mkDerivation {
      name = "website-site";
      src = ./site;
      phases = "unpackPhase buildPhase";
-     buildInputs = [ generator ];
+     buildInputs = [ 
+       generator 
+       #pkgs.nodePackages.yarn
+     ];
      buildPhase = ''
        #LANG=en_US.UTF-8 generator build
        generator build

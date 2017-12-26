@@ -1,56 +1,71 @@
-body {
-    color: black;
-    font-size: 16px;
-    margin: 0px auto 0px auto;
-    width: 600px;
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Raleway';
 }
 
-header {
-    border-bottom: 2px solid black;
-    margin-bottom: 30px;
-    padding: 12px 0px 12px 0px;
+.logo {
+  display: inline;
+  margin-right: 1.5rem;
 }
 
-nav {
-    text-align: right;
+.logo h1 {
+  font-size: 4rem;
+  display: inline;
 }
 
-nav a {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
+.site-nav {
+  display: inline;
+  font-variant-caps: small-caps;
 }
 
-footer {
-    border-top: solid 2px black;
-    color: #555;
-    font-size: 12px;
-    margin-top: 30px;
-    padding: 12px 0px 12px 0px;
-    text-align: right;
+.logo a, .site-nav a {
+  color: #222222;
+  text-decoration: none;
 }
 
-h1 {
-    font-size: 24px;
+.site-nav a {
+  margin-right: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
 }
 
 h2 {
-    font-size: 20px;
+  border-bottom: 1px solid #dddddd;
 }
 
-article .header {
-    color: #555;
-    font-size: 14px;
-    font-style: italic;
+.info-blurb .headshot {
+  margin-top: 2rem;
 }
 
-.logo a {
-    color: black;
-    float: left;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
+.info-blurb h1 {
+  font-size: 3rem;
 }
+
+.info-blurb h2 {
+  font-size: 2.5rem;
+  border-bottom: none;
+}
+
+.social-links {
+  display: inline;
+}
+
+.social-links li {
+  display: inline-block;
+  line-height: 2em;
+}
+
+.social-links li a {
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
