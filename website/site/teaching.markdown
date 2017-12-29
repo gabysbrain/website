@@ -4,10 +4,10 @@
 ## Lectures
 
 Winter 2017
-: * [Visualization](https://vda.cs.univie.ac.at/Teaching/Vis/17w)
+: * [Visualization](http://vda.univie.ac.at/Teaching/Vis/17w/)
 
 Summer 2017
-: * [Visualization](https://vda.cs.univie.ac.at/Teaching/Vis/17s)
+: * [Visualization](http://vda.univie.ac.at/Teaching/Vis/17s/)
 
 ## Supervision
 
