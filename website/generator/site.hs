@@ -1,21 +1,45 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import GHC.IO.Encoding as E
+import           Control.Monad (liftM)
 import           Data.Monoid (mappend)
 import           Hakyll
+--import           Hakyll.Web.Sass (sassCompiler)
 import qualified Data.Set as S
 import           Text.Pandoc.Options
 
 --------------------------------------------------------------------------------
+
+bibFileName :: String
+bibFileName = "bib/all.bib"
+
+refCslFileName :: String
+refCslFileName = "csl/apa-cv.csl"
+
+inlineCslFileName :: String
+inlineCslFileName = "csl/inline.csl"
+
 main :: IO ()
 main = do
   E.setLocaleEncoding E.utf8
+
   hakyll $ do
+
     match "images/*" $ do
       route   idRoute
       compile copyFileCompiler
 
-    match "css/*" $ do
+    -- files for citations
+    match "bib/*" $ compile biblioCompiler
+    match "csl/*" $ compile cslCompiler
+      
+    {-match "css/*.scss" $ do-}
+    {-route   $ setExtension "css"-}
+    {-let compressCssItem = fmap compressCss-}
+    {---compile (compressCssItem <$> sassCompiler)-}
+    {-compile sassCompiler-}
+
+    match "css/*.css" $ do
       route   idRoute
       compile compressCssCompiler
 
@@ -28,14 +52,14 @@ main = do
 
     match (fromList ["publications.markdown"]) $ do
       route   $ setExtension "html"
-      compile $ pandocPubsCompiler
+      compile $ pageCompiler
         -- >>= loadAndApplyTemplate "templates/page.html"  postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
     match "posts/*" $ do
       route $ setExtension "html"
-      compile $ pandocCompiler
+      compile $ blogCompiler
         >>= loadAndApplyTemplate "templates/post.html"  postCtx
         >>= loadAndApplyTemplate "templates/default.html" postCtx
         >>= relativizeUrls
@@ -88,4 +112,18 @@ pandocPubsCompiler =
                         writerExtensions = newExtensions
                       }
   in pandocCompilerWith defaultHakyllReaderOptions writerOptions
+
+pageCompiler :: Compiler (Item String)
+pageCompiler = do
+  csl <- load $ fromFilePath inlineCslFileName
+  bib <- load $ fromFilePath bibFileName
+  liftM writePandoc
+        (getResourceBody >>= readPandocBiblio def csl bib)
+
+blogCompiler :: Compiler (Item String)
+blogCompiler = do
+  csl <- load $ fromFilePath refCslFileName
+  bib <- load $ fromFilePath bibFileName
+  liftM writePandoc
+        (getResourceBody >>= readPandocBiblio def csl bib)
 

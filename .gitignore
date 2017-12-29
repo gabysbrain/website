@@ -27,6 +27,3 @@ node_modules
 
 source/stylesheets/syntax
 
-# don't include temporary bibtex file
-all.bib
-
