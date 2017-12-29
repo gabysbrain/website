@@ -1,7 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Oxygen|Anonymous+Pro');
+
+body {
+  max-width: 980px;
+
+  font-family: 'Oxygen';
+  font-size: 18px;
+  font-weight: 200;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+code, pre {
+  font-family: 'Anonymous Pro';
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-blurb {
+  flex: 1;
+  margin-right: 5px;
+}
+
+.content {
+  flex: 2;
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Raleway';
+  font-weight: inherit;
 }
 
 .logo {
@@ -10,7 +40,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .logo h1 {
-  font-size: 4rem;
+  /*font-size: 4rem;*/
   display: inline;
 }
 
@@ -26,7 +56,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .site-nav a {
   margin-right: 1.2rem;
-  font-size: 1.8rem;
+  /*font-size: 1.8rem;*/
 }
 
 .site-nav a:hover {
@@ -42,11 +72,11 @@ h2 {
 }
 
 .info-blurb h1 {
-  font-size: 3rem;
+  /*font-size: 3rem;*/
 }
 
 .info-blurb h2 {
-  font-size: 2.5rem;
+  /*font-size: 2.5rem;*/
   border-bottom: none;
 }
 
