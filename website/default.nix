@@ -1,5 +1,6 @@
 #!/usr/bin/env nix-build
 
+# from https://utdemir.com/posts/hakyll-on-nixos.html
 { pkgs ? import <nixpkgs> {} }:
 let generator = pkgs.stdenv.mkDerivation {
       name = "website-generator";
