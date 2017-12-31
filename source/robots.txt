@@ -1,2 +1,0 @@
-User-agent: *
-Disallow: /sa_reading_group
