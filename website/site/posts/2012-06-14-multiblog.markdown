@@ -64,7 +64,7 @@ I then made sure that there were layout files called `post.html` and
 Then, when creating my [blog index](/blog/) page, I just have to check
 if `layout = 'post'`
 
-``` djangotemplate
+``` html
 {% for post in paginator.posts %}
   {% if post.layout == 'post' %}
   {% assign content = post.content %}
@@ -78,7 +78,7 @@ if `layout = 'post'`
 For the projects list I manually list the categories right now.  So, for
 example, the "Research" section of my [projects list](/projects) looks like
 
-``` djangotemplate
+``` html
 <h1>Research</h1>
 {% for proj in site.posts %}
   {% if proj.layout == 'project' and proj.category == 'research' %}
@@ -126,7 +126,7 @@ extra fields that the project layout uses for my projects like a teaser image,
 and links for demo videos, citations, websites, etc.  My new project task
 looks like
 
-``` yaml
+``` ruby
 desc "Begin a new project in #{source_dir}/#{projects_dir}"
 task :new_project, :title do |t, args|
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)

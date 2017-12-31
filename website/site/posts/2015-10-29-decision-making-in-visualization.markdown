@@ -58,7 +58,7 @@ relatively consistent over time. Decision making and problem solving heuristics
 depend not just on the particular person but also what problem they are trying
 to solve and even how that problem is presented to them[@Slovic:1983]!
 
-![axis of user characterization](images/vis_personalization_axis.svg)
+![axis of user characterization](/images/vis_personalization_axis.svg)
 
 As we move from right to left on this axis we find that the tasks get more
 abstract and have better defined goals. The high-level task of, say, "find the
