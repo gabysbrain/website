@@ -6,15 +6,20 @@ title: CV
 
 ## Journal publications
 
+* [@Torsney-Weir:2017a]
+* [@Torsney-Weir:2017]
+* [@Pajer:2016]
+* [@Kainz:2015]
+* [@Torsney-Weir:2011]
+
 ## Conference publications
+
+* [@Torsney-Weir:2015]
 
 ## Other publications
 
-[@Torsney-Weir:2015]
-
-[@Torsney-Weir:2012]
-
-[@Torsney-Weir:2011a]
+* [@Torsney-Weir:2012]
+* [@Torsney-Weir:2011a]
 
 ## Invited talks
 

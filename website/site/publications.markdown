@@ -16,8 +16,5 @@
 ## Other
 
 * [@Torsney-Weir:2012]
-
-## 2015
-
 * [@Torsney-Weir:2011a]
 
