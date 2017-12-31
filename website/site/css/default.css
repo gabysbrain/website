@@ -4,15 +4,33 @@ body {
   max-width: 980px;
 
   font-family: 'Oxygen';
-  font-size: 18px;
-  font-weight: 200;
+  font-size: 16px;
+  font-weight: 400;
 
   margin-left: auto;
   margin-right: auto;
 }
 
+a {
+  color: green;
+}
+
+.site-header {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: green;
+
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
 code, pre {
   font-family: 'Anonymous Pro';
+}
+
+footer {
+  margin-top: 2rem;
 }
 
 .columns {
@@ -42,11 +60,13 @@ h1,h2,h3,h4,h5,h6 {
 .logo h1 {
   /*font-size: 4rem;*/
   display: inline;
+  font-size: 2rem;
 }
 
 .site-nav {
   display: inline;
   font-variant-caps: small-caps;
+  font-size: 1.15rem;
 }
 
 .logo a, .site-nav a {
@@ -55,6 +75,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .site-nav a {
+  color: green;
   margin-right: 1.2rem;
   /*font-size: 1.8rem;*/
 }
@@ -64,6 +85,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h2 {
+  padding-left: 0.5rem;
   border-bottom: 1px solid #dddddd;
 }
 
@@ -71,17 +93,40 @@ h2 {
   margin-top: 2rem;
 }
 
+.headshot {
+  margin-bottom: 1rem;
+}
+
+.headshot img {
+  display: block;
+  margin: auto;
+  /*clip-path: inset(10px 0px 27px 0px);*/
+}
+
 .info-blurb h1 {
   /*font-size: 3rem;*/
+  color: #6f6f6f;
+  text-align: left;
+  margin: 0;
 }
 
 .info-blurb h2 {
   /*font-size: 2.5rem;*/
+  color: #6f6f6f;
+  text-align: left;
+  padding-left: 0;
   border-bottom: none;
+  margin: 0;
+}
+
+.address {
+  list-style: none;
+  padding-left: 0;
 }
 
 .social-links {
   display: inline;
+  padding-left: 0;
 }
 
 .social-links li {
@@ -97,5 +142,6 @@ h2 {
   color: white;
   text-align: center;
   vertical-align: middle;
+  text-decoration: none;
 }
 

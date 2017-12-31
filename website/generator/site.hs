@@ -43,14 +43,14 @@ main = do
       route   idRoute
       compile compressCssCompiler
 
-    match (fromList ["about.markdown", "research.markdown", "teaching.markdown", "cv.markdown"]) $ do
+    match (fromList ["about.markdown", "research.markdown", "teaching.markdown"]) $ do
       route   $ setExtension "html"
       compile $ pandocCompiler
         -- >>= loadAndApplyTemplate "templates/page.html"  postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-    match (fromList ["publications.markdown"]) $ do
+    match (fromList ["publications.markdown", "cv.markdown"]) $ do
       route   $ setExtension "html"
       compile $ pageCompiler
         -- >>= loadAndApplyTemplate "templates/page.html"  postCtx
