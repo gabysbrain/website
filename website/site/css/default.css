@@ -26,6 +26,19 @@ ul {
   padding-left: 0;
 }
 
+/* just date lists for now */
+dt {
+  float: left;
+  clear: left;
+  width: 17%;
+  margin-bottom: 0.8rem;
+}
+
+dd {
+  margin-left: 19%;
+  margin-bottom: 0.8rem;
+}
+
 .site-header {
   border-bottom-width: 3px;
   border-bottom-style: solid;
@@ -157,17 +170,6 @@ h2 {
 
 .byline {
   margin-bottom: 0.5rem;
-}
-
-/* just date lists for now */
-dt {
-  float: left;
-  clear: left;
-  width: 17%;
-}
-
-dd {
-  margin-left: 19%;
 }
 
 
