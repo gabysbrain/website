@@ -36,7 +36,7 @@ recommendations will transfer to other domains and help guide other
 visualization designers.
 
 The field of decision making such as has been described in *The adaptive
-decision maker*<%= cite_inline('Payne:1993') %> is a field that studies how
+decision maker*[@Payne:1993] is a field that studies how
 people combine low-level task primitives to solve complex problems with unclear
 goals.  These are precisely the types of tasks that people face when doing data
 exploration and analysis. While many people know they found something once they
@@ -46,18 +46,17 @@ this information they found useful?
 Right now I see decision making fitting into an axis of user evaluation as seen
 in the diagram below. On the left are perceptual studies which focus on
 developing principles are generalizable to all humans. An example of this is
-how many colors can we see<%= cite_inline('Haroz:2012') %>.  On the other side
+how many colors can we see[@Haroz:2012].  On the other side
 are design studies which focus on a very specific user and task type. The Fluid
-explorer paper<%= cite_inline('Bruckner:2010') %> is a great example of this
+explorer paper[@Bruckner:2010] is a great example of this
 type of research.  So that's the axis from basically all humans to one human
 doing one task one specific way. In between these endpoints, we get more
 focused on a particular user and environment as we move from the left to the
-right. For example, cognitive traits like locus of control<%=
-cite_inline('Rotter:1966') %> are specific to a particular person but are
+right. For example, cognitive traits like locus of control[@Rotter:1966] are 
+specific to a particular person but are
 relatively consistent over time. Decision making and problem solving heuristics
 depend not just on the particular person but also what problem they are trying
-to solve and even how that problem is presented to them<%=
-cite_inline('Slovic:1983') %>!
+to solve and even how that problem is presented to them[@Slovic:1983]!
 
 ![axis of user characterization](images/vis_personalization_axis.svg)
 
