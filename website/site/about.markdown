@@ -19,4 +19,13 @@ as "gabysbrain" on
 [Twitter](<%= data.social.twitter %>).
 
 
+My work address is:
+<ul class="address">
+  <li>VDA research group</li>
+  <li>Faculty of Computer Science</li>
+  <li>University of Vienna</li>
+  <li>Sensengasse 6/2.07</li>
+  <li>1090 Vienna, Austria</li>
+</ul>
+
 
