@@ -57,7 +57,7 @@ for adding boilerplate code.  I particularly like this for adding the knitr
 code blocks.  With the fork of SnipMate I have set up
 (<https://github.com/gabysbrain/snipmate.vim>) typing `rcode` expands to
 
-```
+``` markdown
 <!--begin.rcode ${1},cache=TRUE,dependson='${2}'
 ${3}
 end.rcode-->
@@ -65,7 +65,7 @@ end.rcode-->
 
 and typing `rfig` expands to
 
-```
+``` markdown
 <!--begin.rcode ${1},cache=TRUE,dependson='${2}',fig.width=${3:12},fig.height=${4:12},dev='png'
 ${5}
 end.rcode-->
