@@ -57,6 +57,10 @@ main = do
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
+    match "news.md" $ do
+      compile $ pageCompiler
+        >>= relativizeUrls
+
     match "posts/*" $ do
       route $ setExtension "html"
       compile $ blogCompiler
@@ -82,9 +86,11 @@ main = do
       route idRoute
       compile $ do
         posts <- recentFirst =<< loadAll "posts/*"
+        news <- loadBody "news.md"
         let indexCtx =
               listField "posts" postCtx (return posts) `mappend`
               constField "title" "Home"                `mappend`
+              constField "news" news                `mappend`
               defaultContext
 
         getResourceBody
