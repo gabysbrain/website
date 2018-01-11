@@ -43,7 +43,7 @@
     </macro>
     <macro name="locators">
         <choose>
-            <if type="article-journal">
+            <if type="article article-journal">
                 <text variable="volume" prefix=" "/>
                 <text variable="issue" prefix=" (" suffix=")"/>
             </if>
@@ -63,7 +63,7 @@
                     </group>
                 </group>
             </else-if>
-            <else-if type="chapter paper-conference" match="any">
+            <else-if type="chapter paper-conference inproceedings" match="any">
                 <choose>
                     <if variable="page" match="none">
                         <group prefix=". ">
