@@ -82,6 +82,13 @@ main = do
           >>= loadAndApplyTemplate "templates/default.html" archiveCtx
           >>= relativizeUrls
 
+    -- TODO: make talks index page
+    match "talks/*.html" $ do
+      route idRoute
+      compile $ do
+        getResourceBody
+          >>= relativizeUrls
+
     match "index.html" $ do
       route idRoute
       compile $ do
