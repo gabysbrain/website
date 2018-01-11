@@ -83,11 +83,9 @@ main = do
           >>= relativizeUrls
 
     -- TODO: make talks index page
-    match "talks/*.html" $ do
+    match "talks/*" $ do
       route idRoute
-      compile $ do
-        getResourceBody
-          >>= relativizeUrls
+      compile copyFileCompiler
 
     match "index.html" $ do
       route idRoute
