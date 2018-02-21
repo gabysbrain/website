@@ -52,23 +52,28 @@ Sep 16, 2011
 2002
 : BS in Computer Science. Georgetown University, Washington, DC, USA
 
-## Reviewerships
+## Scientific activities
 
+2018
+: **Program committee member**, International EuroVis workshop on visual analytics (EuroVA)
+
+2018
+: **Program committee member**, Workshop on Exploratory Search and Interactive Data Analytics (ESIDA 2018) 
 
 2016 -- 2017
-: EuroVA
+: **Reviewer**, International EuroVis workshop on visual analytics (EuroVA)
 
 2012 -- 2017
-: IEEE Transactions on Visualization and Computer Graphics
+: **Reviewer**, IEEE Transactions on Visualization and Computer Graphics
 
 2012 -- 2014
-: EuroVis
+: **Reviewer**, EG/VGTC Conference on visualization (EuroVis)
 
 2014
-: International Conference on Intelligent User Interfaces
+: **Program committee member**, International Conference on Intelligent User Interfaces
 
 2014
-: Computers and Graphics
+: **Reviewer**, Computers and Graphics
 
 ## Teaching
 
@@ -88,7 +93,7 @@ Fall 2010
 ## Academic positions
 
 January 2015 -- present
-: **Research assistant** Visualization and data analysis research group, University of Vienna
+: **Universitätsassistent ("prae doc")** Visualization and data analysis research group, University of Vienna
 
 January 2011 -- December 2012
 : **Research assistant** GrUVi Lab, SFU Computing Science Department
