@@ -23,6 +23,12 @@ refCslFileName = "csl/apa-cv.csl"
 inlineCslFileName :: String
 inlineCslFileName = "csl/inline.csl"
 
+pandocReadOpts = def
+  { Pandoc.readerSmart = True
+  }
+
+myReadPandoc = readPandocBiblio pandocReadOpts
+
 main :: IO ()
 main = do
   E.setLocaleEncoding E.utf8
@@ -75,7 +81,7 @@ main = do
         csl <- load $ fromFilePath inlineCslFileName
         bib <- load $ fromFilePath bibFileName
         getResourceBody
-           >>= readPandocBiblio def csl bib
+           >>= myReadPandoc csl bib
            >>= (return . fmap writeXeTex)
            >>= loadAndApplyTemplate "templates/cv.tex" defaultContext
            >>= xelatex
@@ -152,14 +158,14 @@ pageCompiler = do
   csl <- load $ fromFilePath inlineCslFileName
   bib <- load $ fromFilePath bibFileName
   liftM writePandoc
-        (getResourceBody >>= readPandocBiblio def csl bib)
+        (getResourceBody >>= myReadPandoc csl bib)
 
 blogCompiler :: Compiler (Item String)
 blogCompiler = do
   csl <- load $ fromFilePath refCslFileName
   bib <- load $ fromFilePath bibFileName
   liftM writePandoc
-        (getResourceBody >>= readPandocBiblio def csl bib)
+        (getResourceBody >>= myReadPandoc csl bib)
 
 --writeXeTex :: Item Pandoc.Pandoc -> Compiler (Item String)
 writeXeTex = 
@@ -173,8 +179,10 @@ xelatex item = do
 
     unsafeCompiler $ do
         writeFile texPath $ itemBody item
+        writeFile "./xelatex.tmp.tex" $ itemBody item
         _ <- Process.system $ unwords ["xelatex"
              , "-halt-on-error", "-output-directory"
+             --, tmpDir, "./xelatex.tmp.tex"
              , tmpDir, texPath
              --, ">/dev/null", "2>&1"
              ]
