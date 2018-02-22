@@ -5,7 +5,11 @@ import           Control.Monad (liftM)
 import           Data.Monoid (mappend)
 import           Hakyll
 --import           Hakyll.Web.Sass (sassCompiler)
+import           System.FilePath (replaceExtension, takeDirectory)
+import qualified System.Process  as Process
 import qualified Data.Set as S
+import qualified Data.Text as T
+import qualified Text.Pandoc as Pandoc
 import           Text.Pandoc.Options
 
 --------------------------------------------------------------------------------
@@ -56,6 +60,25 @@ main = do
         -- >>= loadAndApplyTemplate "templates/page.html"  postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
+
+    match "cv.markdown" $ do
+      route   $ setExtension "html"
+      compile $ pageCompiler
+        -- >>= loadAndApplyTemplate "templates/page.html"  postCtx
+        >>= loadAndApplyTemplate "templates/cv.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
+
+    match "cv.markdown" $ version "pdf" $ do
+      route   $ setExtension "pdf"
+      compile $ do 
+        csl <- load $ fromFilePath inlineCslFileName
+        bib <- load $ fromFilePath bibFileName
+        getResourceBody
+           >>= readPandocBiblio def csl bib
+           >>= (return . fmap writeXeTex)
+           >>= loadAndApplyTemplate "templates/cv.tex" defaultContext
+           >>= xelatex
 
     match "news.md" $ do
       compile $ pageCompiler
@@ -137,4 +160,25 @@ blogCompiler = do
   bib <- load $ fromFilePath bibFileName
   liftM writePandoc
         (getResourceBody >>= readPandocBiblio def csl bib)
+
+--writeXeTex :: Item Pandoc.Pandoc -> Compiler (Item String)
+writeXeTex = 
+  Pandoc.writeLaTeX Pandoc.def {Pandoc.writerTeXLigatures = False}
+
+xelatex :: Item String -> Compiler (Item TmpFile)
+xelatex item = do
+    TmpFile texPath <- newTmpFile "xelatex.tex"
+    let tmpDir  = takeDirectory texPath
+        pdfPath = replaceExtension texPath "pdf"
+
+    unsafeCompiler $ do
+        writeFile texPath $ itemBody item
+        _ <- Process.system $ unwords ["xelatex"
+             , "-halt-on-error", "-output-directory"
+             , tmpDir, texPath
+             --, ">/dev/null", "2>&1"
+             ]
+        return ()
+
+    makeItem $ TmpFile pdfPath
 

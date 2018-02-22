@@ -2,9 +2,7 @@
 title: CV
 ---
 
-# CV
-
-## Journal publications
+# Journal publications
 
 [@Torsney-Weir:2017a]
 
@@ -17,17 +15,17 @@ title: CV
 [@Torsney-Weir:2011]
 
 
-## Conference publications
+# Conference publications
 
 [@Torsney-Weir:2015]
 
-## Other publications
+# Other publications
 
 [@Torsney-Weir:2012]
 
 [@Torsney-Weir:2011a]
 
-## Invited talks
+# Invited talks
 
 May 6, 2014
 : "scala-swing." Vienna Scala meetup group, Vienna, Austria
@@ -41,7 +39,7 @@ Jun 20, 2012
 Sep 16, 2011
 : "Visualization of computer models." MoCCSy Graduate Seminar, Burnaby, BC
 
-## Education
+# Education
 
 2012 -- present
 : PhD in Computer Science. University of Vienna, Vienna, Austria
@@ -52,7 +50,7 @@ Sep 16, 2011
 2002
 : BS in Computer Science. Georgetown University, Washington, DC, USA
 
-## Scientific activities
+# Scientific activities
 
 2018
 : **Program committee member**, International EuroVis workshop on visual analytics (EuroVA)
@@ -75,7 +73,7 @@ Sep 16, 2011
 2014
 : **Reviewer**, Computers and Graphics
 
-## Teaching
+# Teaching
 
 Fall 2011
 :  **Teaching assistant**, CMPT 361 Introduction to Computer Graphics
@@ -86,11 +84,11 @@ Spring 2011
 Fall 2010
 :  **Teaching assistant**, CMPT 225 Introduction to Data Structures and Algorithms
 
-## Professional activities
+# Professional activities
 2016 -- present
 : **Student volunteer chair** IEEE Visualization conference
 
-## Academic positions
+# Academic positions
 
 January 2015 -- present
 : **Universitätsassistent ("prae doc")** Visualization and data analysis research group, University of Vienna
@@ -113,7 +111,7 @@ May 2002 -- October 2002
     - Added rigid body dynamics to the SimRobot robotics simulator
     - Developed a collision detection system based on V-Clip to account for penetration and location of impact
 
-## Volunteer positions
+# Volunteer positions
 Sep 2010 -- Sep 2012
 : **Steward** SFU Teaching Support Staff Union
 
@@ -128,11 +126,11 @@ Jan 2011 -- Sep 2012
 
     - Coordinated incoming student mentorship program 
 
-## Academic awards
+# Academic awards
 Spring 2012
 : **SFU graduate fellowship (Masters)**, CAD 6,250
 
-## Professional positions
+# Professional positions
 
 September 2007 -- June 2010
 : **Vice President, Lead Developer** StoneCastle Partners. New York, NY
@@ -174,7 +172,7 @@ March 2003 -- July 2004
     - Assisted with the coordination of the CDO Analytics testing team
     - "Wrote specifications based on analysts' suggestions and work flow."
 
-## Other activities
+# Other activities
 
 *  Skiing
 *  Rock climbing

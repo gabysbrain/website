@@ -25,6 +25,7 @@ in pkgs.stdenv.mkDerivation {
      #nativeBuildInputs = [ pkgs.libsass ];
      buildInputs = [ 
        generator 
+       pkgs.texlive.combined.scheme-full
        #pkgs.nodePackages.yarn
      ];
      buildPhase = ''
