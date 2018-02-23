@@ -182,9 +182,8 @@ xelatex item = do
         writeFile "./xelatex.tmp.tex" $ itemBody item
         _ <- Process.system $ unwords ["xelatex"
              , "-halt-on-error", "-output-directory"
-             --, tmpDir, "./xelatex.tmp.tex"
              , tmpDir, texPath
-             --, ">/dev/null", "2>&1"
+             , ">/dev/null", "2>&1"
              ]
         return ()
 
