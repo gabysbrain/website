@@ -27,17 +27,28 @@ title: CV
 
 # Invited talks
 
+January 10, 2017
+: "Visualization of machine learning algorithms." JKU Linz, Austria.
+
+January 8, 2017
+: "Tuner", MedVis 2, TU Wien, Vienna, Austria.
+
+November 30, 2017
+: "Slicing multi-dimensional spaces."
+  Discrete geometry seminar, Freie University Berlin, Germany.
+
 May 6, 2014
-: "scala-swing." Vienna Scala meetup group, Vienna, Austria
+: "scala-swing." Vienna Scala meetup group, Vienna, Austria.
 
-Sep 19, 2013
-: "Tuner." Visualization and virtual reality research group, University of Leeds, Leeds, UK
+September 19, 2013
+: "Tuner." Visualization and virtual reality research group, 
+  University of Leeds, Leeds, UK.
 
-Jun 20, 2012
-: "Tuner." MADAI workshop, Duke University, Durham, NC
+June 20, 2012
+: "Tuner." MADAI workshop, Duke University, Durham, NC.
 
-Sep 16, 2011
-: "Visualization of computer models." MoCCSy Graduate Seminar, Burnaby, BC
+September 16, 2011
+: "Visualization of computer models." MoCCSy Graduate Seminar, Burnaby, BC.
 
 # Education
 
@@ -51,6 +62,9 @@ Sep 16, 2011
 : BS in Computer Science. Georgetown University, Washington, DC, USA
 
 # Scientific activities
+
+2016 -- present
+: **Student volunteer chair** IEEE Visualization conference
 
 2018
 : **Program committee member**, International EuroVis workshop on visual analytics (EuroVA)
@@ -84,10 +98,6 @@ Spring 2011
 Fall 2010
 :  **Teaching assistant**, CMPT 225 Introduction to Data Structures and Algorithms
 
-# Professional activities
-2016 -- present
-: **Student volunteer chair** IEEE Visualization conference
-
 # Academic positions
 
 January 2015 -- present
@@ -106,22 +116,22 @@ September 2005 -- May 2006
     - Outlined basic idea for improved parse tree visualization
 
 May 2002 -- October 2002
-: **Research assistant** 'NIST-funded project: "Learning driving behaviors for autonomous vehicles," Georgetown Computer Science Department'
+: **Research assistant** "Learning driving behaviors for autonomous vehicles," NIST-funded project, Georgetown Computer Science Department
 
     - Added rigid body dynamics to the SimRobot robotics simulator
     - Developed a collision detection system based on V-Clip to account for penetration and location of impact
 
 # Volunteer positions
-Sep 2010 -- Sep 2012
+September 2010 -- September 2012
 : **Steward** SFU Teaching Support Staff Union
 
-Jan 2012 -- Sep 2012
+January 2012 -- September 2012
 : **Membership Mobilization Committee Commissioner** SFU Teaching Support Staff Union
 
-Jan 2011 -- Jan 2012
+January 2011 -- January 2012
 : **Membership Mobilization Committee member** SFU Teaching Support Staff Union
 
-Jan 2011 -- Sep 2012
+January 2011 -- September 2012
 : **Buddy coordinator** SFU Computing Science Department
 
     - Coordinated incoming student mentorship program 
