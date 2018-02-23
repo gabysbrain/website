@@ -53,6 +53,7 @@ main = do
       route   idRoute
       compile compressCssCompiler
 
+    -- things with reference-style citations
     match (fromList ["about.markdown", "research.markdown", "teaching.markdown"]) $ do
       route   $ setExtension "html"
       compile $ pandocCompiler
@@ -60,7 +61,8 @@ main = do
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
 
-    match (fromList ["publications.markdown", "cv.markdown"]) $ do
+    -- things with inline full citations
+    match (fromList ["publications.markdown"]) $ do
       route   $ setExtension "html"
       compile $ pageCompiler
         -- >>= loadAndApplyTemplate "templates/page.html"  postCtx

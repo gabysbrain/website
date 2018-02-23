@@ -113,6 +113,12 @@ h2 {
   border-bottom: 1px solid #dddddd;
 }
 
+.cv-contents h1 {
+  padding-left: 0.5rem;
+  border-bottom: 1px solid #dddddd;
+  font-size: 1.5rem;
+}
+
 .info-blurb .headshot {
   margin-top: 2rem;
 }
