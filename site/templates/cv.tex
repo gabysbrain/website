@@ -21,22 +21,25 @@
 
 \setlist{nolistsep}
 
-\linespread{1.25}
+%\linespread{1.25}
 
+% for pandoc's lists
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% nicer description lists
+\usepackage{enumitem}
+\setlist[description]{style=nextline,font=\normalfont\space}
 
 \usepackage{titlesec}
-
+% don't number sections
 \titleformat{\section}
   {\normalfont\Large\bfseries}   % The style of the section title
   {}                             % a prefix
   {0pt}                          % How much space exists between the prefix and the title
   {}                             % How the section is represented
 
-%% Internals
-
+% fancy title with an underline
 \renewcommand*{\author}[1] {\renewcommand*{\theauthor}{#1}}
 \newcommand*{\email}[1] {\renewcommand*{\theemail}{#1}}
 \newcommand*{\address}[1] {\renewcommand*{\theaddress}{#1}}
@@ -90,6 +93,8 @@
 \maketitle
 
 %\setlength{\topsep}{0ex}
+
+Website: \url{http://www.tomtorsneyweir.com}
 
 Visualization researcher with interest in visual analysis in 
 multi-dimensional continuous spaces and understanding complex models.
