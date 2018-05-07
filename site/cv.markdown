@@ -4,6 +4,8 @@ title: CV
 
 # Journal publications
 
+[@Torsney-Weir:2018]
+
 [@Torsney-Weir:2017a]
 
 [@Torsney-Weir:2017]
@@ -16,6 +18,8 @@ title: CV
 
 
 # Conference publications
+
+[@Torsney-Weir:2018a]
 
 [@Torsney-Weir:2015]
 
@@ -52,7 +56,7 @@ September 16, 2011
 
 # Education
 
-2012 -- present
+2018
 : PhD in Computer Science. University of Vienna, Vienna, Austria
 
 2012
@@ -100,7 +104,10 @@ Fall 2010
 
 # Academic positions
 
-January 2015 -- present
+April 2018 -- present
+: **Universitätsassistent ("post doc")** Visualization and data analysis research group, University of Vienna
+
+January 2015 -- April 2018
 : **Universitätsassistent ("prae doc")** Visualization and data analysis research group, University of Vienna
 
 January 2011 -- December 2012
