@@ -23,11 +23,11 @@ refCslFileName = "csl/apa-cv.csl"
 inlineCslFileName :: String
 inlineCslFileName = "csl/inline.csl"
 
-pandocReadOpts = def
-  { Pandoc.readerSmart = True
-  }
+{-pandocReadOpts = def-}
+  {-{ Pandoc.extensionsFromList = []-}
+  {-}-}
 
-myReadPandoc = readPandocBiblio pandocReadOpts
+myReadPandoc = readPandocBiblio defaultHakyllReaderOptions
 
 main :: IO ()
 main = do
@@ -84,7 +84,8 @@ main = do
         bib <- load $ fromFilePath bibFileName
         getResourceBody
            >>= myReadPandoc csl bib
-           >>= (return . fmap writeXeTex)
+           -- >>= (return . fmap writeXeTex)
+           >>= writeXeTex
            >>= loadAndApplyTemplate "templates/cv.tex" defaultContext
            >>= xelatex
 
@@ -145,15 +146,17 @@ postCtx =
 
 
 --------------------------------------------------------------------------------
+{-
 pandocPubsCompiler :: Compiler (Item String)
 pandocPubsCompiler =
-  let customExtensions = [ Ext_definition_lists ] -- from pandoc's options: http://hackage.haskell.org/package/pandoc-1.10.0.4/docs/Text-Pandoc-Options.html 
+  let customExtensions = [ Ext_definition_lists, Ext_smart ] -- from pandoc's options: http://hackage.haskell.org/package/pandoc-1.10.0.4/docs/Text-Pandoc-Options.html 
       defaultExtensions = writerExtensions defaultHakyllWriterOptions
       newExtensions = foldr S.insert defaultExtensions customExtensions
       writerOptions = defaultHakyllWriterOptions {
                         writerExtensions = newExtensions
                       }
   in pandocCompilerWith defaultHakyllReaderOptions writerOptions
+-}
 
 pageCompiler :: Compiler (Item String)
 pageCompiler = do
@@ -169,9 +172,12 @@ blogCompiler = do
   liftM writePandoc
         (getResourceBody >>= myReadPandoc csl bib)
 
---writeXeTex :: Item Pandoc.Pandoc -> Compiler (Item String)
-writeXeTex = 
-  Pandoc.writeLaTeX Pandoc.def {Pandoc.writerTeXLigatures = False}
+writeXeTex :: Item Pandoc.Pandoc -> Compiler (Item String)
+writeXeTex = traverse $ \pandoc ->
+  case Pandoc.runPure (Pandoc.writeLaTeX Pandoc.def pandoc) of
+       Left err -> fail $ show err
+       Right x  -> return (T.unpack x)
+
 
 xelatex :: Item String -> Compiler (Item TmpFile)
 xelatex item = do
