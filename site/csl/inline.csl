@@ -41,6 +41,9 @@
             </else>
         </choose>
     </macro>
+    <macro name="source">
+      <text variable="container-title" />
+    </macro>
     <macro name="locators">
         <choose>
             <if type="article article-journal">
@@ -79,9 +82,9 @@
         </choose>
     </macro>
     <macro name="date">
-        <date variable="issued">
-            <date-part name="year"/>
-        </date>
+      <date variable="issued">
+        <date-part name="year" />
+      </date>
     </macro>
     <citation hanging-indent="true" et-al-min="11" et-al-use-first="7" subsequent-author-substitute="———" entry-spacing="0">
         <sort>
@@ -91,9 +94,11 @@
         <layout suffix=".">
             <text macro="authors" suffix=". "/>
             <text macro="title"/>
-            <text macro="date" prefix=", " suffix=". "/>
-            <text macro="locators"/>
-            <text macro="access"/>
+            <text macro="source" prefix=", " suffix=". " />
+            <text macro="date" prefix=" " />
+            <!--<text macro="date" prefix=" " suffix=". "/>-->
+            <!--<text macro="locators"/>-->
+            <!--<text macro="access"/>-->
         </layout>
     </citation>
 </style>
