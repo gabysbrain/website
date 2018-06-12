@@ -1,4 +1,7 @@
 
+June 07, 2018
+: **Conference presentation** [Risk fixers and sweet spotters](/talks/2018-06-07_risk_fixers_eurovis.html), Eurovis conference, Brno, Czechia.
+
 January 10, 2017
 : **Guest lecture** [Visualization of machine learning algorithms](/talks/2018-01-10_machine_learning_vis.html), JKU Linz.
 
