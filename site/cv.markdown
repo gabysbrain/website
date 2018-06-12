@@ -25,6 +25,8 @@ title: CV
 
 # Other publications
 
+[@Torsney-Weir:2018b]
+
 [@Torsney-Weir:2012]
 
 [@Torsney-Weir:2011a]

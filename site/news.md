@@ -11,6 +11,9 @@ June 04, 2018
 June 04, 2018
 : **Publication** [@Torsney-Weir:2018a]
 
+April 03, 2018
+: **Phd Defense** I got my PhD!
+
 January 10, 2017
 : **Guest lecture** [Visualization of machine learning algorithms](/talks/2018-01-10_machine_learning_vis.html), JKU Linz.
 
