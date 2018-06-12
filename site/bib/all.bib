@@ -1031,21 +1031,22 @@
 	
 	}
 
-@article{Demir:2014,
-	Author = {Ismail Demir and Christian Dick and R\"udiger Westermann},
-	Date-Added = {2017-08-16 09:25:41 +0000},
-	Date-Modified = {2017-08-21 07:35:17 +0000},
-	Doi = {10.1109/TVCG.2014.2346448},
-	Journal = {IEEE Transactions on Visualization and Computer Graphics},
-	Month = dec,
-	Number = {12},
-	Rating = {3},
-	Read = {1},
-	Title = {Multi-Charts for Comparative 3D Ensemble Visualization},
-	Volume = {20},
-	Year = 2014,
-	
-	}
+@Article{Demir:2014,
+  author        = {Ismail Demir and Christian Dick and R\"udiger Westermann},
+  title         = {Multi-Charts for Comparative 3D Ensemble Visualization},
+  journal       = {IEEE Transactions on Visualization and Computer Graphics},
+  year          = {2014},
+  volume        = {20},
+  number        = {12},
+  month         = dec,
+  doi           = {10.1109/TVCG.2014.2346448},
+  date-added    = {2017-08-16 09:25:41 +0000},
+  date-modified = {2017-08-21 07:35:17 +0000},
+  file          = {paper:Multi-Charts for Comparative 3D Ensemble Visualization - Demir_2014.pdf:PDF},
+  rating        = {3},
+  read          = {1},
+  timestamp     = {2018-05-11},
+}
 
 @article{Gelman:2012b,
 	Author = {Andrew Gelman and Cosma Shalizi},
@@ -12133,22 +12134,20 @@ help achieve these ends. },
 	Title = {PReSM: Principled parameter finding for image segmentation algorithms using visual response surface exploration},
 	Year = {2011}}
 
-@phdthesis{Torsney-Weir:2012,
-	Abstract = {We present a system called Tuner to systematically analyze the parameter space of com- plex computer simulations, which are time consuming to run and consequently cannot be exhaustively sampled. We begin with a sparse initial sampling of the parameter space, then use these samples to create a fast emulator of the simulation. Analyzing this emulator gives the user insight on further sampling the simulation. Tuner guides the user through sampling and provides tools to find optimal parameter settings of up to two objective functions and perform sensitivity analysis. We present use-cases from the domain of image segmentation algorithms.
+@MastersThesis{Torsney-Weir:2012,
+  author        = {Thomas Torsney-Weir},
+  title         = {Visual analysis of high-dimensional parameter spaces},
+  school        = {Department of Computing Science, Simon Fraser University},
+  year          = {2012},
+  type          = {Master's thesis},
+  abstract      = {We present a system called Tuner to systematically analyze the parameter space of com- plex computer simulations, which are time consuming to run and consequently cannot be exhaustively sampled. We begin with a sparse initial sampling of the parameter space, then use these samples to create a fast emulator of the simulation. Analyzing this emulator gives the user insight on further sampling the simulation. Tuner guides the user through sampling and provides tools to find optimal parameter settings of up to two objective functions and perform sensitivity analysis. We present use-cases from the domain of image segmentation algorithms.
 
 Since our method must utilize samples of the simulation and relies on an inherently interactive visualization method, we perform a complexity analysis to see how many sam- ples can be rendered while staying interactive. We examined how rendering performance changes with the dimensionality, reconstruction kernel size, and number of sample points. To study this, we decomposed the rendering complexity into a predictive cost function that combines the cost of filtering each data point and then the cost to draw each pixel on screen. This cost function is calibrated to the time to filter and draw for two different hardware configurations. The cost formulation is used to examine the effects on rendering time from using box filtering versus a radial distance measure in high-dimensional data spaces as used for the filtered scatterplot and HyperSlice visualization methods, respectively. We find that for a constant kernel volume, rendering performance increases with dimensionality in the HyperSlice technique while it decreases with the filtered scatterplot technique. We also find that the total number of sample points and not the size of the reconstruction kernel is a much stronger determinant of the rendering time.},
-	Author = {Thomas Torsney-Weir},
-	Date-Added = {2014-04-22 09:22:53 +0000},
-	Date-Modified = {2014-04-24 09:23:27 +0000},
-	Doi = {10.6084/m9.figshare.1005188},
-	School = {Department of Computing Science, Simon Fraser University},
-	Title = {Visual analysis of high-dimensional parameter spaces},
-	Type = {Master's thesis},
-	Url = {http://summit.sfu.ca/item/12569},
-	Year = {2012},
-	
-	
-	}
+  date-added    = {2014-04-22 09:22:53 +0000},
+  date-modified = {2014-04-24 09:23:27 +0000},
+  doi           = {10.6084/m9.figshare.1005188},
+  url           = {http://summit.sfu.ca/item/12569},
+}
 
 @article{Patterson:2014,
 	Author = {Robert E. Patterson and Leslie M. Blaha and Georges G. Grinstein and Kristen K. Liggett and David E. Kaveney and Kathleen C. Sheldon and Paul R. Havig and Jason A. Moore},
@@ -24652,19 +24651,18 @@ Assessing the Reliability of Complex Models discusses changes in education of pr
 }
 
 @Article{10.2307/1390897,
-  author        = {George W. Furnas and Andreas Buja},
-  title         = {Prosection Views: Dimensional Inference through Sections and Projections},
-  journal       = {Journal of Computational and Graphical Statistics},
-  year          = {1994},
-  volume        = {3},
-  number        = {4},
-  pages         = {323--353},
-  issn          = {10618600},
-  abstract      = {We present some basic properties of two general graphical techniques for constructing views of high-dimensional objects, projection and section. Projections can easily display aspects of structure that are only of low dimension, and sections--that is, intersections of subspaces with a high-dimensional object--can easily display structure of only low codimension (and hence often high dimension). However, compositions of sections and projections, here called prosections, can display aspects of structure of any intermediate dimension. These statements are relevant for data analysis: projections of data can be easily generated with x-y scatterplots, three-dimensional (3-D) data rotations, and grand tours; sections can be approximated in existing systems by scatterplot brushing and painting. Thus this article is in part an investigation into the principles underlying these techniques.},
-  __markedentry = {[tom:]},
-  publisher     = {[American Statistical Association, Taylor \& Francis, Ltd., Institute of Mathematical Statistics, Interface Foundation of America]},
-  timestamp     = {2018-04-01},
-  url           = {http://www.jstor.org/stable/1390897},
+  author    = {George W. Furnas and Andreas Buja},
+  title     = {Prosection Views: Dimensional Inference through Sections and Projections},
+  journal   = {Journal of Computational and Graphical Statistics},
+  year      = {1994},
+  volume    = {3},
+  number    = {4},
+  pages     = {323--353},
+  issn      = {10618600},
+  abstract  = {We present some basic properties of two general graphical techniques for constructing views of high-dimensional objects, projection and section. Projections can easily display aspects of structure that are only of low dimension, and sections--that is, intersections of subspaces with a high-dimensional object--can easily display structure of only low codimension (and hence often high dimension). However, compositions of sections and projections, here called prosections, can display aspects of structure of any intermediate dimension. These statements are relevant for data analysis: projections of data can be easily generated with x-y scatterplots, three-dimensional (3-D) data rotations, and grand tours; sections can be approximated in existing systems by scatterplot brushing and painting. Thus this article is in part an investigation into the principles underlying these techniques.},
+  publisher = {[American Statistical Association, Taylor \& Francis, Ltd., Institute of Mathematical Statistics, Interface Foundation of America]},
+  timestamp = {2018-04-01},
+  url       = {http://www.jstor.org/stable/1390897},
 }
 
 @Inproceedings{Zockler:1996,
@@ -24683,7 +24681,8 @@ Assessing the Reliability of Complex Models discusses changes in education of pr
   journal   = {Computer Graphics Forum},
   year      = {2018},
   pages     = {(to appear)},
-  timestamp = {2018-04-02},
+  doi       = {10.1111/cgf.13415},
+  timestamp = {2018-06-12},
 }
 
 @Article{Bae:2017,
@@ -24697,7 +24696,7 @@ Assessing the Reliability of Complex Models discusses changes in education of pr
   month         = jul,
   doi           = {10.1111/cgf.13198},
   abstract      = {Abstract To find correlations and cause and effect relationships in multivariate data sets is central in many data analysis problems. A common way of representing causal relations among variables is to use node‐link diagrams, where nodes depict variables and edges show relationships between them. When performing a causal analysis, analysts may be biased by the position of collected evidences, especially when they are at the top of a list. This is of crucial importance since finding a root cause or a derived effect, and searching for causal chains of inferences are essential analytic tasks when investigating causal relationships. In this paper, we examine whether sequential ordering influences understanding of indirect causal relationships and whether it improves readability of multi‐attribute causal diagrams. Moreover, we see how people reason to identify a root cause or a derived effect. The results of our design study show that sequential ordering does not play a crucial role when analyzing causal relationships, but many connections from/to a variable and higher strength/certainty values may influence the process of finding a root cause and a derived effect.},
-  __markedentry = {[tom:6]},
+  __markedentry = {[tom:]},
   keywords      = {Categories and Subject Descriptors (according to ACM CCS), H.5.2 Information Interfaces and Presentation: User Interfaces—Evaluation/methodology},
   timestamp     = {2018-04-20},
 }
@@ -24776,8 +24775,9 @@ Assessing the Reliability of Complex Models discusses changes in education of pr
   booktitle = {EuroVis 2018 - Short Papers},
   year      = {2018},
   publisher = {The Eurographics Association},
+  doi       = {10.2312/eurovisshort.20181089},
   pages     = {(to appear)},
-  timestamp = {2018-05-01},
+  timestamp = {2018-06-12},
 }
 
 @Inproceedings{Taher:2015,
@@ -24830,7 +24830,33 @@ Assessing the Reliability of Complex Models discusses changes in education of pr
   timestamp = {2018-04-30},
 }
 
+@Article{White:2010,
+  author        = {White, Dave D. and Wutich, Amber and Larson, Kelli L and Gober, Patricia and Lant, Timothy and Senneville, Clea},
+  title         = {Credibility, salience, and legitimacy of boundary objects: water managers' assessment of a simulation model in an immersive decision theater},
+  journal       = {Science and Public Policy},
+  year          = {2010},
+  volume        = {37},
+  number        = {3},
+  pages         = {219-232},
+  month         = apr,
+  doi           = {10.3152/030234210X497726},
+  __markedentry = {[tom:6]},
+  eprint        = {/oup/backfile/content_public/journal/spp/37/3/10.3152/030234210x497726/2/37-3-219.pdf},
+  file          = {paper:credibility_salience_legitimacy.pdf:PDF},
+  timestamp     = {2018-05-09},
+}
+
+@PhdThesis{Torsney-Weir:2018b,
+  author    = {Thomas Torsney-Weir},
+  title     = {Slicing multi-dimensional spaces},
+  school    = {University of Vienna},
+  year      = {2018},
+  timestamp = {2018-06-12},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: fileDirectory:/home/tom/Sync/Papers/papers;}
 
 @Comment{jabref-meta: groupstree:
 0 AllEntriesGroup:;
