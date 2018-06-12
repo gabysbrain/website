@@ -115,7 +115,7 @@ main = do
           >>= relativizeUrls
 
     -- TODO: make talks index page
-    match "talks/**/*" $ do
+    match "talks/**" $ do
       route idRoute
       compile copyFileCompiler
 
