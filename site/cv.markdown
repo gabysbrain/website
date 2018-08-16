@@ -73,15 +73,12 @@ September 16, 2011
 : **Student volunteer chair** IEEE Visualization conference
 
 2018
-: **Program committee member**, International EuroVis workshop on visual analytics (EuroVA)
-
-2018
 : **Program committee member**, Workshop on Exploratory Search and Interactive Data Analytics (ESIDA 2018) 
 
-2016 -- 2017
-: **Reviewer**, International EuroVis workshop on visual analytics (EuroVA)
+2016 -- 2018
+: **Program committee member**, International EuroVis workshop on visual analytics (EuroVA)
 
-2012 -- 2017
+2012 -- 2018
 : **Reviewer**, IEEE Transactions on Visualization and Computer Graphics
 
 2012 -- 2014
@@ -94,6 +91,12 @@ September 16, 2011
 : **Reviewer**, Computers and Graphics
 
 # Teaching
+
+2016 -- present
+: **Lecturer**, Visualization and Visual Data Analysis
+
+2018 -- present
+: **Lecturer**, Foundations of Data Analysis
 
 Fall 2011
 :  **Teaching assistant**, CMPT 361 Introduction to Computer Graphics
@@ -115,20 +118,11 @@ January 2015 -- April 2018
 January 2011 -- December 2012
 : **Research assistant** GrUVi Lab, SFU Computing Science Department
 
-    - Developed Tuner, a visualization tool for image segmentation algorithm developers to find optimum parameter settings for their algorithms
-    - Analyzed the complexity of visualizing high-dimensional continuous functions
-
 September 2005 -- May 2006
 : **Research assistant** NYU Proteus Project, NYU Computer Science Department
 
-    - Implemented a vizualization tool for multilingual parse trees in Java
-    - Outlined basic idea for improved parse tree visualization
-
 May 2002 -- October 2002
 : **Research assistant** "Learning driving behaviors for autonomous vehicles," NIST-funded project, Georgetown Computer Science Department
-
-    - Added rigid body dynamics to the SimRobot robotics simulator
-    - Developed a collision detection system based on V-Clip to account for penetration and location of impact
 
 # Volunteer positions
 September 2010 -- September 2012
@@ -146,6 +140,9 @@ January 2011 -- September 2012
     - Coordinated incoming student mentorship program 
 
 # Academic awards
+2017
+: **A/B publication strategy award**, University of Vienna
+
 Spring 2012
 : **SFU graduate fellowship (Masters)**, CAD 6,250
 
