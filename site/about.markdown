@@ -15,8 +15,7 @@ My email address is [thomas.torsney-weir@univie.ac.at](mailto:thomas.torsney-wei
 
 I can also be found
 as "gabysbrain" on
-[Github](<%= data.social.github %>) and
-[Twitter](<%= data.social.twitter %>).
+[Github](<%= data.social.github %>).
 
 
 My work address is:
@@ -24,7 +23,7 @@ My work address is:
   <li>VDA research group</li>
   <li>Faculty of Computer Science</li>
   <li>University of Vienna</li>
-  <li>Sensengasse 6/2.07</li>
+  <li>Sensengasse 6/2.06</li>
   <li>1090 Vienna, Austria</li>
 </ul>
 
