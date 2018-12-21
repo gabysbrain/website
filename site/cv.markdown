@@ -112,6 +112,9 @@ Fall 2010
 April 2018 -- present
 : **Universitätsassistent ("post doc")** Visualization and data analysis research group, University of Vienna
 
+July 2016 -- October 2016
+: **Research internship**  Center for Applied Scientific Computing, Lawrence Livermore National Laboratory
+
 January 2015 -- April 2018
 : **Universitätsassistent ("prae doc")** Visualization and data analysis research group, University of Vienna
 
