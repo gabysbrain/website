@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DIR=$(nix-build --no-out-link)
-SERVER="tomtorsneyweir.com"
+SERVER="tom@tomtorsneyweir.com"
 
 rsync -avr --progress --delete $DIR/ ${SERVER}:site/
 
