@@ -69,7 +69,13 @@ September 16, 2011
 
 # Scientific activities
 
-2016 -- present
+2019
+: **IPC member**, International Symposium on Visual Computing
+
+2019
+: **IPC member**, EuroVis STAR
+
+2016 -- 2018
 : **Student volunteer chair** IEEE Visualization conference
 
 2018
