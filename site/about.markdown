@@ -3,8 +3,8 @@
 
 ![](/images/me.jpg)
 
-I am a PhD student at the University of Vienna in Austria.  I study how
-visualization and statistical methods can be used to help scientists
+I am a postdoctoral researcher at the University of Vienna in Austria.  I study
+how visualization and statistical methods can be used to help scientists
 understand and create better computer models.
 
 I try to spend as much time in the outdoors as possible. I love skiing,
