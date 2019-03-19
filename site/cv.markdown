@@ -33,6 +33,9 @@ title: CV
 
 # Invited talks
 
+March 18, 2019
+: "Slicing multi-dimensional spaces." Data and Design Meetup, Vienna, Austria.
+
 January 10, 2017
 : "Visualization of machine learning algorithms." JKU Linz, Austria.
 

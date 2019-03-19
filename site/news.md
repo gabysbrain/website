@@ -1,4 +1,7 @@
 
+March 18, 2019
+: **Invited talk** [Slicing multi-dimensional spaces](/talks/2019-03-18_data_and_design_talk.pdf), Data and Design Meetup, Vienna, Austria.
+
 June 07, 2018
 : **Conference presentation** [Risk fixers and sweet spotters](/talks/2018-06-07_risk_fixers_eurovis.html), Eurovis conference, Brno, Czechia.
 
