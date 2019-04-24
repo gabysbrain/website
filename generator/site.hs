@@ -54,9 +54,9 @@ main = do
       compile compressCssCompiler
 
     -- things with reference-style citations
-    match (fromList ["about.markdown", "research.markdown", "teaching.markdown"]) $ do
+    match (fromList ["about.markdown", "research.markdown", "teaching.markdown", "proof_primer.markdown"]) $ do
       route   $ setExtension "html"
-      compile $ pandocCompiler
+      compile $ pandocMathCompiler
         -- >>= loadAndApplyTemplate "templates/page.html"  postCtx
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
         >>= relativizeUrls
@@ -157,6 +157,20 @@ pandocPubsCompiler =
                       }
   in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 -}
+
+pandocMathCompiler :: Compiler (Item String)
+pandocMathCompiler =
+  let mathExtensions = extensionsFromList [ Ext_tex_math_dollars
+                                          , Ext_tex_math_double_backslash
+                                          , Ext_latex_macros
+                                          ]
+      defaultExtensions = writerExtensions defaultHakyllWriterOptions
+      newExtensions = mathExtensions <> defaultExtensions
+      writerOptions = defaultHakyllWriterOptions {
+                        writerExtensions = newExtensions,
+                        writerHTMLMathMethod = MathJax ""
+                      }
+  in pandocCompilerWith defaultHakyllReaderOptions writerOptions
 
 pageCompiler :: Compiler (Item String)
 pageCompiler = do
