@@ -8,7 +8,7 @@ The idea of this document is to describe some of the common proof techniques
 that you'll encounter in computer science. I've also included some common 
 transformations that you'll use.
 
-# Proof techniques
+## Proof techniques
 
 A mathematical proof is shows that a statement is logically true. This means
 that you need to make a logical argument why the statement is true. You need
@@ -20,7 +20,7 @@ Testing with real numbers into statements can give you intuition about how the
 problem works though! It's very helpful if you get stuck and don't know how
 to progress, but specific examples are not part of a formal proof.
 
-## Equivalence
+### Equivalence
 
 These are very common in math textbooks where you are asked to show that one
 thing is equal to another thing: $A = B$. The way you solve these is by showing
@@ -38,7 +38,7 @@ Note that I've included justifications for the algebraic rules used at every
 step. This is good practice so the reader of your proof can follow it more
 easily.
 
-## Induction
+### Induction
 
 Proof by induction is used alot for proving running time of algorithms or for
 sequences. A proof by induction consists of two parts:
@@ -55,7 +55,7 @@ a sequence of true statements.
 Proving part 1 is usually quite easy. Step 2 is often harder because you need
 to show that the $(n+1)$ case is the same form as the $n$th case.
 
-## Contradiction
+### Contradiction
 
 Sometimes it's hard to show that a statement is true. A proof by contradiction
 works by assuming that the statement is not true, then using a number of
@@ -64,7 +64,7 @@ technique was used to for one of the most famous proofs in computer science.
 Alan Turing used it to prove that a general algorithm cannot be used to solve
 the halting problem.
 
-# Useful facts/algebra rules
+## Useful facts/algebra rules
 
 Equivalence: If $A = B$ and $B = C$, then $A = C$. This also works for proofs
 where you have to show something like $P(A | B) P(B) = P(A,B) = P(B | A) P(A)$.
