@@ -1,4 +1,7 @@
 
+May 04, 2019
+: **Invited talk** [Visualization and machine learning](/talks/2019-05-04_vis_and_ml.pdf), Data and Design Meetup, Vienna, Austria.
+
 March 18, 2019
 : **Invited talk** [Slicing multi-dimensional spaces](/talks/2019-03-18_data_and_design_talk.pdf), Data and Design Meetup, Vienna, Austria.
 

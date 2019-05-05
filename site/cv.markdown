@@ -33,6 +33,9 @@ title: CV
 
 # Invited talks
 
+May 04, 2019
+: "Visualization and machine learning." Data science hackathon, Vienna, Austria.
+
 March 18, 2019
 : "Slicing multi-dimensional spaces." Data and Design Meetup, Vienna, Austria.
 
