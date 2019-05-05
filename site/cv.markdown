@@ -33,7 +33,7 @@ title: CV
 
 # Invited talks
 
-May 04, 2019
+May 03, 2019
 : "Visualization and machine learning." Data science hackathon, Vienna, Austria.
 
 March 18, 2019
