@@ -15,7 +15,7 @@ My email address is [t.d.torsney-weir@swansea.ac.uk](mailto:t.d.torsney-weir@swa
 
 I can also be found
 as "gabysbrain" on
-[Github](<%= data.social.github %>).
+[Github](https://github.com/gabysbrain)
 
 
 My work address is:
