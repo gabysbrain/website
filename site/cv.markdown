@@ -4,6 +4,8 @@ title: CV
 
 # Journal publications
 
+[@Schwarzl:2019]
+
 [@Torsney-Weir:2018]
 
 [@Torsney-Weir:2017a]
@@ -15,7 +17,6 @@ title: CV
 [@Kainz:2015]
 
 [@Torsney-Weir:2011]
-
 
 # Conference publications
 
@@ -98,11 +99,14 @@ September 16, 2011
 
 # Scientific activities
 
-2019
-: **IPC member**, International Symposium on Visual Computing
+2019 -- present
+: **IPC member**, EuroVis STAR
+
+2014 -- present
+: **Program committee member**, International Conference on Intelligent User Interfaces
 
 2019
-: **IPC member**, EuroVis STAR
+: **IPC member**, International Symposium on Visual Computing
 
 2016 -- 2018
 : **Student volunteer chair** IEEE Visualization conference
@@ -120,27 +124,15 @@ September 16, 2011
 : **Reviewer**, EG/VGTC Conference on visualization (EuroVis)
 
 2014
-: **Program committee member**, International Conference on Intelligent User Interfaces
-
-2014
 : **Reviewer**, Computers and Graphics
 
 # Teaching
 
-2016 -- present
-: **Lecturer**, Visualization and Visual Data Analysis
-
-2018 -- present
-: **Lecturer**, Foundations of Data Analysis
-
-Fall 2011
-:  **Teaching assistant**, CMPT 361 Introduction to Computer Graphics
-
-Spring 2011
-:  **Teaching assistant**, CMPT 225 Introduction to Data Structures and Algorithms
-
-Fall 2010
-:  **Teaching assistant**, CMPT 225 Introduction to Data Structures and Algorithms
+* Relational and Object-Oriented Database Systems
+* Visualization and Visual Data Analysis
+* Foundations of Data Analysis
+* Introduction to Computer Graphics
+* Introduction to Data Structures and Algorithms
 
 # Volunteer positions
 September 2010 -- September 2012
