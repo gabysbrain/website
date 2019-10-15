@@ -119,30 +119,14 @@ September 16, 2011
 2012 -- 2014
 : **Reviewer**, EG/VGTC Conference on visualization (EuroVis)
 
-2014
+2014 -- present
 : **Program committee member**, International Conference on Intelligent User Interfaces
 
 2014
 : **Reviewer**, Computers and Graphics
 
-# Teaching
-
-2016 -- present
-: **Lecturer**, Visualization and Visual Data Analysis
-
-2018 -- present
-: **Lecturer**, Foundations of Data Analysis
-
-Fall 2011
-:  **Teaching assistant**, CMPT 361 Introduction to Computer Graphics
-
-Spring 2011
-:  **Teaching assistant**, CMPT 225 Introduction to Data Structures and Algorithms
-
-Fall 2010
-:  **Teaching assistant**, CMPT 225 Introduction to Data Structures and Algorithms
-
 # Volunteer positions
+
 September 2010 -- September 2012
 : **Steward** SFU Teaching Support Staff Union
 
