@@ -3,29 +3,31 @@
 
 ## Journals
 
-[@Torsney-Weir:2018]
+[@schwarzl:2019]
 
-[@Torsney-Weir:2017a]
+[@torsney-weir:2018]
 
-[@Torsney-Weir:2017]
+[@torsney-weir:2017a]
 
-[@Pajer:2016]
+[@torsney-weir:2017]
 
-[@Kainz:2015]
+[@pajer:2016]
 
-[@Torsney-Weir:2011]
+[@kainz:2015]
+
+[@torsney-weir:2011]
 
 ## Conferences
 
-[@Torsney-Weir:2018a]
+[@torsney-weir:2018a]
 
-[@Torsney-Weir:2015]
+[@torsney-weir:2015]
 
 ## Other
 
-[@Torsney-Weir:2018b]
+[@torsney-weir:2018b]
 
-[@Torsney-Weir:2012]
+[@torsney-weir:2012]
 
-[@Torsney-Weir:2011a]
+[@torsney-weir:2011a]
 
