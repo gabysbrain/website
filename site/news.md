@@ -15,10 +15,10 @@ June 06, 2018
 : **Conference presentation** [Hypersliceplorer](/talks/2018-06-06_hypersliceplorer_eurovis.html), Eurovis conference, Brno, Czechia.
 
 June 04, 2018
-: **Publication** [@Torsney-Weir:2018]
+: **Publication** [@torsney-weir:2018]
 
 June 04, 2018
-: **Publication** [@Torsney-Weir:2018a]
+: **Publication** [@torsney-weir:2018a]
 
 April 03, 2018
 : **Phd Defense** I got my PhD!
@@ -34,5 +34,5 @@ November 30, 2017
   Discrete geometry seminar, Freie University Berlin.
 
 June 12, 2017
-: **Publication** [@Torsney-Weir:2017a]
+: **Publication** [@torsney-weir:2017a]
 
