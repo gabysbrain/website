@@ -3,10 +3,10 @@ version: 2.1
 #orbs:
   #gh-pages: sugarshin/gh-pages@0.0.6
 
-executors:
-  nix_machine:
-    docker:
-      - image: nixos/nix:latest
+#executors:
+  #nix_machine:
+    #docker:
+      #- image: nixos/nix:latest
   #nm_alt:
     #docker:
       #- image: lnl7/nix:latest
@@ -23,7 +23,8 @@ executors:
 
 jobs:
   build:
-    executor: nix_machine
+    docker:
+      - image: nixos/nix:latest
     steps:
       - checkout
       - restore_cache:
