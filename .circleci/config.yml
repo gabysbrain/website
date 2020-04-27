@@ -1,16 +1,46 @@
 version: 2.1
+
+orbs:
+  gh-pages: sugarshin/gh-pages@0.0.6
+
+executors:
+  nix_machine:
+    docker:
+      - image: nixos/nix:latest
+  nm_alt:
+    docker:
+      - image: lnl7/nix:latest
+
+workflows:
+  deploy_prod:
+    jobs:
+      - build
+      - deploy_prod:
+          build_dir: result
+          requires:
+            - build
+
 jobs:
   build:
-    docker:
-      - image: 'lnl7/nix:latest'
+    executor: nix_machine
     steps:
       - checkout
       - restore_cache:
           keys:
             - nix-cache
-      - run: $(nix-build --no-out-link)
+      - run: 
+          name: build website
+          shell: $(nix-build --no-out-link)
       - save_cache:
           key: nix-cache
           paths:
             - /nix/store
-      - run: touch build/site/.nojekyll
+#- run: 
+#name: disable github jekyll
+#shell: touch result/site/.nojekyll
+
+  deploy_prod:
+    executor: nix_machine
+    steps:
+      - gh-pages/deploy:
+          ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
