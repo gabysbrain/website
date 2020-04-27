@@ -5,5 +5,12 @@ jobs:
       - image: 'lnl7/nix:latest'
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - nix-cache
       - run: $(nix-build --no-out-link)
+      - save_cache:
+          key: nix-cache
+          paths:
+            - /nix/store
       - run: touch build/site/.nojekyll
