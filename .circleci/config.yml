@@ -3,13 +3,13 @@ version: 2.1
 #orbs:
   #gh-pages: sugarshin/gh-pages@0.0.6
 
-#executors:
-  #nix_machine:
-    #docker:
-      #- image: nixos/nix:latest
-  #nm_alt:
-    #docker:
-      #- image: lnl7/nix:latest
+executors:
+  nix_machine:
+    docker:
+      - image: nixos/nix:latest
+  nm_alt:
+    docker:
+      - image: lnl7/nix:latest
 
 #workflows:
   #deploy_prod:
@@ -23,16 +23,15 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: nixos/nix:latest
+    executor: nix_machine
     steps:
       - checkout
       - restore_cache:
           keys:
             - nix-cache
       - run: 
-          name: "build website"
-          command: "$(nix-build --no-out-link)"
+          name: build website
+          command: $(nix-build --no-out-link)
       - save_cache:
           key: nix-cache
           paths:
