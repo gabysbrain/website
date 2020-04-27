@@ -15,9 +15,11 @@ workflows:
   deploy_prod:
     jobs:
       - build
-      - deploy_prod:
+      - gh-pages/deploy:
+          build-dir: build
           requires:
             - build
+          ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
 
 jobs:
   build:
@@ -38,9 +40,3 @@ jobs:
 #name: disable github jekyll
 #shell: touch result/site/.nojekyll
 
-  deploy_prod:
-    executor: nix_machine
-    steps:
-      - gh-pages/deploy:
-          build_dir: result
-          ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
