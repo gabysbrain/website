@@ -11,10 +11,10 @@ executors:
     docker:
       - image: lnl7/nix:latest
 
-#workflows:
-  #deploy_prod:
-    #jobs:
-      #- build
+workflows:
+  deploy_prod:
+    jobs:
+      - build
       #- gh-pages/deploy:
           #build-dir: build
           #requires:
