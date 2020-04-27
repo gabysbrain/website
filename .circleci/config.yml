@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ' lnl7/nix:latest'
+      - image: 'lnl7/nix:latest'
     steps:
       - checkout
       - run: $(nix-build --no-out-link)
