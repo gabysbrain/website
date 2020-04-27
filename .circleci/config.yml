@@ -32,7 +32,7 @@ jobs:
             - nix-cache
       - run: 
           name: build website
-          shell: $(nix-build --no-out-link)
+          command: $(nix-build --no-out-link)
       - save_cache:
           key: nix-cache
           paths:
