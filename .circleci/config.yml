@@ -5,6 +5,9 @@ executors:
     docker: 
       - image: buildpack-deps:jessie
         #working_directory: /tmp
+  node:
+    docker
+      - image: circleci/node:current
   nixos:
     docker:
       - image: nixos/nix:latest
@@ -50,7 +53,7 @@ jobs:
             - build
 
   deploy_prod:
-    executor: basic
+    executor: node
     steps:
       - attach_workspace:
           at: /tmp/workspace
