@@ -29,9 +29,12 @@ jobs:
       - restore_cache:
           keys:
             - nix-cache
+      - run:
+          name: setup deploy directory
+          command: mkdir build
       - run: 
           name: build website
-          command: nix-build
+          command: cp -R $(nix-build --no-out-link)/* build/
       - save_cache:
           key: nix-cache
           paths:
