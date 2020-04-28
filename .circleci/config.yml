@@ -16,8 +16,6 @@ workflows:
     jobs:
       - build
       - deploy_prod
-          requires:
-            - build
 
 jobs:
   build:
@@ -44,6 +42,8 @@ jobs:
           paths:
             - build
   deploy_prod:
+    requires:
+      - build
     steps:
       - attach_workspace:
           at: /tmp/workspace
