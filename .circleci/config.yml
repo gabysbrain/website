@@ -27,25 +27,26 @@ workflows:
 
 jobs:
   build:
-    executor: nixos
+    executor: basic
+    #executor: nixos
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - nix-cache
-      - run: 
-          name: build website
-          command: nix-build
+      #- restore_cache:
+          #keys:
+            #- nix-cache
+      #- run: 
+          #name: build website
+          #command: nix-build
       - run: 
           name: copy website to workplace
           command: |
             mkdir -p workspace/build
             #cp -R $(nix-build --no-out-link)/* workspace/build/
             echo "hello world" > workspace/build/index.html
-      - save_cache:
-          key: nix-cache
-          paths:
-            - /nix/store
+      #- save_cache:
+          #key: nix-cache
+          #paths:
+            #- /nix/store
       - persist_to_workspace:
           root: workspace
           paths:
