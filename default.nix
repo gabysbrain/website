@@ -27,7 +27,6 @@ in pkgs.stdenv.mkDerivation {
      buildInputs = [ 
        generator 
        pkgs.texlive.combined.scheme-full
-       #pkgs.nodePackages.yarn
      ];
      buildPhase = ''
        generator build
