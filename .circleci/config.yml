@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  gh-pages: sugarshin/gh-pages@0.0.6
-
 executors:
   basic:
     docker: 
@@ -57,9 +54,15 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp/workspace
-      - gh-pages/deploy:
-          build-dir: /tmp/workspace/build
-          ssh-fingerprints: '51:ae:f3:4c:93:1b:38:d4:d4:2d:33:c1:aa:54:3a:a5'
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "ci-build@tomtorsneyweir.com"
+            git config user.name "ci-build"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dist /tmp/workspace/build
 
 #- run: 
 #name: disable github jekyll
