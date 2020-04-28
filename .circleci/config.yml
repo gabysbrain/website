@@ -1,10 +1,6 @@
 version: 2.1
 
 executors:
-  basic:
-    docker: 
-      - image: buildpack-deps:jessie
-        #working_directory: /tmp
   node:
     docker:
       - image: circleci/node:current
@@ -55,12 +51,13 @@ jobs:
   deploy_prod:
     executor: node
     steps:
+      - checkout
       - attach_workspace:
-          at: /tmp/workspace
+          at: build
       - run:
           name: Install and configure dependencies
           command: |
-            npm install -g --silent gh-pages@2.0.1
+            sudo npm install -g gh-pages@2.0.1
             git config user.email "ci-build@tomtorsneyweir.com"
             git config user.name "ci-build"
       - run:
