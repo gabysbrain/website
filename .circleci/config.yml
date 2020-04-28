@@ -14,42 +14,39 @@ executors:
 workflows:
   deploy_prod:
     jobs:
-      - build
-      - deploy_prod
-
-jobs:
-  build:
-    executor: nix_machine
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - nix-cache
-      - run: 
-          name: build website
-          command: nix-build
-      - run: 
-          name: copy website to workplace
-          command: |
-            mkdir -p workspace/build
-            cp -R $(nix-build --no-out-link)/* workspace/build/
-      - save_cache:
-          key: nix-cache
-          paths:
-            - /nix/store
-      - persist_to_workspace:
-          root: workspace
-          paths:
-            - build
-  deploy_prod:
-    requires:
-      - build
-    steps:
-      - attach_workspace:
-          at: /tmp/workspace
-      - gh-pages/deploy:
-          build-dir: /tmp/workspace/build
-          ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
+      build:
+        executor: nix_machine
+        steps:
+          - checkout
+          - restore_cache:
+              keys:
+                - nix-cache
+          - run: 
+              name: build website
+              command: nix-build
+          - run: 
+              name: copy website to workplace
+              command: |
+                mkdir -p workspace/build
+                cp -R $(nix-build --no-out-link)/* workspace/build/
+          - save_cache:
+              key: nix-cache
+              paths:
+                - /nix/store
+          - persist_to_workspace:
+              root: workspace
+              paths:
+                - build
+      deploy_prod:
+        executor: nix_machine
+        requires:
+          - build
+        steps:
+          - attach_workspace:
+              at: /tmp/workspace
+          - gh-pages/deploy:
+              build-dir: /tmp/workspace/build
+              ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
 
 #- run: 
 #name: disable github jekyll
