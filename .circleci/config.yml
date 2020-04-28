@@ -8,7 +8,7 @@ executors:
     docker: 
       - image: buildpack-deps:jessie
         #working_directory: /tmp
-  nix_machine:
+  nixos:
     docker:
       - image: nixos/nix:latest
         #working_directory: /tmp
@@ -27,7 +27,7 @@ workflows:
 
 jobs:
   build:
-    executor: nix_machine
+    executor: nixos
     steps:
       - checkout
       - restore_cache:
@@ -40,7 +40,8 @@ jobs:
           name: copy website to workplace
           command: |
             mkdir -p workspace/build
-            cp -R $(nix-build --no-out-link)/* workspace/build/
+            #cp -R $(nix-build --no-out-link)/* workspace/build/
+            echo "hello world" > workspace/build/index.html
       - save_cache:
           key: nix-cache
           paths:
@@ -51,13 +52,13 @@ jobs:
             - build
 
   deploy_prod:
-    executor: nix_machine
+    executor: basic
     steps:
       - attach_workspace:
           at: /tmp/workspace
       - gh-pages/deploy:
           build-dir: /tmp/workspace/build
-          ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
+          ssh-fingerprints: '51:ae:f3:4c:93:1b:38:d4:d4:2d:33:c1:aa:54:3a:a5'
 
 #- run: 
 #name: disable github jekyll
