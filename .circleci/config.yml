@@ -60,7 +60,7 @@ jobs:
       - run:
           name: Install and configure dependencies
           command: |
-            npm install gh-pages --save-dev
+            npm install gh-pages
             git config user.email "ci-build@tomtorsneyweir.com"
             git config user.name "ci-build"
       - run:
@@ -71,7 +71,7 @@ jobs:
             - "04:20:b3:77:32:f8:06:6f:02:39:01:d3:85:54:e0:15"
       - run:
           name: Deploy to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist workspace/build
+          command: node_modules/gh-pages/bin/gh-pages.js --dotfiles --message "[skip ci] Updates" --dist workspace/build
 
 #- run: 
 #name: disable github jekyll
