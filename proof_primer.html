@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45010384-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-45010384-1');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tom Torsney-Weir</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <script src="https://kit.fontawesome.com/bfc83b0cb2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/default.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="./"><h1>Tom Torsney-Weir</h1></a>
+      </div>
+      <nav class="site-nav">
+        <a href="./about.html">About</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./teaching.html">Teaching</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./cv.html">CV</a>
+      </nav>
+
+      <!--<hr/>-->
+    </header>
+
+    <main role="main">
+      <h1 id="toms-proof-primer">Tom’s proof primer</h1>
+<p>The idea of this document is to describe some of the common proof techniques that you’ll encounter in computer science. I’ve also included some common transformations that you’ll use.</p>
+<h2 id="proof-techniques">Proof techniques</h2>
+<p>A mathematical proof is shows that a statement is logically true. This means that you need to make a logical argument why the statement is true. You need to show that a claim is true for <em>all</em> cases, not just a few examples. This is why you can’t just plug a few examples into these statements and then claim the statement is true.</p>
+<p>Testing with real numbers into statements can give you intuition about how the problem works though! It’s very helpful if you get stuck and don’t know how to progress, but specific examples are not part of a formal proof.</p>
+<h3 id="equivalence">Equivalence</h3>
+<p>These are very common in math textbooks where you are asked to show that one thing is equal to another thing: <span class="math inline">\(A = B\)</span>. The way you solve these is by showing that you can convert <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> or <span class="math inline">\(B\)</span> to <span class="math inline">\(A\)</span> through algebraic manipulations. Here’s a simple example where we prove Bayes rule: <span class="math inline">\(P(A|B) = \frac{P(B|A) P(A)}{P(B)}\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+  P(A|B) &amp; = \frac{P(B|A) P(A)}{P(B)} \\
+  P(A|B) P(B) &amp; = P(B|A) P(A) &amp;&amp; \text{multiply both sides by } P(B) \\
+  P(A,B) &amp;= P(B,A) &amp;&amp; \text{using the rule that } P(A | B) P(B) = P(A,B) \\
+  P(A,B) &amp;= P(A,B) &amp;&amp; \text{logical and is commutative}
+\end{align*}\]</span></p>
+<p>Note that I’ve included justifications for the algebraic rules used at every step. This is good practice so the reader of your proof can follow it more easily.</p>
+<h3 id="induction">Induction</h3>
+<p>Proof by induction is used alot for proving running time of algorithms or for sequences. A proof by induction consists of two parts:</p>
+<ol type="1">
+<li>Showing that the statement holds for the base case.</li>
+<li>Proving that, if we assume the statement holds for the <span class="math inline">\(n\)</span>th case, then it also holds true for the <span class="math inline">\((n+1)\)</span>th case.</li>
+</ol>
+<p>This proof works because you have proven that given a particular input size, the proof still holds if you increase the input by one. Because you’ve shown the base case holds you can use that as the <span class="math inline">\(n\)</span>th case and use that to start a sequence of true statements.</p>
+<p>Proving part 1 is usually quite easy. Step 2 is often harder because you need to show that the <span class="math inline">\((n+1)\)</span> case is the same form as the <span class="math inline">\(n\)</span>th case.</p>
+<h3 id="contradiction">Contradiction</h3>
+<p>Sometimes it’s hard to show that a statement is true. A proof by contradiction works by assuming that the statement is not true, then using a number of logical derivations, shows that you reach a logical contradiction. This proof technique was used to for one of the most famous proofs in computer science. Alan Turing used it to prove that a general algorithm cannot be used to solve the halting problem.</p>
+<h2 id="useful-factsalgebra-rules">Useful facts/algebra rules</h2>
+<p>Equivalence: If <span class="math inline">\(A = B\)</span> and <span class="math inline">\(B = C\)</span>, then <span class="math inline">\(A = C\)</span>. This also works for proofs where you have to show something like <span class="math inline">\(P(A | B) P(B) = P(A,B) = P(B | A) P(A)\)</span>.</p>
+<p><span class="math inline">\(\frac{a}{a + b} = \frac{1}{1 + b/a}\)</span></p>
+<p>Contrapositive: When you have a true statement, <span class="math inline">\(A \implies B\)</span>, then you can also claim <span class="math inline">\(\neg B \implies \neg A\)</span>.</p>
+<p>Converse error: <span class="math inline">\(A \implies B\)</span> and <span class="math inline">\(B \implies A\)</span> are <em>not</em> logically equivalent! The converse error and inverse error are common logical falacies.</p>
+<p>Inverse error: <span class="math inline">\(A \implies B\)</span> and <span class="math inline">\(\neg A \implies \neg B\)</span> are <em>not</em> logically equivalent! The converse error and inverse error are common logical falacies.</p>
+<p><span class="math inline">\(P(A | B) \neq P(B | A)\)</span></p>
+<p>You can’t divide a matrix or vector by another. There is the idea of the inverse of a matrix or vector which is roughly equivalent to division.</p>
+<p>There is a distributive law for matrices and vectors, i.e. <span class="math inline">\(C(A + B) = CA + CB\)</span>, if <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are matrices/vectors.</p>
+    </main>
+
+    <footer>
+      <hr />
+
+      <p>© Copyright Tom Torsney-Weir</p>
+
+      <p>
+      Site proudly generated by
+      <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </p>
+    </footer>
+  </body>
+</html>

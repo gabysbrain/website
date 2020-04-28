@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45010384-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-45010384-1');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tom Torsney-Weir</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <script src="https://kit.fontawesome.com/bfc83b0cb2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/default.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="../"><h1>Tom Torsney-Weir</h1></a>
+      </div>
+      <nav class="site-nav">
+        <a href="../about.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../teaching.html">Teaching</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../cv.html">CV</a>
+      </nav>
+
+      <!--<hr/>-->
+    </header>
+
+    <main role="main">
+      <article>
+  <h1 class="article-title">Public/private git for research</h1>
+  <section class="byline">
+    <date class="post-date">October 29, 2013</date>
+  </section>
+  <section>
+    <p>I feel that it’s very important that any code I write for my research is available online so that anyone can access and read it. I also want people to be able to view all the individual changesets that went into the software. That way they can see the full thought-process that went into a project. That is why, for example, <a href="http://github.com/gabysbrain/tuner">Tuner</a> is on GitHub.</p>
+<p>However, when I am developing a feature for a paper, I don’t want the code to be public until after the paper is accepted. Furthermore, I want to keep my private changes online so that I can share them with collaborators. So what to do? What I do is have 2 git repos online, a public one and a private one. Then, I use feature branches in the style of <a href="http://nvie.com/posts/a-successful-git-branching-model/">git-flow</a> to keep track of all my changes. I keep them in my private repo until I’m ready to expose them to the world and then move them to my public repo once I’m done. I detail my specific setup below.</p>
+<!-- more -->
+<h2 id="set-up">Set Up</h2>
+<p>In this example I have my public repo at <code>github.com</code> and my private repo hosted at the (fake) address <code>private.com</code>.</p>
+<h3 id="remotes">Remotes</h3>
+<p>The first thing I do is remove the “origin” remote mapping. This way it’s unambiguous whether I’m pushing a branch to my public repo or my private one.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> remote remove origin</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">git</span> remote add public git@github.com:gabysbrain/tuner.git</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">git</span> remote add private git@private.com:gabysbrain/tuner_dev.git</span></code></pre></div>
+<h3 id="branches">Branches</h3>
+<p>The next thing is to map all the branches that I want to use. For example if I have branches <code>release_2.0</code> and <code>bugfix</code> in the public repo and a <code>secret_feature</code> branch in my private repo. Then I just map these the normal way:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> branch release_2.0 public/release_2.0</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">git</span> branch bugfix public/bugfix</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">git</span> branch secret_feature private/secret_feature</span></code></pre></div>
+<p>And that’s it. Now the master branch is linked to the public repo. This means that I only have one “official” version of Tuner: the master branch on GitHub. I used to maintain a “development master” branch too but that was always confusing as to which one I should be merging into.</p>
+<h2 id="workflow">Workflow</h2>
+<p>Now that all the basic structure is set up we can easily handle new branches. Here is an example of creating a new private feature branch, doing some work on it, and then moving it to my public repo.</p>
+<p>First we check out a new branch and then push it upstream to my private repo.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">git</span> checkout -b next_idea</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">git</span> push --set-upstream private next_idea</span></code></pre></div>
+<p>Then I can make all the changes I want and push them privately. This is the branch I will share with contributors. Once I’m ready to There’s no remote move command so we have to do it manually by pushing it upstream to the public repo and then deleting it on the private one.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> push --set-upstream public next_idea</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">git</span> branch -r -d private/next_idea</span></code></pre></div>
+<p>I usually look at my branch mappings at this point to double check that everything is up to date.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">git</span> branch -r</span></code></pre></div>
+<p>I check that all my public branches should be mapped to the public remote and all my private branches are mapped to my private remote.</p>
+  </section>
+</article>
+
+    </main>
+
+    <footer>
+      <hr />
+
+      <p>© Copyright Tom Torsney-Weir</p>
+
+      <p>
+      Site proudly generated by
+      <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </p>
+    </footer>
+  </body>
+</html>

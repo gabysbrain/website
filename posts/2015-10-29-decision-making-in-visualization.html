@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45010384-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-45010384-1');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tom Torsney-Weir</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <script src="https://kit.fontawesome.com/bfc83b0cb2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/default.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="../"><h1>Tom Torsney-Weir</h1></a>
+      </div>
+      <nav class="site-nav">
+        <a href="../about.html">About</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../teaching.html">Teaching</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../cv.html">CV</a>
+      </nav>
+
+      <!--<hr/>-->
+    </header>
+
+    <main role="main">
+      <article>
+  <h1 class="article-title">Decision making in visualization</h1>
+  <section class="byline">
+    <date class="post-date">October 29, 2015</date>
+  </section>
+  <section>
+    <p>I gave a talk at the <a href="http://uncertainty2015.cs.univie.ac.at">Visualization for decision making under uncertainty workshop</a> (<a href="http://figshare.com/articles/Decision_making_in_uncertainty_visualization/1585848">writeup</a> and <a href="http://www.tomtorsneyweir.com/decision_making-vdmu2015/final_talk">slides</a>) recently on a project of mine. We hypothesize that with better user modeling at a cognitive level we could adapt visualization interfaces to their needs. A better model of how a user works with a visualization would benefit visualization design in two ways. The additional data on user-types would give us additional intervening variables to consider when designing user study experiments. In addition, we could design systems that could adapt to different user characteristics. These systems could work better with the user, enhancing their strengths as an analyst and helping to mitigate their weaknesses.</p>
+<p>Right now, there are two major methods of evaluation for visualizations: user studies and design studies. User studies are focused primarily on the perceptual aspects of visualization. They evaluate very specific visual encodings for very specific tasks with clearly defined goals. Evaluation metrics are typically in the form of time taken for the task and how accurately they performed the task. In many cases this requires distilling a real-world task and visualization into a much more focused one in order to test anything. Design studies, on the other hand, design applications to help analysts in real-world application scenarios. The goal of these studies is to concentrate on and work with only a very few domain experts and develop a task abstraction of how domain experts accomplish their task. There is also an extensive discussion about the design decisions made while developing a tool for the users. These studies give a detailed description overview of how a domain expert works. The hope is that some of the task abstractions and design recommendations will transfer to other domains and help guide other visualization designers.</p>
+<p>The field of decision making such as has been described in <em>The adaptive decision maker</em><span class="citation" data-cites="Payne:1993">(<span class="citeproc-not-found" data-reference-id="Payne:1993"><strong>???</strong></span>)</span> is a field that studies how people combine low-level task primitives to solve complex problems with unclear goals. These are precisely the types of tasks that people face when doing data exploration and analysis. While many people know they found something once they found it, the questions are how did they go about finding information and is this information they found useful?</p>
+<p>Right now I see decision making fitting into an axis of user evaluation as seen in the diagram below. On the left are perceptual studies which focus on developing principles are generalizable to all humans. An example of this is how many colors can we see<span class="citation" data-cites="Haroz:2012">(<span class="citeproc-not-found" data-reference-id="Haroz:2012"><strong>???</strong></span>)</span>. On the other side are design studies which focus on a very specific user and task type. The Fluid explorer paper<span class="citation" data-cites="Bruckner:2010">(<span class="citeproc-not-found" data-reference-id="Bruckner:2010"><strong>???</strong></span>)</span> is a great example of this type of research. So that’s the axis from basically all humans to one human doing one task one specific way. In between these endpoints, we get more focused on a particular user and environment as we move from the left to the right. For example, cognitive traits like locus of control<span class="citation" data-cites="Rotter:1966">(<span class="citeproc-not-found" data-reference-id="Rotter:1966"><strong>???</strong></span>)</span> are specific to a particular person but are relatively consistent over time. Decision making and problem solving heuristics depend not just on the particular person but also what problem they are trying to solve and even how that problem is presented to them<span class="citation" data-cites="Slovic:1983">(<span class="citeproc-not-found" data-reference-id="Slovic:1983"><strong>???</strong></span>)</span>!</p>
+<figure>
+<img src="../images/vis_personalization_axis.svg" alt /><figcaption>axis of user characterization</figcaption>
+</figure>
+<p>As we move from right to left on this axis we find that the tasks get more abstract and have better defined goals. The high-level task of, say, “find the best flame simulation for my movie scene” as the case of Fluid explorer breaks down into progressively more focused tasks. Medium-level tasks are things like “compare multiple simulation outputs.” A low-level task in this scenario is through visual comparison of two frames of two different simulations side by side. I feel that better cognitive modelling can help us to better understand how people decompose the high-level task into the eventual low-level tasks.</p>
+<p>So far this is shaping up to be a very interesting but difficult project :) It would be linking together many distinct fields and I don’t know how much trouble this will be. But it’s definitely fun to research, think about, and discuss!</p>
+  </section>
+</article>
+
+    </main>
+
+    <footer>
+      <hr />
+
+      <p>© Copyright Tom Torsney-Weir</p>
+
+      <p>
+      Site proudly generated by
+      <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+      </p>
+    </footer>
+  </body>
+</html>
