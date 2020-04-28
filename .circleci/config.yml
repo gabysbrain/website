@@ -66,6 +66,9 @@ jobs:
       - run:
           name: Disable jekyll builds
           command: touch workspace/build/.nojekyll
+      - run:
+          name: setup CNAME file
+          command: echo www.tomtorsneyweir.com > workspace/build/CNAME
       - add_ssh_keys:
           fingerprints:
             - "04:20:b3:77:32:f8:06:6f:02:39:01:d3:85:54:e0:15"
