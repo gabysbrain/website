@@ -1,7 +1,7 @@
 version: 2.1
 
-#orbs:
-  #gh-pages: sugarshin/gh-pages@0.0.6
+orbs:
+  gh-pages: sugarshin/gh-pages@0.0.6
 
 executors:
   nix_machine:
@@ -15,11 +15,11 @@ workflows:
   deploy_prod:
     jobs:
       - build
-      #- gh-pages/deploy:
-          #build-dir: build
-          #requires:
-            #- build
-          #ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
+      - gh-pages/deploy:
+          build-dir: result
+          requires:
+            - build
+          ssh-fingerprints: 'ff:22:gs:v6:gg:2g:22:7j:73:gf:ja:36:ff:y2:22:89'
 
 jobs:
   build:
