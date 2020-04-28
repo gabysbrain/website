@@ -6,7 +6,7 @@ executors:
       - image: buildpack-deps:jessie
         #working_directory: /tmp
   node:
-    docker
+    docker:
       - image: circleci/node:current
   nixos:
     docker:
