@@ -16,7 +16,7 @@ title: CV
 
 [@kainz:2015]
 
-[@torsney-weir:2011]
+[@torsney-weir:2011a]
 
 # Conference publications
 
@@ -30,7 +30,7 @@ title: CV
 
 [@torsney-weir:2012]
 
-[@torsney-weir:2011a]
+[@torsney-weir:2011]
 
 # Academic positions
 
