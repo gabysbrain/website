@@ -108,6 +108,9 @@ September 16, 2011
 2014 -- present
 : **Program committee member**, International Conference on Intelligent User Interfaces
 
+2012 -- present
+: **Reviewer**, IEEE Transactions on Visualization and Computer Graphics
+
 2019
 : **IPC member**, International Symposium on Visual Computing
 
@@ -119,9 +122,6 @@ September 16, 2011
 
 2016 -- 2018
 : **Program committee member**, International EuroVis workshop on visual analytics (EuroVA)
-
-2012 -- 2018
-: **Reviewer**, IEEE Transactions on Visualization and Computer Graphics
 
 2012 -- 2014
 : **Reviewer**, EG/VGTC Conference on visualization (EuroVis)
