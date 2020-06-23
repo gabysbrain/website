@@ -68,6 +68,9 @@ May 2002 -- October 2002
 
 # Invited talks
 
+Oct 30, 2019
+: "Visualizing multi-dimensional spaces." JKU Linz, Austria.
+
 May 03, 2019
 : "Visualization and machine learning." Data science hackathon, Vienna, Austria.
 
@@ -129,25 +132,11 @@ September 16, 2011
 # Teaching
 
 * Relational and Object-Oriented Database Systems
+* Data visualization
 * Visualization and Visual Data Analysis
 * Foundations of Data Analysis
 * Introduction to Computer Graphics
 * Introduction to Data Structures and Algorithms
-
-# Volunteer positions
-September 2010 -- September 2012
-: **Steward** SFU Teaching Support Staff Union
-
-January 2012 -- September 2012
-: **Membership Mobilization Committee Commissioner** SFU Teaching Support Staff Union
-
-January 2011 -- January 2012
-: **Membership Mobilization Committee member** SFU Teaching Support Staff Union
-
-January 2011 -- September 2012
-: **Buddy coordinator** SFU Computing Science Department
-
-    - Coordinated incoming student mentorship program 
 
 # Academic awards
 2017
