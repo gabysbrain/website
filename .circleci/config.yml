@@ -32,6 +32,12 @@ jobs:
       - restore_cache:
           keys:
             - nix-cache
+      - run:
+          name: Install dependencies
+          command: |
+            nix-channel --update
+            nix-env -u
+            nix-env -iA nixpkgs.pandoc
       - run: 
           name: build website
           command: nix-build
