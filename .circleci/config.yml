@@ -9,12 +9,8 @@ executors:
       - image: circleci/node:current
   nixos:
     docker:
-      - image: nixos/nix:latest
-        #working_directory: /tmp
-  nm_alt:
-    docker:
-      - image: lnl7/nix:latest
-        #working_directory: /tmp
+      - image: gabysbrain/website:latest
+      #- image: nixos/nix:latest
 
 workflows:
   deploy_prod:
