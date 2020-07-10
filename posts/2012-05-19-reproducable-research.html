@@ -54,13 +54,13 @@
 <p>The best thing about this method is that it’s pretty much editor agnostic. Marked doesn’t care what editor you use as long as it’s editing markdown. So, I get to use the only text editor I’ve ever liked: vim!</p>
 <p>I linked Marked to vim with the instructions from <a href="http://captainbollocks.tumblr.com/post/9858989188/linking-macvim-and-marked-app">A Whole lot of Bollocks’ blog post</a> so that I can hit <code>&lt;leader&gt;-m</code> and have the file I’m editing open in Marked. Once the file is open it automatically updates every time I save.</p>
 <p>To make my editing more efficient I use the <a href="http://www.vim.org/scripts/script.php?script_id=2540">SnipMate plugin</a> which brings TextMate-style snippets to vim. Basically, you can type a shorter string, hit tab, and have it expand into anything you want. It’s really great for adding boilerplate code. I particularly like this for adding the knitr code blocks. With the fork of SnipMate I have set up (<a href="https://github.com/gabysbrain/snipmate.vim" class="uri">https://github.com/gabysbrain/snipmate.vim</a>) typing <code>rcode</code> expands to</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>&lt;!--<span class="co">begin.rcode ${1},cache=TRUE,dependson='${2}'</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co">${3}</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co">end.rcode--&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">&lt;!--begin.rcode ${1},cache=TRUE,dependson='${2}'</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co">${3}</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co">end.rcode--&gt;</span></span></code></pre></div>
 <p>and typing <code>rfig</code> expands to</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>&lt;!--<span class="co">begin.rcode ${1},cache=TRUE,dependson='${2}',fig.width=${3:12},fig.height=${4:12},dev='png'</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co">${5}</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co">end.rcode--&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">&lt;!--begin.rcode ${1},cache=TRUE,dependson='${2}',fig.width=${3:12},fig.height=${4:12},dev='png'</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="co">${5}</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co">end.rcode--&gt;</span></span></code></pre></div>
 <p>I’m also using the multimarkdown syntax highlighter: <a href="https://github.com/jngeist/vim-multimarkdown" class="uri">https://github.com/jngeist/vim-multimarkdown</a>.</p>
 <h2 id="processor-knitr">Processor: knitr</h2>
 <p>In its default incarnation knitr provides a lot of functionality out of the box for processing R code embedded in a markdown document. The killer feature (other than the markdown output) in my opinion is its caching and and dependency layer so I don’t have to wait for R to recompute every section when I just change one. It’s also smart enough to recompute any blocks that depend on the one I changed.</p>

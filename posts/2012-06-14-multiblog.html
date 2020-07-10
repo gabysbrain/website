@@ -47,94 +47,94 @@
 <p>I found <a href="http://groups.google.com/group/jekyll-rb/browse_thread/thread/50a5f36fee313f29?pli=1">this thread</a> as well as <a href="http://www.garron.me/blog/multi-blog-site-jekyll.html">this post</a> detail how to use the categories attribute in the yaml front matter to distinguish which blog posts are part of. However, I wanted to use the category attribute to produce a categorized list of all my projects. What I found is that all variables in the yaml front matter are available so I can use effectively the same method as the category one but checking against the value of the <code>layout</code> variable instead of <code>category</code>. This works great for me since my blog posts and project “posts” have completely different layouts anyway.</p>
 <h2 id="example-yaml-front-matter">Example yaml front matter</h2>
 <p>When creating a post I just have to make sure that for blog posts my yaml front matter includes a <code>layout: post</code> line as shown below:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">layout</span><span class="kw">:</span><span class="at"> post</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Reproducable research&quot;</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2012-05-19 20:19</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">comments</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> research</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="fu">layout</span><span class="kw">:</span><span class="at"> post</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Reproducable research&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2012-05-19 20:19</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="fu">comments</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> research</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="pp">---</span></span></code></pre></div>
 <p>and projects include a <code>layout: project</code> line:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="pp">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">layout</span><span class="kw">:</span><span class="at"> project</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Tuner&quot;</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">category</span><span class="kw">:</span><span class="at"> research</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">summary</span><span class="kw">:</span><span class="at"> We present an approach to optimizing a high-dimensional parameter space for computer simulations.</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">teaser</span><span class="kw">:</span><span class="at"> tuner.png</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="fu">video</span><span class="kw">:</span><span class="at"> http://www.youtube.com/watch?v=f44P7ulT2yY</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="pp">---</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="fu">layout</span><span class="kw">:</span><span class="at"> project</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Tuner&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="fu">category</span><span class="kw">:</span><span class="at"> research</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="fu">summary</span><span class="kw">:</span><span class="at"> We present an approach to optimizing a high-dimensional parameter space for computer simulations.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="fu">teaser</span><span class="kw">:</span><span class="at"> tuner.png</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="fu">video</span><span class="kw">:</span><span class="at"> http://www.youtube.com/watch?v=f44P7ulT2yY</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="pp">---</span></span></code></pre></div>
 <p>I then made sure that there were layout files called <code>post.html</code> and <code>project.html</code> in my <code>source/_layout</code> directory in Octopress.</p>
 <h2 id="index-pages">Index pages</h2>
 <p>Then, when creating my <a href="../blog/">blog index</a> page, I just have to check if <code>layout = 'post'</code></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a>{% for post in paginator.posts %}</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  {% if post.layout == 'post' %}</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  {% assign content = post.content %}</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="kw">&lt;article&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a>      {% include article.html %}</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="kw">&lt;/article&gt;</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>  {% endif %}</span>
-<span id="cb3-8"><a href="#cb3-8"></a>{% endfor %}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>{% for post in paginator.posts %}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  {% if post.layout == 'post' %}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>  {% assign content = post.content %}</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="kw">&lt;article&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>      {% include article.html %}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="kw">&lt;/article&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>  {% endif %}</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>{% endfor %}</span></code></pre></div>
 <p>For the projects list I manually list the categories right now. So, for example, the “Research” section of my <a href="../projects">projects list</a> looks like</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;h1&gt;</span>Research<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>{% for proj in site.posts %}</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  {% if proj.layout == 'project' and proj.category == 'research' %}</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    {% assign content = proj.content %}</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;project-preview&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>      {% include project.html %}</span>
-<span id="cb4-7"><a href="#cb4-7"></a>    <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>  {% endif %}</span>
-<span id="cb4-9"><a href="#cb4-9"></a>{% endfor %}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>Research<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>{% for proj in site.posts %}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  {% if proj.layout == 'project' and proj.category == 'research' %}</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    {% assign content = proj.content %}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&quot;project-preview&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>      {% include project.html %}</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>  {% endif %}</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>{% endfor %}</span></code></pre></div>
 <h2 id="rakefile">Rakefile</h2>
 <p>The last step was to make sure that creating new posts via the Rakefile automatically add the layout directive. My new post task now looks like:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb5-1"><a href="#cb5-1"></a>desc <span class="st">&quot;Begin a new post in </span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>posts_dir<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>task <span class="st">:new_post</span>, <span class="st">:title</span> <span class="kw">do</span> |t, args|</span>
-<span id="cb5-3"><a href="#cb5-3"></a>  raise <span class="st">&quot;### You haven't set anything up yet. First run `rake install` to set up an Octopress theme.&quot;</span> <span class="kw">unless</span> <span class="dt">File</span>.directory?(source_dir)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>  mkdir_p <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>posts_dir<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>  args.with_defaults(<span class="st">:title</span> =&gt; <span class="st">'new-post'</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>  title = args.title</span>
-<span id="cb5-7"><a href="#cb5-7"></a>  filename = <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>posts_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span><span class="dt">Time</span>.now.strftime(<span class="st">'%Y-%m-%d'</span>)<span class="ot">}</span><span class="st">-</span><span class="ot">#{</span>title.to_url<span class="ot">}</span><span class="st">.</span><span class="ot">#{</span>new_post_ext<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>  <span class="kw">if</span> <span class="dt">File</span>.exist?(filename)</span>
-<span id="cb5-9"><a href="#cb5-9"></a>    abort(<span class="st">&quot;rake aborted!&quot;</span>) <span class="kw">if</span> ask(<span class="st">&quot;</span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st"> already exists. Do you want to overwrite?&quot;</span>, [<span class="ch">'y'</span>, <span class="ch">'n'</span>]) == <span class="ch">'n'</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>  <span class="kw">end</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>  puts <span class="st">&quot;Creating new post: </span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a>  open(filename, <span class="ch">'w'</span>) <span class="kw">do</span> |post|</span>
-<span id="cb5-13"><a href="#cb5-13"></a>    post.puts <span class="st">&quot;---&quot;</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>    post.puts <span class="st">&quot;layout: post&quot;</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a>    post.puts <span class="st">&quot;published: false&quot;</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a>    post.puts <span class="st">&quot;title: \&quot;</span><span class="ot">#{</span>title.gsub(<span class="ot">/&amp;/</span>,<span class="st">'&amp;amp;'</span>)<span class="ot">}</span><span class="st">\&quot;&quot;</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a>    post.puts <span class="st">&quot;date: </span><span class="ot">#{</span><span class="dt">Time</span>.now.strftime(<span class="st">'%Y-%m-%d %H:%M'</span>)<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a>    post.puts <span class="st">&quot;comments: true&quot;</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a>    post.puts <span class="st">&quot;category: &quot;</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a>    post.puts <span class="st">&quot;---&quot;</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a>  <span class="kw">end</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="kw">end</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>desc <span class="st">&quot;Begin a new post in </span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>posts_dir<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>task <span class="st">:new_post</span>, <span class="st">:title</span> <span class="kw">do</span> |t, args|</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>  raise <span class="st">&quot;### You haven't set anything up yet. First run `rake install` to set up an Octopress theme.&quot;</span> <span class="kw">unless</span> <span class="dt">File</span>.directory?(source_dir)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>  mkdir_p <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>posts_dir<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>  args.with_defaults(<span class="st">:title</span> =&gt; <span class="st">'new-post'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>  title = args.title</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>  filename = <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>posts_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span><span class="dt">Time</span>.now.strftime(<span class="st">'%Y-%m-%d'</span>)<span class="ot">}</span><span class="st">-</span><span class="ot">#{</span>title.to_url<span class="ot">}</span><span class="st">.</span><span class="ot">#{</span>new_post_ext<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>  <span class="kw">if</span> <span class="dt">File</span>.exist?(filename)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>    abort(<span class="st">&quot;rake aborted!&quot;</span>) <span class="kw">if</span> ask(<span class="st">&quot;</span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st"> already exists. Do you want to overwrite?&quot;</span>, [<span class="ch">'y'</span>, <span class="ch">'n'</span>]) == <span class="ch">'n'</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>  <span class="kw">end</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>  puts <span class="st">&quot;Creating new post: </span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>  open(filename, <span class="ch">'w'</span>) <span class="kw">do</span> |post|</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>    post.puts <span class="st">&quot;---&quot;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>    post.puts <span class="st">&quot;layout: post&quot;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a>    post.puts <span class="st">&quot;published: false&quot;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>    post.puts <span class="st">&quot;title: \&quot;</span><span class="ot">#{</span>title.gsub(<span class="ot">/&amp;/</span>,<span class="st">'&amp;amp;'</span>)<span class="ot">}</span><span class="st">\&quot;&quot;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a>    post.puts <span class="st">&quot;date: </span><span class="ot">#{</span><span class="dt">Time</span>.now.strftime(<span class="st">'%Y-%m-%d %H:%M'</span>)<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true"></a>    post.puts <span class="st">&quot;comments: true&quot;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true"></a>    post.puts <span class="st">&quot;category: &quot;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true"></a>    post.puts <span class="st">&quot;---&quot;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true"></a>  <span class="kw">end</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
 <p>I also wanted to add a task called <code>new_project</code> to create a new project file similar to how to create new Octopress posts. That task also adds a bunch of extra fields that the project layout uses for my projects like a teaser image, and links for demo videos, citations, websites, etc. My new project task looks like</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb6-1"><a href="#cb6-1"></a>desc <span class="st">&quot;Begin a new project in </span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>projects_dir<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>task <span class="st">:new_project</span>, <span class="st">:title</span> <span class="kw">do</span> |t, args|</span>
-<span id="cb6-3"><a href="#cb6-3"></a>  raise <span class="st">&quot;### You haven't set anything up yet. First run `rake install` to set up an Octopress theme.&quot;</span> <span class="kw">unless</span> <span class="dt">File</span>.directory?(source_dir)</span>
-<span id="cb6-4"><a href="#cb6-4"></a>  mkdir_p <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>projects_dir<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>  args.with_defaults(<span class="st">:title</span> =&gt; <span class="st">'mr project'</span>)</span>
-<span id="cb6-6"><a href="#cb6-6"></a>  title = args.title</span>
-<span id="cb6-7"><a href="#cb6-7"></a>  filename = <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>projects_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>title.to_url<span class="ot">}</span><span class="st">.</span><span class="ot">#{</span>new_post_ext<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>  <span class="kw">if</span> <span class="dt">File</span>.exist?(filename)</span>
-<span id="cb6-9"><a href="#cb6-9"></a>    abort(<span class="st">&quot;rake aborted!&quot;</span>) <span class="kw">if</span> ask(<span class="st">&quot;</span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st"> already exists. Do you want to overwrite?&quot;</span>, [<span class="ch">'y'</span>, <span class="ch">'n'</span>]) == <span class="ch">'n'</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a>  <span class="kw">end</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a>  puts <span class="st">&quot;Creating new project: </span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st">&quot;</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a>  open(filename, <span class="ch">'w'</span>) <span class="kw">do</span> |proj|</span>
-<span id="cb6-13"><a href="#cb6-13"></a>    proj.puts <span class="st">&quot;---&quot;</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a>    proj.puts <span class="st">&quot;layout: project&quot;</span></span>
-<span id="cb6-15"><a href="#cb6-15"></a>    post.puts <span class="st">&quot;published: false&quot;</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a>    proj.puts <span class="st">&quot;title: \&quot;</span><span class="ot">#{</span>title.gsub(<span class="ot">/&amp;/</span>,<span class="st">'&amp;amp;'</span>)<span class="ot">}</span><span class="st">\&quot;&quot;</span></span>
-<span id="cb6-17"><a href="#cb6-17"></a>    proj.puts <span class="st">&quot;comments: false&quot;</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a>    proj.puts <span class="st">&quot;category: &quot;</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a>    proj.puts <span class="st">&quot;teaser: &quot;</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a>    proj.puts <span class="st">&quot;video: &quot;</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a>    proj.puts <span class="st">&quot;web: &quot;</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a>    proj.puts <span class="st">&quot;mendeley: &quot;</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a>    proj.puts <span class="st">&quot;paper: &quot;</span></span>
-<span id="cb6-24"><a href="#cb6-24"></a>    proj.puts <span class="st">&quot;---&quot;</span></span>
-<span id="cb6-25"><a href="#cb6-25"></a>  <span class="kw">end</span></span>
-<span id="cb6-26"><a href="#cb6-26"></a><span class="kw">end</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>desc <span class="st">&quot;Begin a new project in </span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>projects_dir<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>task <span class="st">:new_project</span>, <span class="st">:title</span> <span class="kw">do</span> |t, args|</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>  raise <span class="st">&quot;### You haven't set anything up yet. First run `rake install` to set up an Octopress theme.&quot;</span> <span class="kw">unless</span> <span class="dt">File</span>.directory?(source_dir)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>  mkdir_p <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>projects_dir<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>  args.with_defaults(<span class="st">:title</span> =&gt; <span class="st">'mr project'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>  title = args.title</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>  filename = <span class="st">&quot;</span><span class="ot">#{</span>source_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>projects_dir<span class="ot">}</span><span class="st">/</span><span class="ot">#{</span>title.to_url<span class="ot">}</span><span class="st">.</span><span class="ot">#{</span>new_post_ext<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>  <span class="kw">if</span> <span class="dt">File</span>.exist?(filename)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>    abort(<span class="st">&quot;rake aborted!&quot;</span>) <span class="kw">if</span> ask(<span class="st">&quot;</span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st"> already exists. Do you want to overwrite?&quot;</span>, [<span class="ch">'y'</span>, <span class="ch">'n'</span>]) == <span class="ch">'n'</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>  <span class="kw">end</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>  puts <span class="st">&quot;Creating new project: </span><span class="ot">#{</span>filename<span class="ot">}</span><span class="st">&quot;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>  open(filename, <span class="ch">'w'</span>) <span class="kw">do</span> |proj|</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a>    proj.puts <span class="st">&quot;---&quot;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true"></a>    proj.puts <span class="st">&quot;layout: project&quot;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true"></a>    post.puts <span class="st">&quot;published: false&quot;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true"></a>    proj.puts <span class="st">&quot;title: \&quot;</span><span class="ot">#{</span>title.gsub(<span class="ot">/&amp;/</span>,<span class="st">'&amp;amp;'</span>)<span class="ot">}</span><span class="st">\&quot;&quot;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true"></a>    proj.puts <span class="st">&quot;comments: false&quot;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true"></a>    proj.puts <span class="st">&quot;category: &quot;</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true"></a>    proj.puts <span class="st">&quot;teaser: &quot;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true"></a>    proj.puts <span class="st">&quot;video: &quot;</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true"></a>    proj.puts <span class="st">&quot;web: &quot;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true"></a>    proj.puts <span class="st">&quot;mendeley: &quot;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true"></a>    proj.puts <span class="st">&quot;paper: &quot;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true"></a>    proj.puts <span class="st">&quot;---&quot;</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true"></a>  <span class="kw">end</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <p>That’s it! Now I can have as many sub blogs as I want and keep the category field available for categorizing posts.</p>
   </section>

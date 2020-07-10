@@ -60,184 +60,184 @@ I like the fact it creates static pages which I can then upload to my web accoun
 <p>The major additions are written as 2 plugins: <code>multimarkdown.rb</code>, which adds multimarkdown support to Octopress, and <code>knitr.rb</code>, which runs all the blog posts through knitr to execute the R code and generate the plots and such before the final mmd to html conversion.</p>
 <h3 id="mmd-plugin">mmd plugin</h3>
 <p>The original version is <a href="https://github.com/danieldriver/jekyll/commit/a07766e3c5cb1c78b7b77643f850a67cb721763a">here</a>. The only real change I made was that the extension is now <code>multimarkdown</code>. I found that because octopress/jekyll’s extension mapping will match partial extensions <code>mmd</code> was being detected as a different file type than multimarkdown.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># multimarkdown renderer for jekyll</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co">#</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># adapted from: http://git.io/9-RWUg</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">module</span> <span class="dt">Jekyll</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a>  require <span class="st">'multimarkdown'</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>  <span class="kw">class</span> <span class="dt">MultimarkdownConverter</span> &lt; <span class="dt">Converter</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>    safe <span class="dv">false</span></span>
-<span id="cb1-11"><a href="#cb1-11"></a>    priority <span class="st">:low</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a>    <span class="kw">def</span> matches(ext)</span>
-<span id="cb1-14"><a href="#cb1-14"></a>      ext =~ <span class="ot">/multimarkdown/i</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>    <span class="kw">end</span></span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a>    <span class="kw">def</span> output_ext(ext)</span>
-<span id="cb1-18"><a href="#cb1-18"></a>      <span class="st">&quot;.html&quot;</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>    <span class="kw">end</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a>    <span class="kw">def</span> convert(content)</span>
-<span id="cb1-22"><a href="#cb1-22"></a>      <span class="co">#puts MultiMarkdown.new(knit(content)).to_html</span></span>
-<span id="cb1-23"><a href="#cb1-23"></a>      <span class="dt">MultiMarkdown</span>.new(content).to_html</span>
-<span id="cb1-24"><a href="#cb1-24"></a>    <span class="kw">end</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a></span>
-<span id="cb1-26"><a href="#cb1-26"></a>  <span class="kw">end</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="kw">end</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co"># multimarkdown renderer for jekyll</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co">#</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co"># adapted from: http://git.io/9-RWUg</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="kw">module</span> <span class="dt">Jekyll</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  require <span class="st">'multimarkdown'</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>  <span class="kw">class</span> <span class="dt">MultimarkdownConverter</span> &lt; <span class="dt">Converter</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>    safe <span class="dv">false</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    priority <span class="st">:low</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    <span class="kw">def</span> matches(ext)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>      ext =~ <span class="ot">/multimarkdown/i</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>    <span class="kw">end</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>    <span class="kw">def</span> output_ext(ext)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>      <span class="st">&quot;.html&quot;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>    <span class="kw">end</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>    <span class="kw">def</span> convert(content)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>      <span class="co">#puts MultiMarkdown.new(knit(content)).to_html</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>      <span class="dt">MultiMarkdown</span>.new(content).to_html</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>    <span class="kw">end</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>  <span class="kw">end</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
 <h3 id="knitr">knitr</h3>
 <p>The knitr plugin consists of 2 files <code>knitr.rb</code> which is just a wrapper for <code>knit_markdown.R</code> which does most of the work.</p>
 <h4 id="knitr.rb">knitr.rb</h4>
 <p>Here’s the code for <code>knitr.rb</code>. It uses tempfiles instead of just sending the text directly to knitr so that we can index the cache by blog post name. That way there’s a unique cache directory for each blog post and identical cache section names in different blog posts won’t clobber each other.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb2-1"><a href="#cb2-1"></a>require <span class="st">'tempfile'</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="kw">module</span> <span class="dt">Jekyll</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a>  require_relative <span class="st">'post_filters'</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>  <span class="co"># A filter to pass mmd files through knitr</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>  <span class="kw">class</span> <span class="dt">KnitrPost</span> &lt; <span class="dt">PostFilter</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a>    <span class="dt">KNITR_PATH</span> = <span class="dt">File</span>.join(<span class="dt">File</span>.dirname(<span class="dv">__FILE__</span>), <span class="st">&quot;knit_markdown.R&quot;</span>)</span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
-<span id="cb2-12"><a href="#cb2-12"></a>    <span class="kw">unless</span> <span class="dt">File</span>.exists?(<span class="dt">KNITR_PATH</span>) <span class="kw">and</span> <span class="dt">File</span>.executable?(<span class="dt">KNITR_PATH</span>)</span>
-<span id="cb2-13"><a href="#cb2-13"></a>      throw <span class="st">&quot;knit_markdown.R is not found and executable&quot;</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>    <span class="kw">end</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a>    <span class="kw">def</span> pre_render(post)</span>
-<span id="cb2-17"><a href="#cb2-17"></a>      <span class="kw">if</span> post.is_post?</span>
-<span id="cb2-18"><a href="#cb2-18"></a>        <span class="kw">if</span> post.ext == <span class="st">'.multimarkdown'</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a>          postname = post.name[<span class="dv">0</span>..-post.ext.length<span class="dv">-1</span>]</span>
-<span id="cb2-20"><a href="#cb2-20"></a>          post.content = knit(postname, post.content)</span>
-<span id="cb2-21"><a href="#cb2-21"></a>        <span class="kw">end</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a>      <span class="kw">end</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a>    <span class="kw">end</span></span>
-<span id="cb2-24"><a href="#cb2-24"></a></span>
-<span id="cb2-25"><a href="#cb2-25"></a>    <span class="co"># runs everything through knitr</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a>    <span class="kw">def</span> knit(name, content)</span>
-<span id="cb2-27"><a href="#cb2-27"></a>      <span class="co">#knit_content, status = Open3.capture2(KNITR_PATH, name,</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a>                                            <span class="co">#:stdin_data=&gt;content)</span></span>
-<span id="cb2-29"><a href="#cb2-29"></a>      <span class="co"># set up the tempfiles to do the translation</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a>      src_file = <span class="dt">Tempfile</span>.new(<span class="st">'srcfile'</span>)</span>
-<span id="cb2-31"><a href="#cb2-31"></a>      src_file.write(content)</span>
-<span id="cb2-32"><a href="#cb2-32"></a>      src_file.close</span>
-<span id="cb2-33"><a href="#cb2-33"></a>      dst_file = <span class="dt">Tempfile</span>.new(<span class="st">'dstfile'</span>)</span>
-<span id="cb2-34"><a href="#cb2-34"></a>      dst_file.close</span>
-<span id="cb2-35"><a href="#cb2-35"></a></span>
-<span id="cb2-36"><a href="#cb2-36"></a>      <span class="co"># execute!</span></span>
-<span id="cb2-37"><a href="#cb2-37"></a>      <span class="st">`</span><span class="ot">#{</span><span class="dt">KNITR_PATH</span><span class="ot">}</span><span class="st"> </span><span class="ot">#{</span>name<span class="ot">}</span><span class="st"> </span><span class="ot">#{</span>src_file.path<span class="ot">}</span><span class="st"> </span><span class="ot">#{</span>dst_file.path<span class="ot">}</span><span class="st">`</span></span>
-<span id="cb2-38"><a href="#cb2-38"></a></span>
-<span id="cb2-39"><a href="#cb2-39"></a>      <span class="co"># read back in the processed file</span></span>
-<span id="cb2-40"><a href="#cb2-40"></a>      dst_file.open</span>
-<span id="cb2-41"><a href="#cb2-41"></a>      knit_content = dst_file.read</span>
-<span id="cb2-42"><a href="#cb2-42"></a>      dst_file.close</span>
-<span id="cb2-43"><a href="#cb2-43"></a></span>
-<span id="cb2-44"><a href="#cb2-44"></a>      <span class="co"># remove the files</span></span>
-<span id="cb2-45"><a href="#cb2-45"></a>      src_file.unlink</span>
-<span id="cb2-46"><a href="#cb2-46"></a>      dst_file.unlink</span>
-<span id="cb2-47"><a href="#cb2-47"></a></span>
-<span id="cb2-48"><a href="#cb2-48"></a>      <span class="co"># This is a hack to get the double backslashes in latex math</span></span>
-<span id="cb2-49"><a href="#cb2-49"></a>      <span class="co"># working with liquid templates</span></span>
-<span id="cb2-50"><a href="#cb2-50"></a>      knit_content.gsub(<span class="ot">/\\\\$/</span>){<span class="st">&quot;\\\\\\\\&quot;</span>}</span>
-<span id="cb2-51"><a href="#cb2-51"></a>    <span class="kw">end</span></span>
-<span id="cb2-52"><a href="#cb2-52"></a>  <span class="kw">end</span></span>
-<span id="cb2-53"><a href="#cb2-53"></a><span class="kw">end</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>require <span class="st">'tempfile'</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="kw">module</span> <span class="dt">Jekyll</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>  require_relative <span class="st">'post_filters'</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>  <span class="co"># A filter to pass mmd files through knitr</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>  <span class="kw">class</span> <span class="dt">KnitrPost</span> &lt; <span class="dt">PostFilter</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>    <span class="dt">KNITR_PATH</span> = <span class="dt">File</span>.join(<span class="dt">File</span>.dirname(<span class="dv">__FILE__</span>), <span class="st">&quot;knit_markdown.R&quot;</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>    <span class="kw">unless</span> <span class="dt">File</span>.exists?(<span class="dt">KNITR_PATH</span>) <span class="kw">and</span> <span class="dt">File</span>.executable?(<span class="dt">KNITR_PATH</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>      throw <span class="st">&quot;knit_markdown.R is not found and executable&quot;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>    <span class="kw">end</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>    <span class="kw">def</span> pre_render(post)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>      <span class="kw">if</span> post.is_post?</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>        <span class="kw">if</span> post.ext == <span class="st">'.multimarkdown'</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>          postname = post.name[<span class="dv">0</span>..-post.ext.length<span class="dv">-1</span>]</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>          post.content = knit(postname, post.content)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>        <span class="kw">end</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a>      <span class="kw">end</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a>    <span class="kw">end</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a>    <span class="co"># runs everything through knitr</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a>    <span class="kw">def</span> knit(name, content)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a>      <span class="co">#knit_content, status = Open3.capture2(KNITR_PATH, name,</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a>                                            <span class="co">#:stdin_data=&gt;content)</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a>      <span class="co"># set up the tempfiles to do the translation</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a>      src_file = <span class="dt">Tempfile</span>.new(<span class="st">'srcfile'</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true"></a>      src_file.write(content)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true"></a>      src_file.close</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true"></a>      dst_file = <span class="dt">Tempfile</span>.new(<span class="st">'dstfile'</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true"></a>      dst_file.close</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true"></a>      <span class="co"># execute!</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true"></a>      <span class="st">`</span><span class="ot">#{</span><span class="dt">KNITR_PATH</span><span class="ot">}</span><span class="st"> </span><span class="ot">#{</span>name<span class="ot">}</span><span class="st"> </span><span class="ot">#{</span>src_file.path<span class="ot">}</span><span class="st"> </span><span class="ot">#{</span>dst_file.path<span class="ot">}</span><span class="st">`</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true"></a>      <span class="co"># read back in the processed file</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true"></a>      dst_file.open</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true"></a>      knit_content = dst_file.read</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true"></a>      dst_file.close</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true"></a>      <span class="co"># remove the files</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true"></a>      src_file.unlink</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true"></a>      dst_file.unlink</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true"></a>      <span class="co"># This is a hack to get the double backslashes in latex math</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true"></a>      <span class="co"># working with liquid templates</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true"></a>      knit_content.gsub(<span class="ot">/\\\\$/</span>){<span class="st">&quot;\\\\\\\\&quot;</span>}</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true"></a>    <span class="kw">end</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true"></a>  <span class="kw">end</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
 <h4 id="knit_markdown.r">knit_markdown.R</h4>
 <p>This is the script that does most of the heavy lifting. Extensions to knitr’s processing is handled through various “hooks.” These are described in the <a href="http://yihui.name/knitr/hooks">knitr manual</a>.</p>
 <p>Lines 9-15 set up the cache and image directories that knitr will use. Lines 28-66 is an extension to support movies of multiple R plots. In order to get Octopress to highlight R code we need to wrap it in liquid <code>codeblock</code> tags. The hook for that is done by lines 69-71. The rest just sets all the hooks I want to use and renders the files using knitr.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#!/usr/bin/Rscript</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="kw">library</span>(knitr)</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a>args &lt;-<span class="st"> </span><span class="kw">commandArgs</span>(<span class="dt">trailingOnly=</span><span class="ot">TRUE</span>)</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># the file name generating this R code</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="co"># needed so we can put separate cache and image links</span></span>
-<span id="cb3-9"><a href="#cb3-9"></a>post.name &lt;-<span class="st"> </span>args[<span class="dv">1</span>]</span>
-<span id="cb3-10"><a href="#cb3-10"></a>store.prefix &lt;-<span class="st"> </span><span class="cf">if</span>(<span class="kw">is.na</span>(post.name)) <span class="st">&quot;&quot;</span> <span class="cf">else</span> post.name</span>
-<span id="cb3-11"><a href="#cb3-11"></a>cache.path &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">'cache'</span>, store.prefix, <span class="st">&quot;&quot;</span>, <span class="dt">sep=</span><span class="st">'/'</span>)</span>
-<span id="cb3-12"><a href="#cb3-12"></a>image.save.path &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">'source/images/knitr'</span>, store.prefix, <span class="st">&quot;&quot;</span>, <span class="dt">sep=</span><span class="st">'/'</span>)</span>
-<span id="cb3-13"><a href="#cb3-13"></a>image.load.path &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">'/images/knitr'</span>, store.prefix, <span class="st">&quot;&quot;</span>, <span class="dt">sep=</span><span class="st">'/'</span>)</span>
-<span id="cb3-14"><a href="#cb3-14"></a>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">cache.path=</span>cache.path)</span>
-<span id="cb3-15"><a href="#cb3-15"></a>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">fig.path=</span>image.save.path)</span>
-<span id="cb3-16"><a href="#cb3-16"></a></span>
-<span id="cb3-17"><a href="#cb3-17"></a><span class="co"># also get the input and output files</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a>in.file &lt;-<span class="st"> </span><span class="cf">if</span>(<span class="kw">is.na</span>(args[<span class="dv">2</span>])) <span class="kw">file</span>(<span class="st">&quot;stdin&quot;</span>) <span class="cf">else</span> args[<span class="dv">2</span>]</span>
-<span id="cb3-19"><a href="#cb3-19"></a>out.file &lt;-<span class="st"> </span><span class="cf">if</span>(<span class="kw">is.na</span>(args[<span class="dv">3</span>])) <span class="kw">stdout</span>() <span class="cf">else</span> args[<span class="dv">3</span>]</span>
-<span id="cb3-20"><a href="#cb3-20"></a></span>
-<span id="cb3-21"><a href="#cb3-21"></a>pic.sample &lt;-<span class="st"> </span><span class="cf">function</span>() {</span>
-<span id="cb3-22"><a href="#cb3-22"></a>  <span class="kw">sample</span>(<span class="dv">1000</span>,<span class="dv">1</span>)</span>
-<span id="cb3-23"><a href="#cb3-23"></a>}</span>
-<span id="cb3-24"><a href="#cb3-24"></a></span>
-<span id="cb3-25"><a href="#cb3-25"></a><span class="co"># hook to force marked to reload output images</span></span>
-<span id="cb3-26"><a href="#cb3-26"></a><span class="co"># uses a random query element on the image</span></span>
-<span id="cb3-27"><a href="#cb3-27"></a><span class="co"># also supports creating animations</span></span>
-<span id="cb3-28"><a href="#cb3-28"></a>query_plot_hook &lt;-<span class="st"> </span><span class="cf">function</span>(x, options) {</span>
-<span id="cb3-29"><a href="#cb3-29"></a>  <span class="co"># pull out all the relevant plot options</span></span>
-<span id="cb3-30"><a href="#cb3-30"></a>  animate &lt;-<span class="st"> </span>options<span class="op">$</span>fig.show <span class="op">==</span><span class="st"> 'animate'</span></span>
-<span id="cb3-31"><a href="#cb3-31"></a>  fig.num &lt;-<span class="st"> </span>options<span class="op">$</span>fig.num</span>
-<span id="cb3-32"><a href="#cb3-32"></a>  fig.cur &lt;-<span class="st"> </span>options<span class="op">$</span>fig.cur</span>
-<span id="cb3-33"><a href="#cb3-33"></a>  <span class="cf">if</span>(<span class="kw">is.null</span>(fig.cur)) fig.cur &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb3-34"><a href="#cb3-34"></a></span>
-<span id="cb3-35"><a href="#cb3-35"></a>  <span class="co"># Don't print out intermediate plots if we're animating</span></span>
-<span id="cb3-36"><a href="#cb3-36"></a>  <span class="cf">if</span>(animate <span class="op">&amp;&amp;</span><span class="st"> </span>fig.cur <span class="op">&lt;</span><span class="st"> </span>fig.num) <span class="kw">return</span>(<span class="st">''</span>)</span>
-<span id="cb3-37"><a href="#cb3-37"></a></span>
-<span id="cb3-38"><a href="#cb3-38"></a>  base &lt;-<span class="st"> </span>opts_knit<span class="op">$</span><span class="kw">get</span>(<span class="st">'base.url'</span>)</span>
-<span id="cb3-39"><a href="#cb3-39"></a>  <span class="cf">if</span> (<span class="kw">is.null</span>(base)) base &lt;-<span class="st"> ''</span></span>
-<span id="cb3-40"><a href="#cb3-40"></a>  <span class="co"># adjust the base for the base path</span></span>
-<span id="cb3-41"><a href="#cb3-41"></a>  filename &lt;-<span class="st"> </span><span class="kw">paste</span>(image.load.path, <span class="kw">basename</span>(<span class="kw">paste</span>(x,<span class="dt">collapse=</span><span class="st">'.'</span>)), <span class="dt">sep=</span><span class="st">''</span>)</span>
-<span id="cb3-42"><a href="#cb3-42"></a>  <span class="cf">if</span>(options<span class="op">$</span>fig.show <span class="op">==</span><span class="st"> 'animate'</span>) {</span>
-<span id="cb3-43"><a href="#cb3-43"></a>    <span class="co"># set up the ffmpeg run</span></span>
-<span id="cb3-44"><a href="#cb3-44"></a>    ffmpeg.opts &lt;-<span class="st"> </span>options<span class="op">$</span>aniopts</span>
-<span id="cb3-45"><a href="#cb3-45"></a>    fig.fname &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="kw">sub</span>(<span class="kw">paste</span>(fig.num, <span class="st">'$'</span>,<span class="dt">sep=</span><span class="st">''</span>), <span class="st">''</span>, x[<span class="dv">1</span>]), <span class="st">&quot;%d.png&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb3-46"><a href="#cb3-46"></a>    mov.fname &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="kw">sub</span>(<span class="kw">paste</span>(fig.num, <span class="st">'$'</span>,<span class="dt">sep=</span><span class="st">''</span>), <span class="st">''</span>, x[<span class="dv">1</span>]), <span class="st">&quot;.mp4&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</span>
-<span id="cb3-47"><a href="#cb3-47"></a>    mov.linkname &lt;-<span class="st"> </span><span class="kw">paste</span>(image.load.path, <span class="kw">basename</span>(mov.fname), <span class="dt">sep=</span><span class="st">''</span>)</span>
-<span id="cb3-48"><a href="#cb3-48"></a>    <span class="cf">if</span>(<span class="kw">is.na</span>(ffmpeg.opts)) ffmpeg.opts &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
-<span id="cb3-49"><a href="#cb3-49"></a></span>
-<span id="cb3-50"><a href="#cb3-50"></a>    ffmpeg.cmd &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;ffmpeg&quot;</span>, <span class="st">&quot;-y&quot;</span>, <span class="st">&quot;-r&quot;</span>, <span class="dv">1</span><span class="op">/</span>options<span class="op">$</span>interval,</span>
-<span id="cb3-51"><a href="#cb3-51"></a>                        <span class="st">&quot;-i&quot;</span>, fig.fname, mov.fname)</span>
-<span id="cb3-52"><a href="#cb3-52"></a>    <span class="kw">system</span>(ffmpeg.cmd, <span class="dt">ignore.stdout=</span><span class="ot">TRUE</span>)</span>
-<span id="cb3-53"><a href="#cb3-53"></a></span>
-<span id="cb3-54"><a href="#cb3-54"></a>    <span class="co"># figure out the options for the movie itself</span></span>
-<span id="cb3-55"><a href="#cb3-55"></a>    mov.opts &lt;-<span class="st"> </span><span class="kw">strsplit</span>(options<span class="op">$</span>aniopts, <span class="st">';'</span>)[[<span class="dv">1</span>]]</span>
-<span id="cb3-56"><a href="#cb3-56"></a>    opt.str &lt;-<span class="st"> </span><span class="kw">paste</span>(</span>
-<span id="cb3-57"><a href="#cb3-57"></a>      <span class="st">&quot; &quot;</span>,</span>
-<span id="cb3-58"><a href="#cb3-58"></a>      <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.null</span>(options<span class="op">$</span>out.width)) <span class="kw">sprintf</span>(<span class="st">'width=%s'</span>, options<span class="op">$</span>out.width),</span>
-<span id="cb3-59"><a href="#cb3-59"></a>      <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.null</span>(options<span class="op">$</span>out.height)) <span class="kw">sprintf</span>(<span class="st">'height=%s'</span>, options<span class="op">$</span>out.height),</span>
-<span id="cb3-60"><a href="#cb3-60"></a>      <span class="cf">if</span>(<span class="st">'controls'</span> <span class="op">%in%</span><span class="st"> </span>mov.opts) <span class="st">'controls=&quot;controls&quot;'</span>,</span>
-<span id="cb3-61"><a href="#cb3-61"></a>      <span class="cf">if</span>(<span class="st">'loop'</span> <span class="op">%in%</span><span class="st"> </span>mov.opts) <span class="st">'loop=&quot;loop&quot;'</span>)</span>
-<span id="cb3-62"><a href="#cb3-62"></a>    <span class="kw">sprintf</span>(<span class="st">'&lt;video %s&gt;&lt;source src=&quot;%s?%d&quot; type=&quot;video/mp4&quot; /&gt;video of chunk %s&lt;/video&gt;'</span>, opt.str, mov.linkname, <span class="kw">pic.sample</span>(), options<span class="op">$</span>label)</span>
-<span id="cb3-63"><a href="#cb3-63"></a>  } <span class="cf">else</span> {</span>
-<span id="cb3-64"><a href="#cb3-64"></a>    <span class="kw">sprintf</span>(<span class="st">'![plot of chunk %s](%s%s?%d) '</span>,</span>
-<span id="cb3-65"><a href="#cb3-65"></a>            options<span class="op">$</span>label, base, filename, <span class="kw">pic.sample</span>())</span>
-<span id="cb3-66"><a href="#cb3-66"></a>  }</span>
-<span id="cb3-67"><a href="#cb3-67"></a>}</span>
-<span id="cb3-68"><a href="#cb3-68"></a></span>
-<span id="cb3-69"><a href="#cb3-69"></a><span class="co"># highlight R code on output</span></span>
-<span id="cb3-70"><a href="#cb3-70"></a>code_hook &lt;-<span class="st"> </span><span class="cf">function</span>(x, options) {</span>
-<span id="cb3-71"><a href="#cb3-71"></a>  <span class="kw">print</span>(options)</span>
-<span id="cb3-72"><a href="#cb3-72"></a>  prefix &lt;-<span class="st"> </span><span class="kw">sprintf</span>(<span class="st">&quot;</span><span class="ch">\n\n</span><span class="st">{{ &quot;</span>{<span class="op">%%</span><span class="st">&quot; }} codeblock %s lang:r %%}&quot;</span>, options<span class="op">$</span>label<span class="er">)</span></span>
-<span id="cb3-73"><a href="#cb3-73"></a>  suffix &lt;-<span class="st"> &quot;{{ &quot;</span>{<span class="op">%&quot; }} endcodeblock %</span>}\n\n<span class="st">&quot;</span></span>
-<span id="cb3-74"><a href="#cb3-74"></a><span class="st">  paste(prefix, x, suffix, sep=&quot;</span>\n<span class="st">&quot;)</span></span>
-<span id="cb3-75"><a href="#cb3-75"></a><span class="st">}</span></span>
-<span id="cb3-76"><a href="#cb3-76"></a></span>
-<span id="cb3-77"><a href="#cb3-77"></a><span class="st"># hack render_markdown so it doesn't override my custom hook</span></span>
-<span id="cb3-78"><a href="#cb3-78"></a><span class="st">render_custom &lt;- function() {</span></span>
-<span id="cb3-79"><a href="#cb3-79"></a><span class="st">  render_markdown(strict=TRUE)</span></span>
-<span id="cb3-80"><a href="#cb3-80"></a><span class="st">  knit_hooks$set(plot=query_plot_hook,</span></span>
-<span id="cb3-81"><a href="#cb3-81"></a><span class="st">                 source=code_hook)</span></span>
-<span id="cb3-82"><a href="#cb3-82"></a><span class="st">}</span></span>
-<span id="cb3-83"><a href="#cb3-83"></a></span>
-<span id="cb3-84"><a href="#cb3-84"></a><span class="st"># need to read everything through stdin and stdout</span></span>
-<span id="cb3-85"><a href="#cb3-85"></a><span class="st">pat_html()</span></span>
-<span id="cb3-86"><a href="#cb3-86"></a><span class="st">render_custom()</span></span>
-<span id="cb3-87"><a href="#cb3-87"></a><span class="st">opts_knit$set(progress=FALSE)</span></span>
-<span id="cb3-88"><a href="#cb3-88"></a><span class="st">#opts_knit$set(dev='png')</span></span>
-<span id="cb3-89"><a href="#cb3-89"></a><span class="st">opts_knit$set(out.format='custom')</span></span>
-<span id="cb3-90"><a href="#cb3-90"></a><span class="st">opts_knit$set(input.dir=getwd())</span></span>
-<span id="cb3-91"><a href="#cb3-91"></a><span class="st">knit(in.file, out.file)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co">#!/usr/bin/Rscript</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="kw">library</span>(knitr)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>args &lt;-<span class="st"> </span><span class="kw">commandArgs</span>(<span class="dt">trailingOnly=</span><span class="ot">TRUE</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co"># the file name generating this R code</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="co"># needed so we can put separate cache and image links</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>post.name &lt;-<span class="st"> </span>args[<span class="dv">1</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>store.prefix &lt;-<span class="st"> </span><span class="cf">if</span>(<span class="kw">is.na</span>(post.name)) <span class="st">&quot;&quot;</span> <span class="cf">else</span> post.name</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>cache.path &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">'cache'</span>, store.prefix, <span class="st">&quot;&quot;</span>, <span class="dt">sep=</span><span class="st">'/'</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>image.save.path &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">'source/images/knitr'</span>, store.prefix, <span class="st">&quot;&quot;</span>, <span class="dt">sep=</span><span class="st">'/'</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>image.load.path &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">'/images/knitr'</span>, store.prefix, <span class="st">&quot;&quot;</span>, <span class="dt">sep=</span><span class="st">'/'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">cache.path=</span>cache.path)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">fig.path=</span>image.save.path)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a><span class="co"># also get the input and output files</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a>in.file &lt;-<span class="st"> </span><span class="cf">if</span>(<span class="kw">is.na</span>(args[<span class="dv">2</span>])) <span class="kw">file</span>(<span class="st">&quot;stdin&quot;</span>) <span class="cf">else</span> args[<span class="dv">2</span>]</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a>out.file &lt;-<span class="st"> </span><span class="cf">if</span>(<span class="kw">is.na</span>(args[<span class="dv">3</span>])) <span class="kw">stdout</span>() <span class="cf">else</span> args[<span class="dv">3</span>]</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>pic.sample &lt;-<span class="st"> </span><span class="cf">function</span>() {</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>  <span class="kw">sample</span>(<span class="dv">1000</span>,<span class="dv">1</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a>}</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a><span class="co"># hook to force marked to reload output images</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a><span class="co"># uses a random query element on the image</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a><span class="co"># also supports creating animations</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a>query_plot_hook &lt;-<span class="st"> </span><span class="cf">function</span>(x, options) {</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a>  <span class="co"># pull out all the relevant plot options</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a>  animate &lt;-<span class="st"> </span>options<span class="op">$</span>fig.show <span class="op">==</span><span class="st"> 'animate'</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a>  fig.num &lt;-<span class="st"> </span>options<span class="op">$</span>fig.num</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true"></a>  fig.cur &lt;-<span class="st"> </span>options<span class="op">$</span>fig.cur</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true"></a>  <span class="cf">if</span>(<span class="kw">is.null</span>(fig.cur)) fig.cur &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true"></a>  <span class="co"># Don't print out intermediate plots if we're animating</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true"></a>  <span class="cf">if</span>(animate <span class="op">&amp;&amp;</span><span class="st"> </span>fig.cur <span class="op">&lt;</span><span class="st"> </span>fig.num) <span class="kw">return</span>(<span class="st">''</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true"></a>  base &lt;-<span class="st"> </span>opts_knit<span class="op">$</span><span class="kw">get</span>(<span class="st">'base.url'</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true"></a>  <span class="cf">if</span> (<span class="kw">is.null</span>(base)) base &lt;-<span class="st"> ''</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true"></a>  <span class="co"># adjust the base for the base path</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true"></a>  filename &lt;-<span class="st"> </span><span class="kw">paste</span>(image.load.path, <span class="kw">basename</span>(<span class="kw">paste</span>(x,<span class="dt">collapse=</span><span class="st">'.'</span>)), <span class="dt">sep=</span><span class="st">''</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true"></a>  <span class="cf">if</span>(options<span class="op">$</span>fig.show <span class="op">==</span><span class="st"> 'animate'</span>) {</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true"></a>    <span class="co"># set up the ffmpeg run</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true"></a>    ffmpeg.opts &lt;-<span class="st"> </span>options<span class="op">$</span>aniopts</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true"></a>    fig.fname &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="kw">sub</span>(<span class="kw">paste</span>(fig.num, <span class="st">'$'</span>,<span class="dt">sep=</span><span class="st">''</span>), <span class="st">''</span>, x[<span class="dv">1</span>]), <span class="st">&quot;%d.png&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true"></a>    mov.fname &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="kw">sub</span>(<span class="kw">paste</span>(fig.num, <span class="st">'$'</span>,<span class="dt">sep=</span><span class="st">''</span>), <span class="st">''</span>, x[<span class="dv">1</span>]), <span class="st">&quot;.mp4&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true"></a>    mov.linkname &lt;-<span class="st"> </span><span class="kw">paste</span>(image.load.path, <span class="kw">basename</span>(mov.fname), <span class="dt">sep=</span><span class="st">''</span>)</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true"></a>    <span class="cf">if</span>(<span class="kw">is.na</span>(ffmpeg.opts)) ffmpeg.opts &lt;-<span class="st"> </span><span class="ot">NULL</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true"></a>    ffmpeg.cmd &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;ffmpeg&quot;</span>, <span class="st">&quot;-y&quot;</span>, <span class="st">&quot;-r&quot;</span>, <span class="dv">1</span><span class="op">/</span>options<span class="op">$</span>interval,</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true"></a>                        <span class="st">&quot;-i&quot;</span>, fig.fname, mov.fname)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true"></a>    <span class="kw">system</span>(ffmpeg.cmd, <span class="dt">ignore.stdout=</span><span class="ot">TRUE</span>)</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true"></a></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true"></a>    <span class="co"># figure out the options for the movie itself</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true"></a>    mov.opts &lt;-<span class="st"> </span><span class="kw">strsplit</span>(options<span class="op">$</span>aniopts, <span class="st">';'</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true"></a>    opt.str &lt;-<span class="st"> </span><span class="kw">paste</span>(</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true"></a>      <span class="st">&quot; &quot;</span>,</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true"></a>      <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.null</span>(options<span class="op">$</span>out.width)) <span class="kw">sprintf</span>(<span class="st">'width=%s'</span>, options<span class="op">$</span>out.width),</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true"></a>      <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.null</span>(options<span class="op">$</span>out.height)) <span class="kw">sprintf</span>(<span class="st">'height=%s'</span>, options<span class="op">$</span>out.height),</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true"></a>      <span class="cf">if</span>(<span class="st">'controls'</span> <span class="op">%in%</span><span class="st"> </span>mov.opts) <span class="st">'controls=&quot;controls&quot;'</span>,</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true"></a>      <span class="cf">if</span>(<span class="st">'loop'</span> <span class="op">%in%</span><span class="st"> </span>mov.opts) <span class="st">'loop=&quot;loop&quot;'</span>)</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true"></a>    <span class="kw">sprintf</span>(<span class="st">'&lt;video %s&gt;&lt;source src=&quot;%s?%d&quot; type=&quot;video/mp4&quot; /&gt;video of chunk %s&lt;/video&gt;'</span>, opt.str, mov.linkname, <span class="kw">pic.sample</span>(), options<span class="op">$</span>label)</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true"></a>    <span class="kw">sprintf</span>(<span class="st">'![plot of chunk %s](%s%s?%d) '</span>,</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true"></a>            options<span class="op">$</span>label, base, filename, <span class="kw">pic.sample</span>())</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true"></a>  }</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true"></a>}</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true"></a><span class="co"># highlight R code on output</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true"></a>code_hook &lt;-<span class="st"> </span><span class="cf">function</span>(x, options) {</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true"></a>  <span class="kw">print</span>(options)</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true"></a>  prefix &lt;-<span class="st"> </span><span class="kw">sprintf</span>(<span class="st">&quot;</span><span class="ch">\n\n</span><span class="st">{{ &quot;</span>{<span class="op">%%</span><span class="st">&quot; }} codeblock %s lang:r %%}&quot;</span>, options<span class="op">$</span>label<span class="er">)</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true"></a>  suffix &lt;-<span class="st"> &quot;{{ &quot;</span>{<span class="op">%&quot; }} endcodeblock %</span>}\n\n<span class="st">&quot;</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true"></a><span class="st">  paste(prefix, x, suffix, sep=&quot;</span>\n<span class="st">&quot;)</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true"></a><span class="st">}</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true"></a></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true"></a><span class="st"># hack render_markdown so it doesn't override my custom hook</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true"></a><span class="st">render_custom &lt;- function() {</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true"></a><span class="st">  render_markdown(strict=TRUE)</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true"></a><span class="st">  knit_hooks$set(plot=query_plot_hook,</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true"></a><span class="st">                 source=code_hook)</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true"></a><span class="st">}</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true"></a><span class="st"># need to read everything through stdin and stdout</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true"></a><span class="st">pat_html()</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true"></a><span class="st">render_custom()</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true"></a><span class="st">opts_knit$set(progress=FALSE)</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true"></a><span class="st">#opts_knit$set(dev='png')</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true"></a><span class="st">opts_knit$set(out.format='custom')</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true"></a><span class="st">opts_knit$set(input.dir=getwd())</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true"></a><span class="st">knit(in.file, out.file)</span></span></code></pre></div>
 <h2 id="conclusion">Conclusion</h2>
 <p>And that’s about it. The rest of the changes are in the <a href="https://github.com/gabysbrain/r-notebook">repository</a> of course.<br />
 Feel free to fork the repository for your own work and let me know what you think!</p>
