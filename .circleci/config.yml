@@ -28,7 +28,6 @@ jobs:
   build:
     executor: nixos
     steps:
-      - checkout
       - restore_cache:
           keys:
             - nix-cache
@@ -38,6 +37,7 @@ jobs:
             nix-channel --update
             nix-env -u
             nix-env -iA nixpkgs.pandoc
+      - checkout
       - run: 
           name: build website
           command: nix-build
@@ -64,7 +64,7 @@ jobs:
       - run:
           name: Install and configure dependencies
           command: |
-            npm install gh-pages
+            npm install
             git config user.email "ci-build@tomtorsneyweir.com"
             git config user.name "ci-build"
       - run:
@@ -78,5 +78,6 @@ jobs:
             - "04:20:b3:77:32:f8:06:6f:02:39:01:d3:85:54:e0:15"
       - run:
           name: Deploy to gh-pages branch
-          command: node_modules/gh-pages/bin/gh-pages.js --dotfiles --message "[skip ci] Updates" --dist workspace/build
+          command: npm run deploy
+          #node_modules/gh-pages/bin/gh-pages.js --dotfiles --message "[skip ci] Updates" --dist workspace/build
 
