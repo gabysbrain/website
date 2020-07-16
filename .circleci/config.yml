@@ -14,14 +14,13 @@ executors:
 workflows:
   deploy_prod:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
       - deploy_prod:
           requires:
             - build
-    filters:
-      branches:
-        ignore:
-          - gh-pages
 
 jobs:
   build:
