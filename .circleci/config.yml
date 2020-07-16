@@ -10,7 +10,6 @@ executors:
   nixos:
     docker:
       - image: gabysbrain/website:latest
-      #- image: nixos/nix:latest
 
 workflows:
   deploy_prod:
@@ -20,8 +19,9 @@ workflows:
           requires:
             - build
     filters:
-      ignore:
-        - gh-pages
+      branches:
+        ignore:
+          - gh-pages
 
 jobs:
   build:
