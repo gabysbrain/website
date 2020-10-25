@@ -205,7 +205,7 @@ xelatex item = do
         _ <- Process.system $ unwords ["xelatex"
              , "-halt-on-error", "-output-directory"
              , tmpDir, texPath
-             , ">/dev/null", "2>&1"
+             --, ">/dev/null" --, "2>&1"
              ]
         return ()
 

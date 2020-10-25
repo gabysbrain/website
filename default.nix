@@ -19,6 +19,7 @@ let
         ghc -O2 --make site.hs -o $out/bin/generator
       '';
     };
+  #texlive = pkgs.texlive.combined;
 in pkgs.stdenv.mkDerivation {
      name = "website-site";
      src = ./site;
@@ -26,7 +27,16 @@ in pkgs.stdenv.mkDerivation {
      #nativeBuildInputs = [ pkgs.libsass ];
      buildInputs = [ 
        generator 
-       pkgs.texlive.combined.scheme-full
+       (pkgs.texlive.combine { 
+         inherit (pkgs.texlive) 
+         scheme-small 
+         changepage
+         doi 
+         enumitem 
+         libertine 
+         tabulary
+         titlesec; 
+       })
      ];
      buildPhase = ''
        generator build
