@@ -9,8 +9,8 @@ executors:
       - image: circleci/node:current
   nixos:
     docker:
-      - image: lnl7/nix:2020-06-07
-      #- image: lnl7/nix:latest
+      #- image: lnl7/nix:2020-06-07
+      - image: lnl7/nix:latest
 
 workflows:
   deploy_prod:
