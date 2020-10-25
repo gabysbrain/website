@@ -9,7 +9,7 @@ executors:
       - image: circleci/node:current
   nixos:
     docker:
-      - image: gabysbrain/website:latest
+      - image: lnl7/nix:2020-09-11
 
 workflows:
   deploy_prod:
@@ -26,9 +26,6 @@ jobs:
   build:
     executor: nixos
     steps:
-      - restore_cache:
-          keys:
-            - nix-cache
       - run:
           name: Install dependencies
           command: |
@@ -44,10 +41,6 @@ jobs:
           command: |
             mkdir -p workspace/build
             cp -R $(nix-build --no-out-link)/* workspace/build/
-      - save_cache:
-          key: nix-cache
-          paths:
-            - /nix/store
       - persist_to_workspace:
           root: workspace
           paths:
