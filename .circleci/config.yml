@@ -9,8 +9,8 @@ executors:
       - image: circleci/node:current
   nixos:
     docker:
-      #- image: lnl7/nix:2020-09-11
-      - image: lnl7/nix:latest
+      - image: lnl7/nix:2020-06-07
+      #- image: lnl7/nix:latest
 
 workflows:
   deploy_prod:
@@ -34,7 +34,11 @@ jobs:
           command: |
             nix-channel --update
             nix-env -u
-            nix-env -iA nixpkgs.pandoc
+            nix-env -iA \
+              nixpkgs.gitMinimal
+              nixpkgs.pandoc
+              nixpkgs.pandoc-citeproc
+              nixpkgs.texlive.combined.scheme-full
       - checkout
       - run: 
           name: build website
