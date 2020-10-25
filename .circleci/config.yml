@@ -26,8 +26,8 @@ workflows:
 jobs:
   build:
     executor: nixos
-    environment:
-      - NIXPKGS_ALLOW_BROKEN: 1
+    #environment:
+    #- NIXPKGS_ALLOW_BROKEN: 1
     steps:
       - run:
           name: Install dependencies
