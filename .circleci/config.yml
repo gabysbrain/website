@@ -35,7 +35,6 @@ jobs:
             nix-channel --update
             nix-env -u
             nix-env -iA \
-              nixpkgs.gitMinimal
               nixpkgs.pandoc
               nixpkgs.pandoc-citeproc
               nixpkgs.texlive.combined.scheme-full
