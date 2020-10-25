@@ -26,11 +26,13 @@ workflows:
 jobs:
   build:
     executor: nixos
+    environment:
+      - NIXPKGS_ALLOW_BROKEN: 1
     steps:
       - run:
           name: Install dependencies
           command: |
-            #nix-channel --update
+            nix-channel --update
             nix-env -u
             nix-env -iA nixpkgs.pandoc
       - checkout
