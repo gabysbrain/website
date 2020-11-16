@@ -65,7 +65,7 @@
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="pp">---</span></span></code></pre></div>
 <p>I then made sure that there were layout files called <code>post.html</code> and <code>project.html</code> in my <code>source/_layout</code> directory in Octopress.</p>
 <h2 id="index-pages">Index pages</h2>
-<p>Then, when creating my <a href="../blog/">blog index</a> page, I just have to check if <code>layout = 'post'</code></p>
+<p>Then, when creating my <a href="../blog.html">blog index</a> page, I just have to check if <code>layout = 'post'</code></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>{% for post in paginator.posts %}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  {% if post.layout == 'post' %}</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>  {% assign content = post.content %}</span>
@@ -74,7 +74,7 @@
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="kw">&lt;/article&gt;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>  {% endif %}</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>{% endfor %}</span></code></pre></div>
-<p>For the projects list I manually list the categories right now. So, for example, the “Research” section of my <a href="../projects">projects list</a> looks like</p>
+<p>For the projects list I manually list the categories right now. So, for example, the “Research” section of my old projects list looks like</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">&lt;h1&gt;</span>Research<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>{% for proj in site.posts %}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  {% if proj.layout == 'project' and proj.category == 'research' %}</span>
