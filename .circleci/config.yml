@@ -32,14 +32,10 @@ jobs:
     #- NIXPKGS_ALLOW_BROKEN: 1
     steps:
       - run:
-          name: Install dependencies
+          name: update packages
           command: |
             nix-channel --update
             nix-env -u
-            nix-env -iA \
-              nixpkgs.pandoc
-              nixpkgs.pandoc-citeproc
-              nixpkgs.texlive.combined.scheme-full
       - checkout
       - run:
           name: setup cachix

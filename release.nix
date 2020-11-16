@@ -33,6 +33,8 @@ in
       niv
       pkgs.cacert # needed for niv
       pkgs.nix    # needed for niv
+
+      pkgs.texlive.combined.scheme-full
     ];
     withHoogle = true;
   };
