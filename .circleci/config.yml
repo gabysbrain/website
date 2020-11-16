@@ -10,6 +10,8 @@ executors:
   nixos:
     docker:
       - image: lnl7/nix:latest
+        environment:
+          CACHIX_NAME: gabysbrain
 
 # TODO: add test job
 workflows:
@@ -35,12 +37,22 @@ jobs:
             nix-channel --update
             nix-env -u
       - checkout
+      - run:
+          name: setup cachix
+          command: |
+            nix-env -iA nixpkgs.cachix nixpkgs.bash
+            cachix use $CACHIX_NAME
+            nix path-info --all > /tmp/store-path-pre-build
       - run: 
           name: build website
           command: nix-build
       - run:
           name: create pages
           command: result/bin/site build
+      - run:
+          name: push to cachix
+          command: |
+            bash -c "comm -13 <(sort /tmp/store-path-pre-build | grep -v '\.drv$') <(nix path-info --all | grep -v '\.drv$' | sort) | cachix push $CACHIX_NAME"
       - run: 
           name: copy website to workplace
           command: |
