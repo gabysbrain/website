@@ -13,8 +13,8 @@ let
 
       website = hpNew.callCabal2nix "gabysbrain-website" ./. { };
 
-      #niv = import sources.niv { };
-      #niv = hpNew.callPackage sources.niv {};
+      # FIXME: this breaks nix-shell
+      niv = import sources.niv { };
     };
   };
 
