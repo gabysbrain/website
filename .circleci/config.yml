@@ -9,7 +9,7 @@ executors:
       - image: circleci/node:current
   nixos:
     docker:
-      - image: nixos/nix:latest
+      - image: gabysbrain/website:latest
         environment:
           CACHIX_NAME: gabysbrain
 
@@ -28,16 +28,14 @@ workflows:
 jobs:
   build:
     executor: nixos
-    #environment:
-    #- NIXPKGS_ALLOW_BROKEN: 1
     steps:
-      - run:
-          name: update packages
-          command: |
-            nix-channel --update
-            nix-env -u
-            nix-env -iA \
-              nixpkgs.texlive.combined.scheme-full
+      #- run:
+          #name: update packages
+          #command: |
+            #nix-channel --update
+            #nix-env -u
+            #nix-env -iA \
+              #nixpkgs.texlive.combined.scheme-full
       - checkout
       - run:
           name: setup cachix
