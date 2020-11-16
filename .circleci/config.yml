@@ -9,7 +9,7 @@ executors:
       - image: circleci/node:current
   nixos:
     docker:
-      - image: lnl7/nix:latest
+      - image: nixos/nix:latest
         environment:
           CACHIX_NAME: gabysbrain
 
