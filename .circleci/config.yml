@@ -9,9 +9,9 @@ executors:
       - image: circleci/node:current
   nixos:
     docker:
-      #- image: lnl7/nix:2020-06-07
       - image: lnl7/nix:latest
 
+# TODO: add test job
 workflows:
   deploy_prod:
     jobs:
@@ -34,19 +34,18 @@ jobs:
           command: |
             nix-channel --update
             nix-env -u
-            nix-env -iA \
-              nixpkgs.pandoc
-              nixpkgs.pandoc-citeproc
-              nixpkgs.texlive.combined.scheme-full
       - checkout
       - run: 
           name: build website
           command: nix-build
+      - run:
+          name: create pages
+          command: result/bin/site build
       - run: 
           name: copy website to workplace
           command: |
             mkdir -p workspace/build
-            cp -R $(nix-build --no-out-link)/* workspace/build/
+            cp -R _site/* workspace/build/
       - persist_to_workspace:
           root: workspace
           paths:
