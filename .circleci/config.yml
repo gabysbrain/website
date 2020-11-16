@@ -51,9 +51,9 @@ jobs:
           name: push to cachix
           command: |
             bash -c "comm -13 <(sort /tmp/store-path-pre-build | grep -v '\.drv$') <(nix path-info --all | grep -v '\.drv$' | sort) | cachix push $CACHIX_NAME"
-      - run:
-          name: test links
-          command: result/bin/site check
+      #- run:
+          #name: test links
+          #command: result/bin/site check
       - run: 
           name: copy website to workplace
           command: |
