@@ -61,7 +61,7 @@ I then made sure that there were layout files called `post.html` and
 
 ## Index pages
 
-Then, when creating my [blog index](/blog/) page, I just have to check
+Then, when creating my [blog index](/blog.html) page, I just have to check
 if `layout = 'post'`
 
 ``` html
@@ -76,7 +76,7 @@ if `layout = 'post'`
 ```
 
 For the projects list I manually list the categories right now.  So, for
-example, the "Research" section of my [projects list](/projects) looks like
+example, the "Research" section of my old projects list looks like
 
 ``` html
 <h1>Research</h1>

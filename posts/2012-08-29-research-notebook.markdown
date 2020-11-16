@@ -49,7 +49,7 @@ execution and automatically linked into the post.  The math is handled by
 
 I wanted to keep using [knitr](http://yihui.name/knitr/) and
 [MathJax](http://www.mathjax.org) as
-[before](/reproducable-research).  They
+[before](2012-05-19-reproducable-research.html).  They
 work really well for my purposes.
 
 I recently found out that version 0.7 of knitr supports executing languages
