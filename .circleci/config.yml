@@ -29,13 +29,11 @@ jobs:
   build:
     executor: nixos
     steps:
-      #- run:
-          #name: update packages
-          #command: |
-            #nix-channel --update
-            #nix-env -u
-            #nix-env -iA \
-              #nixpkgs.texlive.combined.scheme-full
+      - run:
+          name: install depdendencies
+          command: |
+            nix-env -iA \
+              nixpkgs.texlive.combined.scheme-full
       - checkout
       - run:
           name: setup cachix
