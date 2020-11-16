@@ -34,6 +34,7 @@ in
       pkgs.cacert # needed for niv
       pkgs.nix    # needed for niv
 
+      # FIXME: this needs to also be available to nix-build
       pkgs.texlive.combined.scheme-full
     ];
     withHoogle = true;
