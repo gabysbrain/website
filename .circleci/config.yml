@@ -17,11 +17,17 @@ executors:
 workflows:
   deploy_prod:
     jobs:
-      - build:
+      - build
+      #- build:
+          #filters:
+            #branches:
+              #only: 
+                #- master
+      - deploy_prod:
           filters:
             branches:
-              ignore: gh-pages
-      - deploy_prod:
+              only:
+                - master
           requires:
             - build
 
