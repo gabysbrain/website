@@ -1,4 +1,7 @@
 
+September 08, 2020
+: **Invited talk** [Visualization for understanding regression models](/talks/2020-09-08_vis_for_understanding_regression_models.pdf), Turing Institute, UK.
+
 October 30, 2019
 : **Invited talk** [Visualizing multi-dimensional spaces](/talks/2019-10-30_slicing_spaces.pdf), Johannes Kepler University Linz, Austria.
 

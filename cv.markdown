@@ -68,7 +68,10 @@ May 2002 -- October 2002
 
 # Invited talks
 
-Oct 30, 2019
+September 8, 2020
+: "Visualization for understanding regression models." Turing Institute, London, UK.
+
+October 30, 2019
 : "Visualizing multi-dimensional spaces." JKU Linz, Austria.
 
 May 03, 2019
