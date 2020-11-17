@@ -1,9 +1,6 @@
 version: 2.1
 
 executors:
-  basic:
-    docker:
-      - image: cimg/base:2020.01
   node:
     docker:
       - image: circleci/node:current
@@ -18,11 +15,6 @@ workflows:
   deploy_prod:
     jobs:
       - build
-      #- build:
-          #filters:
-            #branches:
-              #only: 
-                #- master
       - deploy_prod:
           filters:
             branches:
