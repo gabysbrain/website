@@ -34,8 +34,11 @@ title: CV
 
 # Academic positions
 
-July 2019 -- present
-: **Lecturer** Computer Science Department, Swansea University
+July 2021 -- present
+: **Researcher** Biomedical image informatics, VRVis Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH
+
+July 2019 -- June 2021
+: **Lecturer** Computer science department, Swansea University
 
 April 2018 -- June 2019
 : **Universitätsassistent ("post doc")** Visualization and data analysis research group, University of Vienna

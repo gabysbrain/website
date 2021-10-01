@@ -11,7 +11,7 @@ I try to spend as much time in the outdoors as possible. I love skiing,
 hiking, climbing, and scuba diving.  I have also been known to run or bike
 occasionally.
 
-My email address is [t.d.torsney-weir@swansea.ac.uk](mailto:t.d.torsney-weir@swansea.ac.uk)
+My email address is [torsney-weir@vrvis.at](mailto:torsney-weir@vrvis.at)
 
 I can also be found
 as "gabysbrain" on
@@ -20,12 +20,10 @@ as "gabysbrain" on
 
 My work address is:
 <ul class="address">
-  <li>Office 416</li>
-  <li>Computational Foundry</li>
-  <li>Swansea University --- Bay Campus</li>
-  <li>Swansea</li>
-  <li>SA1 8EN</li>
-  <li>UK</li>
+  <li>VRVis Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH</li>
+  <li>Donau-City-Strasse 11</li>
+  <li>1220 Vienna</li>
+  <li>Austria</li>
 </ul>
 
 
