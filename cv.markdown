@@ -4,33 +4,39 @@ title: CV
 
 # Journal publications
 
-[@schwarzl:2019]
+[@schwarzl_2019]
 
-[@torsney-weir:2018]
+[@torsney-weir_2018]
 
-[@torsney-weir:2017a]
+[@torsney-weir_2017a]
 
-[@torsney-weir:2017]
+[@torsney-weir_2017]
 
-[@pajer:2016]
+[@pajer_2016]
 
-[@kainz:2015]
+[@kainz_2015]
 
-[@torsney-weir:2011a]
+[@torsney-weir_2011a]
 
 # Conference publications
 
-[@torsney-weir:2018a]
+[@gibson_2021]
 
-[@torsney-weir:2015]
+[@cetin_2021]
+
+[@diehl_2021]
+
+[@torsney-weir_2018a]
+
+[@torsney-weir_2015]
 
 # Other publications
 
-[@torsney-weir:2018b]
+[@torsney-weir_2018b]
 
-[@torsney-weir:2012]
+[@torsney-weir_2012]
 
-[@torsney-weir:2011]
+[@torsney-weir_2011]
 
 # Academic positions
 
