@@ -114,6 +114,9 @@ September 16, 2011
 
 # Scientific activities
 
+2020 -- present
+: **IPC member**, Eurovis papers track
+
 2019 -- present
 : **IPC member**, EuroVis STAR
 
@@ -122,6 +125,9 @@ September 16, 2011
 
 2012 -- present
 : **Reviewer**, IEEE Transactions on Visualization and Computer Graphics
+
+2020 -- present
+: **Reviewer**, Frontiers in Bioinformatics
 
 2019
 : **IPC member**, International Symposium on Visual Computing
