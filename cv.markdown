@@ -4,6 +4,8 @@ title: CV
 
 # Journal publications
 
+[@dykes_2022]
+
 [@schwarzl_2019]
 
 [@torsney-weir_2018]
