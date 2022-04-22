@@ -3,7 +3,7 @@
 
 ![](/images/me.jpg)
 
-I am a Lecturer at Swansea University.  I study
+I am a Postdoctoral researcher at VRVis.  I study
 how visualization and statistical methods can be used to help scientists
 understand and create better computer models.
 
