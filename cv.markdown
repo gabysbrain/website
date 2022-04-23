@@ -2,6 +2,9 @@
 title: CV
 ---
 
+Visualization researcher with interest in visual analysis in 
+multi-dimensional continuous spaces and understanding complex models.
+
 # Journal publications
 
 [@dykes_2022]
