@@ -119,6 +119,9 @@ September 16, 2011
 
 # Scientific activities
 
+2022 -- present
+: **Poster chair**, VCBM (EG Workshop on Visual Computing for Biology and Medicine)
+
 2020 -- present
 : **IPC member**, Eurovis papers track
 
