@@ -7,6 +7,8 @@ multi-dimensional continuous spaces and understanding complex models.
 
 # Journal publications
 
+[@dunne_2022]
+
 [@dykes_2022]
 
 [@schwarzl_2019]

@@ -1,7 +1,11 @@
 
 # Publications
 
-## Journals
+## Journal
+
+[@dunne_2022]
+
+[@dykes_2022]
 
 [@schwarzl_2019]
 
@@ -17,7 +21,7 @@
 
 [@torsney-weir_2011a]
 
-## Conferences
+## Conference
 
 [@gibson_2021]
 
