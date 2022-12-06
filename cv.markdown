@@ -2,8 +2,9 @@
 title: CV
 ---
 
-Visualization researcher with interest in visual analysis in 
-multi-dimensional continuous spaces and understanding complex models.
+I am currently a visualization researcher with interest in visual analysis in 
+multi-dimensional continuous spaces and understanding complex models. I have 20 years of experience in the technology industry. I am experienced in a variety of work environments from being full‑stack engineer, being a
+technical lead, to performing computer science research. I love learning about new technologies and how I can use them to create better software more easily.
 
 # Journal publications
 
