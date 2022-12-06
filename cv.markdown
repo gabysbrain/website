@@ -220,9 +220,12 @@ March 2003 -- July 2004
 
 # Other activities
 
-*  Scuba diving
 *  Board games
 *  Cycling
+*  Scuba diving
 *  Skiing
 *  Trail running
+*  Hiking
+*  Home labs
+*  Dogs
 
