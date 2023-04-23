@@ -2,9 +2,56 @@
 title: CV
 ---
 
-I am currently a visualization researcher with interest in visual analysis in 
-multi-dimensional continuous spaces and understanding complex models. I have 20 years of experience in the technology industry. I am experienced in a variety of work environments from being full‑stack engineer, being a
-technical lead, to performing computer science research. I love learning about new technologies and how I can use them to create better software more easily.
+Recovering academic and 
+software engineer with extensive experience building systems from the ground
+up as well as research in ML/AI with a focus on 
+visual analysis in 
+multi-dimensional continuous spaces and understanding complex models.
+
+# Professional positions
+
+March 2023 -- present
+: **Python developer** Raicoon GmbH. Vienna, Austria
+
+September 2007 -- June 2010
+: **Vice President, Lead Developer** StoneCastle Partners. New York, NY
+
+    * Implemented an investment management system for a variety of asset types
+      using Pylons/Python, the Dojo javascript framework, and PostgreSQL.
+    * Specified and supervised the integration of the Alfresco document 
+      management system with the investment management system to track key 
+      investment decisions and deal documents.
+    * Designed a GIS system for monitoring areas of the country risky to banks.
+    * Built a genetic algorithm to find the optimal method to perform field 
+      visits across the country.
+    * Used the Condor grid service to implement a CDO evaluation system that 
+      enabled a Unix server to call a Windows-only application.
+    * Wrote a simple web crawler to download rural newspaper articles to 
+      a central data store so analysts could browse regional news not covered 
+      by the major news aggregation sites.
+
+July 2004 -- September 2007
+: **Vice President, Lead Developer** Bear Stearns Asset Management. New York, NY
+
+    * Supervised a team of 4 to design and implement a front-office 
+      portfolio surveillance system for a structured finance hedge fund 
+      using a SQL database using Java and Ruby on Rails.
+    * Used Condor to parallelize various long-running tasks across multiple 
+      compute nodes.
+    * Assisted with the design and implementation of a proprietary credit 
+      risk model for an internally managed fund.
+    * Interacted directly with business staff to design and implement 
+      a variety of portfolio management systems.
+
+March 2003 -- July 2004
+: **Senior Associate** Moody's Investors Service. New York, NY 
+
+    * Implemented a spread-based Monte Carlo asset simulation in C.
+    * Created a combination Excel spreadsheet and C to create an Excel 
+      add-in to rate combo notes.
+    * Assisted analysts with modeling complex waterfall steps in CDO Analytics.
+    * Assisted with the coordination of the CDO Analytics testing team.
+    * Wrote specifications based on analysts' suggestions and work flow.
 
 # Journal publications
 
@@ -50,7 +97,7 @@ technical lead, to performing computer science research. I love learning about n
 
 # Academic positions
 
-July 2021 -- present
+July 2021 -- February 2023
 : **Researcher** Biomedical image informatics, VRVis Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH
 
 July 2019 -- June 2021
@@ -175,48 +222,6 @@ September 16, 2011
 
 Spring 2012
 : **SFU graduate fellowship (Masters)**, CAD 6,250
-
-# Professional positions
-
-September 2007 -- June 2010
-: **Vice President, Lead Developer** StoneCastle Partners. New York, NY
-
-    * Implemented an investment management system for a variety of asset types
-      using Pylons/Python, the Dojo javascript framework, and PostgreSQL.
-    * Specified and supervised the integration of the Alfresco document 
-      management system with the investment management system to track key 
-      investment decisions and deal documents.
-    * Designed a GIS system for monitoring areas of the country risky to banks.
-    * Built a genetic algorithm to find the optimal method to perform field 
-      visits across the country.
-    * Used the Condor grid service to implement a CDO evaluation system that 
-      enabled a Unix server to call a Windows-only application.
-    * Wrote a simple web crawler to download rural newspaper articles to 
-      a central data store so analysts could browse regional news not covered 
-      by the major news aggregation sites.
-
-July 2004 -- September 2007
-: **Vice President, Lead Developer** Bear Stearns Asset Management. New York, NY
-
-    * Supervised a team of 4 to design and implement a front-office 
-      portfolio surveillance system for a structured finance hedge fund 
-      using a SQL database using Java and Ruby on Rails.
-    * Used Condor to parallelize various long-running tasks across multiple 
-      compute nodes.
-    * Assisted with the design and implementation of a proprietary credit 
-      risk model for an internally managed fund.
-    * Interacted directly with business staff to design and implement 
-      a variety of portfolio management systems.
-
-March 2003 -- July 2004
-: **Senior Associate** Moody's Investors Service. New York, NY 
-
-    * Implemented a spread-based Monte Carlo asset simulation in C.
-    * Created a combination Excel spreadsheet and C to create an Excel 
-      add-in to rate combo notes.
-    * Assisted analysts with modeling complex waterfall steps in CDO Analytics.
-    * Assisted with the coordination of the CDO Analytics testing team.
-    * Wrote specifications based on analysts' suggestions and work flow.
 
 # Other activities
 
