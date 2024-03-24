@@ -14,7 +14,7 @@ create better software more easily.
 # Professional positions
 
 October 2023 -- present
-: **Technical team lead** Raicoon GmbH. Vienna, Austria
+: **Data Science and Developer Experience Team Lead** Raicoon GmbH. Vienna, Austria
 
 March 2023 -- October 2023
 : **Python developer** Raicoon GmbH. Vienna, Austria
