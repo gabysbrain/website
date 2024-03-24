@@ -10,8 +10,28 @@ multi-dimensional continuous spaces and understanding complex models.
 
 # Professional positions
 
-March 2023 -- present
+October 2023 -- present
+: **Technical team lead** Raicoon GmbH. Vienna, Austria
+
+    * Team lead for both Developer Experience (platform) and Data Science teams
+    * Initiated and leading project to move services to hexagonal 
+          architecture making services easier to test and maintain. Increased 
+          deployment velocity.
+    * Evaluated our legacy detection pipeline. Designed and executed a plan to 
+          improve our core-business distributed system of detectors to make 
+          root-cause analysis and debugging more efficient.
+    * Initiated a mentorship program to articulate technical concepts to 
+          other developers in the company.
+
+March 2023 -- October 2023
 : **Python developer** Raicoon GmbH. Vienna, Austria
+
+    * Refactored critical data ingestion services improving reliability,
+          testability, and maintainability. Legacy versions of services were
+          convoluted and inconsistent. Also worked with stakeholders to create
+          specifications (none existed before)
+    * Led the project to institute distributed tracing across all 
+          importers using Sentry.
 
 September 2007 -- June 2010
 : **Vice President, Lead Developer** StoneCastle Partners. New York, NY
