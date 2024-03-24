@@ -36,6 +36,24 @@ March 2023 -- October 2023
     * Led the project to institute distributed tracing across all 
           importers using Sentry.
 
+July 2021 -- February 2023
+: **Researcher** Biomedical image informatics, VRVis Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH
+
+July 2019 -- June 2021
+: **Lecturer** Computer science department, Swansea University
+
+April 2018 -- June 2019
+: **Universitätsassistent ("post doc")** Visualization and data analysis research group, University of Vienna
+
+July 2016 -- October 2016
+: **Research internship**  Center for Applied Scientific Computing, Lawrence Livermore National Laboratory
+
+January 2015 -- April 2018
+: **Universitätsassistent ("prae doc")** Visualization and data analysis research group, University of Vienna
+
+January 2011 -- December 2012
+: **Research assistant** GrUVi Lab, SFU Computing Science Department
+
 September 2007 -- June 2010
 : **Vice President, Lead Developer** StoneCastle Partners. New York, NY
 
@@ -52,6 +70,9 @@ September 2007 -- June 2010
     * Wrote a simple web crawler to download rural newspaper articles to 
       a central data store so analysts could browse regional news not covered 
       by the major news aggregation sites.
+
+September 2005 -- May 2006
+: **Research assistant** NYU Proteus Project, NYU Computer Science Department
 
 July 2004 -- September 2007
 : **Vice President, Lead Developer** Bear Stearns Asset Management. New York, NY
@@ -75,6 +96,10 @@ March 2003 -- July 2004
     * Assisted analysts with modeling complex waterfall steps in CDO Analytics.
     * Assisted with the coordination of the CDO Analytics testing team.
     * Wrote specifications based on analysts' suggestions and work flow.
+
+
+May 2002 -- October 2002
+: **Research assistant** "Learning driving behaviors for autonomous vehicles," NIST-funded project, Georgetown Computer Science Department
 
 # Journal publications
 
@@ -118,31 +143,6 @@ March 2003 -- July 2004
 
 [@torsney-weir_2011]
 
-# Academic positions
-
-July 2021 -- February 2023
-: **Researcher** Biomedical image informatics, VRVis Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH
-
-July 2019 -- June 2021
-: **Lecturer** Computer science department, Swansea University
-
-April 2018 -- June 2019
-: **Universitätsassistent ("post doc")** Visualization and data analysis research group, University of Vienna
-
-July 2016 -- October 2016
-: **Research internship**  Center for Applied Scientific Computing, Lawrence Livermore National Laboratory
-
-January 2015 -- April 2018
-: **Universitätsassistent ("prae doc")** Visualization and data analysis research group, University of Vienna
-
-January 2011 -- December 2012
-: **Research assistant** GrUVi Lab, SFU Computing Science Department
-
-September 2005 -- May 2006
-: **Research assistant** NYU Proteus Project, NYU Computer Science Department
-
-May 2002 -- October 2002
-: **Research assistant** "Learning driving behaviors for autonomous vehicles," NIST-funded project, Georgetown Computer Science Department
 
 # Education
 
