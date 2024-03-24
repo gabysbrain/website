@@ -16,25 +16,8 @@ create better software more easily.
 October 2023 -- present
 : **Technical team lead** Raicoon GmbH. Vienna, Austria
 
-    * Team lead for both Developer Experience (platform) and Data Science teams
-    * Initiated and leading project to move services to hexagonal 
-          architecture making services easier to test and maintain. Increased 
-          deployment velocity.
-    * Evaluated our legacy detection pipeline. Designed and executed a plan to 
-          improve our core-business distributed system of detectors to make 
-          root-cause analysis and debugging more efficient.
-    * Initiated a mentorship program to articulate technical concepts to 
-          other developers in the company.
-
 March 2023 -- October 2023
 : **Python developer** Raicoon GmbH. Vienna, Austria
-
-    * Refactored critical data ingestion services improving reliability,
-          testability, and maintainability. Legacy versions of services were
-          convoluted and inconsistent. Also worked with stakeholders to create
-          specifications (none existed before)
-    * Led the project to institute distributed tracing across all 
-          importers using Sentry.
 
 July 2021 -- February 2023
 : **Researcher** Biomedical image informatics, VRVis Zentrum für Virtual Reality und Visualisierung Forschungs-GmbH
@@ -57,45 +40,14 @@ January 2011 -- December 2012
 September 2007 -- June 2010
 : **Vice President, Lead Developer** StoneCastle Partners. New York, NY
 
-    * Implemented an investment management system for a variety of asset types
-      using Pylons/Python, the Dojo javascript framework, and PostgreSQL.
-    * Specified and supervised the integration of the Alfresco document 
-      management system with the investment management system to track key 
-      investment decisions and deal documents.
-    * Designed a GIS system for monitoring areas of the country risky to banks.
-    * Built a genetic algorithm to find the optimal method to perform field 
-      visits across the country.
-    * Used the Condor grid service to implement a CDO evaluation system that 
-      enabled a Unix server to call a Windows-only application.
-    * Wrote a simple web crawler to download rural newspaper articles to 
-      a central data store so analysts could browse regional news not covered 
-      by the major news aggregation sites.
-
 September 2005 -- May 2006
 : **Research assistant** NYU Proteus Project, NYU Computer Science Department
 
 July 2004 -- September 2007
 : **Vice President, Lead Developer** Bear Stearns Asset Management. New York, NY
 
-    * Supervised a team of 4 to design and implement a front-office 
-      portfolio surveillance system for a structured finance hedge fund 
-      using a SQL database using Java and Ruby on Rails.
-    * Used Condor to parallelize various long-running tasks across multiple 
-      compute nodes.
-    * Assisted with the design and implementation of a proprietary credit 
-      risk model for an internally managed fund.
-    * Interacted directly with business staff to design and implement 
-      a variety of portfolio management systems.
-
 March 2003 -- July 2004
 : **Senior Associate** Moody's Investors Service. New York, NY 
-
-    * Implemented a spread-based Monte Carlo asset simulation in C.
-    * Created a combination Excel spreadsheet and C to create an Excel 
-      add-in to rate combo notes.
-    * Assisted analysts with modeling complex waterfall steps in CDO Analytics.
-    * Assisted with the coordination of the CDO Analytics testing team.
-    * Wrote specifications based on analysts' suggestions and work flow.
 
 
 May 2002 -- October 2002
