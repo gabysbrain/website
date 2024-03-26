@@ -53,6 +53,11 @@ March 2003 -- July 2004
 May 2002 -- October 2002
 : **Research assistant** "Learning driving behaviors for autonomous vehicles," NIST-funded project, Georgetown Computer Science Department
 
+# Grants
+
+2020
+: **Visual Analytics of Epidemic Simulations with Many Actor Behaviours**, 󰆮107,010.04.
+
 # Journal publications
 
 [@rydow_2022]
