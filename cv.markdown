@@ -119,6 +119,8 @@ May 2002 -- October 2002
 September 8, 2020
 : "Visualization for understanding regression models." Turing Institute, London, UK.
 
+November 30, 2019
+: "Slicing multi-dimensional spaces." Freie Universität Berlin, Germany.
 October 30, 2019
 : "Visualizing multi-dimensional spaces." JKU Linz, Austria.
 
