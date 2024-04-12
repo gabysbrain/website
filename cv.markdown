@@ -10,7 +10,7 @@ I love learning about new technologies and how I can use them to
 create better software more easily.
 I am particularly
 a fan of the Haskell and 
-Purescript languages.
+PureScript languages.
 
 
 # Professional positions
@@ -200,7 +200,7 @@ September 16, 2011
 
 # Academic awards
 2020
-: **nominated for the Heinz-Zemanek PhD Thesis Award**, University of Vienna
+: **Nominated for the Heinz-Zemanek PhD Thesis Award**, University of Vienna
 
 2017
 : **A/B publication strategy award**, University of Vienna
