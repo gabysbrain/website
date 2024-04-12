@@ -2,14 +2,16 @@
 title: CV
 ---
 
-Computer scientist who's
-worked on both greenfield projects and existing systems. 
-I also have worked as a computer science researcher, 
-I specialize in developing methods
-to link visualization with sensitivity and uncertainty analysis to help
-people understand complex machine learning and simulation models.
+Computer scientist with extensive experience building systems from the ground
+up as well as research in ML/AI with a focus on visual analysis in
+multi-dimensional continuous spaces and understanding complex models. I also
+dabble in functional programming. 
 I love learning about new technologies and how I can use them to
 create better software more easily.
+I am particularly
+a fan of the Haskell and 
+Purescript languages.
+
 
 # Professional positions
 
