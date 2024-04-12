@@ -58,7 +58,7 @@ May 2002 -- October 2002
 # Grants
 
 2020
-: **Visual Analytics of Epidemic Simulations with Many Actor Behaviours**, 󰆮107,010.04.
+: **Visual Analytics of Epidemic Simulations with Many Actor Behaviours**, £107,010.04.
 
 # Journal publications
 
@@ -199,10 +199,13 @@ September 16, 2011
 * Introduction to Data Structures and Algorithms
 
 # Academic awards
+2020
+: **nominated for the Heinz-Zemanek PhD Thesis Award**, University of Vienna
+
 2017
 : **A/B publication strategy award**, University of Vienna
 
-Spring 2012
+2012
 : **SFU graduate fellowship (Masters)**, CAD 6,250
 
 # Other activities
